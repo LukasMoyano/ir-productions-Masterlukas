@@ -36,7 +36,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
           description: "Libertad creativa y disrupción constructiva"
         }
       ],
-      slogan: "Hacemos lo que queremos, porque amamos lo que hacemos, funk with us!"
+      slogan: "Hacemos lo que queremos, porque amamos lo que hacemos, Funk with us!"
     },
     en: {
       title: "Who We Are",
@@ -65,7 +65,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
           description: "Creative freedom and constructive disruption"
         }
       ],
-      slogan: "We do what we want, because we love what we do, funk with us!"
+      slogan: "We do what we want, because we love what we do, Funk with us!"
     }
   };
 

@@ -67,15 +67,15 @@ const ContactSection = ({ language }: ContactSectionProps) => {
       icon: Mail,
       label: text.contact.email,
       value: "lukas@ir-productions.com",
-      link: "mailto:lukas@ir-productions.com",
+      link: "mailto:lukasmoyanomorales@gmail.com",
       color: "text-primary",
       bg: "bg-primary/10"
     },
     {
       icon: Linkedin,
       label: text.contact.linkedin,
-      value: "LukasMoyano",
-      link: "https://linkedin.com/in/lukasmoyano",
+      value: "MasterLukasMoyano",
+      link: "https://www.linkedin.com/in/masterlukasmoyano/",
       color: "text-blue-500",
       bg: "bg-blue-500/10"
     },

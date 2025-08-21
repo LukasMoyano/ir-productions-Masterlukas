@@ -12,10 +12,10 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       title: "-IR- Productions",
       subtitle: "Fusionando Arte, Ciencia y Tecnología",
       description: "Transformamos el Agro y las Empresas del Futuro con soluciones digitales integrales que conectan sabiduría ancestral con innovación de vanguardia.",
-      cta1: "Explorar Talleres Agro",
-      cta2: "Descubre Workstations IA",
+      cta1: "Talleres Agro",
+      cta2: "Workstations IA",
       slogan: "Hacemos lo que queremos, porque amamos lo que hacemos. Funk with us!",
-      impact: "Alineados con PDM Arbeláez • PDD Cundinamarca • ODS"
+      impact: "Alineados con PDM de Cundinamarca • PDD Cundinamarca • ODS"
     },
     en: {
       title: "-IR- Productions",
@@ -109,7 +109,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
         </div>
       </div>
 
-      {/* Floating Tech Elements */}
+      {/* Floating Tech Elements */} di
       <div className="absolute top-1/4 left-8 hidden lg:block">
         <div className="w-32 h-32 border border-primary/20 rounded-lg transform rotate-12 animate-float">
           <div className="w-full h-full border border-accent/30 rounded-lg transform -rotate-6" />
