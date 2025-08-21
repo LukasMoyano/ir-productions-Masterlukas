@@ -5,6 +5,7 @@
 _ _-IR-_ _ Productions is a forward-thinking technology company specializing in the fusion of **Art, Science, and Technology** to create innovative digital solutions that drive sustainable transformation. Based in Fusagasugá, Cundinamarca, Colombia, we're dedicated to closing the digital divide and democratizing access to cutting-edge tools with a special focus on rural development and organizational empowerment. 
 
 ---
+
 ## ⚡ Our Philosophy
 
 We believe the most powerful technology is the one that seamlessly blends with human creativity and natural wisdom, often inspired by rediscovering ancestral knowledge and applying it with a modern, artistic lens! Our approach combines technical excellence with creative problem-solving to deliver solutions that truly make a difference.
@@ -14,6 +15,7 @@ Creemos que la tecnología más poderosa es aquella que se fusiona armoniosament
 
 ### 🇫🇷
 Nous croyons que la technologie la plus puissante est celle qui s'intègre harmonieusement à la créativité humaine et à la sagesse naturelle, souvent inspirée par la redécouverte des savoirs ancestraux et appliquée avec une lentille artistique et moderne ! Notre approche combine excellence technique et résolution créative de problèmes pour offrir des solutions qui font vraiment une différence.
+
 ---
 
 ## 🇪🇸 Español | 🇬🇧 English | 🇫🇷 Français
