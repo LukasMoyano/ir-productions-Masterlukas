@@ -1,185 +1,171 @@
----
+# _-IR-_ Productions - README
 
-```markdown
-# _-IR-_ Productions: Soluciones Digitales Integrales | Integral Digital Solutions | Solutions Numériques Intégrales
+## 🌐 Integral Digital Solutions for a Connected World
 
-![IR Productions Banner](URL_DEL_BANNER_AQUÍ) <!-- Reemplaza esto con una URL a un banner visualmente impactante -->
-
-**[English](#english) | [Español](#español) | [Français](#français)**
-
----git push origin main --force
-
-<a name="español"></a>
-
-## 🇪🇸 Español
-
-### Sobre el Proyecto
-
-Bienvenido al repositorio oficial del sitio web de **_-IR-_ Productions**. Este proyecto es más que un portafolio digital; es el centro neurálgico de nuestra operación, diseñado para articular nuestra misión: **impulsar la transformación positiva y sostenible a través de la fusión única de Arte 🎨, Ciencia 🔬 y Tecnología 💻.**
-
-Nuestra filosofía se basa en tres pilares:
-*   **Arte Impecable:** Diseño de experiencias (UX/UI) centrado en el humano, creando interfaces intuitivas y estéticamente poderosas.
-*   **Ciencia Rigurosa:** Aplicación de metodologías pedagógicas y de investigación para garantizar la adopción efectiva y el impacto medible de nuestras soluciones.
-*   **Tecnología de Vanguardia:** Uso estratégico de IoT, IA, HPC y ecosistemas Open Source para democratizar el acceso a herramientas de punta.
-
-Este sitio sirve como la principal plataforma para mostrar nuestras líneas de negocio, atraer colaboradores, clientes institucionales e inversores alineados con nuestra visión de soberanía tecnológica y desarrollo rural.
-
-### Tecnologías Utilizadas
-
-Este proyecto está construido con un stack tecnológico moderno, escalable y de código abierto, reflejando nuestro compromiso con la excelencia y la independencia:
-
-*   **Frontend:** [React](https://react.dev/)
-*   **Build Tool:** [Vite](https://vitejs.dev/)
-*   **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-*   **UI Components:** [shadcn-ui](https://ui.shadcn.com/)
-
-### Cómo Contribuir o Trabajar Localmente
-
-Si eres parte del equipo de _-IR-_ Productions o un colaborador autorizado, puedes trabajar en este proyecto localmente.
-
-**Requisitos:** [Node.js](https://nodejs.org/) & npm (se recomienda instalar con [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
-
-Sigue estos pasos:
-
-```sh
-# 1. Clona el repositorio.
-git clone https://github.com/IR-Productions/nombre-del-repositorio.git # Reemplaza con la URL correcta
-
-# 2. Navega al directorio del proyecto.
-cd nombre-del-repositorio
-
-# 3. Instala las dependencias.
-npm install
-
-# 4. Inicia el servidor de desarrollo.
-npm run dev
-```
-Esto iniciará un servidor local con recarga automática para una vista previa instantánea de tus cambios.
-
-### Contacto y Colaboración
-
-Estamos construyendo un ecosistema de innovación y buscamos activamente alianzas estratégicas. Si tu misión se alinea con la nuestra, conectemos.
-
-*   **Fundador:** Lukas Moyano
-*   **LinkedIn**: [linkedin.com/in/lukasmoyano](https://www.linkedin.com/in/lukasmoyano)
-*   **Email**: [lukasmoyano@ir-productions.com](mailto:lukasmoyano@ir-productions.com)
-*   **WhatsApp:** [+57 319 7919742](https://wa.me/573197919742)
+_-IR-_ Productions is a forward-thinking technology company specializing in the fusion of **Art, Science, and Technology** to create innovative digital solutions that drive sustainable transformation. Based in Fusagasugá, Cundinamarca, Colombia, we're dedicated to closing the digital divide and democratizing access to cutting-edge tools with a special focus on rural development and organizational empowerment. 
 
 ---
 
-<a name="english"></a>
+## 🇬🇧 English | 🇪🇸 Español | 🇫🇷 Français
 
-## 🇬🇧 English
+### 🇬🇧 About Us
 
-### About This Project
+We craft **Integral Digital Solutions** by uniquely fusing **Art 🎨, Science 🔬 (Pedagogy & Research), and Technology 💻 (IoT, AI, HPC, Open Source)**. Our mission is to drive positive, sustainable transformation, close the digital divide, and democratize access to knowledge and cutting-edge tools, with a special focus on rural development and empowering organizations.
 
-Welcome to the official repository for the **_-IR-_ Productions** website. This project is more than a digital portfolio; it is the nerve center of our operation, designed to articulate our mission: **to drive positive, sustainable transformation through the unique fusion of Art 🎨, Science 🔬, and Technology 💻.**
+### 🇪🇸 Sobre Nosotros
 
-Our philosophy is built on three pillars:
-*   **Impeccable Art:** Human-centered experience design (UX/UI), creating intuitive and aesthetically powerful interfaces.
-*   **Rigorous Science:** Application of pedagogical and research methodologies to ensure the effective adoption and measurable impact of our solutions.
-*   **Vanguard Technology:** Strategic use of IoT, AI, HPC, and Open Source ecosystems to democratize access to cutting-edge tools.
+Creamos **Soluciones Digitales Integrales** fusionando de manera única **Arte 🎨, Ciencia 🔬 (Pedagogía e Investigación) y Tecnología 💻 (IoT, IA, HPC, Open Source)**. Nuestra misión es impulsar la transformación positiva y sostenible, cerrar la brecha digital y democratizar el acceso al conocimiento y a herramientas de vanguardia, con un enfoque especial en el desarrollo rural y el empoderamiento de organizaciones.
 
-This site serves as the primary platform to showcase our business lines, and to attract collaborators, institutional clients, and investors aligned with our vision of technological sovereignty and rural development.
+### 🇫🇷 À Propos de Nous
 
-### Technology Stack
-
-This project is built with a modern, scalable, and open-source technology stack, reflecting our commitment to excellence and independence:
-
-*   **Frontend:** [React](https://react.dev/)
-*   **Build Tool:** [Vite](https://vitejs.dev/)
-*   **Language:** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-*   **UI Components:** [shadcn-ui](https://ui.shadcn.com/)
-
-### How to Contribute or Work Locally
-
-If you are part of the _-IR-_ Productions team or an authorized collaborator, you can work on this project locally.
-
-**Prerequisites:** [Node.js](https://nodejs.org/) & npm (installing with [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is recommended)
-
-Follow these steps:
-
-```sh
-# 1. Clone the repository.
-git clone https://github.com/IR-Productions/repository-name.git # Replace with the correct URL
-
-# 2. Navigate to the project directory.
-cd repository-name
-
-# 3. Install dependencies.
-npm install
-
-# 4. Start the development server.
-npm run dev```
-This will start a local server with auto-reloading for an instant preview of your changes.
-
-### Contact & Collaboration
-
-We are building an ecosystem of innovation and are actively seeking strategic alliances. If your mission aligns with ours, let's connect.
-
-*   **Founder:** Lukas Moyano
-*   **LinkedIn**: [linkedin.com/in/lukasmoyano](https://www.linkedin.com/in/lukasmoyano)
-*   **Email**: [lukasmoyano@ir-productions.com](mailto:lukasmoyano@ir-productions.com)
-*   **WhatsApp:** [+57 319 7919742](https://wa.me/573197919742)
+Nous créons des **Solutions Numériques Intégrales** en fusionnant de manière unique **l'Art 🎨, la Science 🔬 (Pédagogie & Recherche) et la Technologie 💻 (IoT, IA, HPC, Open Source)**. Notre mission est de promouvoir une transformation positive et durable, de réduire la fracture numérique et de démocratiser l'accès aux connaissances et aux outils de pointe, avec un accent particulier sur le développement rural et l'autonomisation des organisations.
 
 ---
 
-<a name="français"></a>
+## 🌐 Our Core Expertise
 
-## 🇫🇷 Français
+### 🇬🇧
+* **Integrated Technology Solutions**: Custom development leveraging IoT, AI, and HPC systems
+* **Agro-Tech Innovation**: "CultivaTech ColombIA" for precision agriculture and apiculture
+* **Digital Transformation**: Bridging traditional practices with cutting-edge technology
+* **Sustainable Tech Design**: Creative upcycling of e-waste into functional technology
+* **Open Source Ecosystems**: Specializing in AMD/ARM-based architectures and solutions
 
-### À propos de ce projet
+### 🇪🇸
+* **Soluciones Tecnológicas Integradas**: Desarrollo personalizado aprovechando IoT, IA y sistemas HPC
+* **Innovación Agro-Tech**: "CultivaTech ColombIA" para agricultura de precisión y apicultura
+* **Transformación Digital**: Conectando prácticas tradicionales con tecnología de vanguardia
+* **Diseño Tecnológico Sostenible**: Supra-reciclaje creativo de e-waste en tecnología funcional
+* **Ecosistemas Open Source**: Especializados en arquitecturas y soluciones basadas en AMD/ARM
 
-Bienvenue sur le dépôt officiel du site web de **_-IR-_ Productions**. Ce projet est plus qu'un portfolio numérique ; c'est le centre névralgique de notre opération, conçu pour articuler notre mission : **promouvoir une transformation positive et durable grâce à la fusion unique de l'Art 🎨, de la Science 🔬 et de la Technologie 💻.**
+### 🇫🇷
+* **Solutions Technologiques Intégrées** : Développement sur mesure utilisant IoT, IA et systèmes HPC
+* **Innovation Agro-Tech** : "CultivaTech ColombIA" pour agriculture de précision et apiculture
+* **Transformation Numérique** : Rapprocher les pratiques traditionnelles avec des technologies de pointe
+* **Design Technologique Durable** : Recyclage créatif des déchets électroniques en technologie fonctionnelle
+* **Écosystèmes Open Source** : Spécialisés dans les architectures et solutions basées sur AMD/ARM
 
-Notre philosophie repose sur trois piliers :
-*   **Art Impeccable :** Conception d'expériences (UX/UI) centrées sur l'humain, créant des interfaces intuitives et esthétiquement puissantes.
-*   **Science Rigoureuse :** Application de méthodologies pédagogiques et de recherche pour garantir l'adoption efficace et l'impact mesurable de nos solutions.
-*   **Technologie d'Avant-garde :** Utilisation stratégique de l'IoT, de l'IA, du HPC et des écosystèmes Open Source pour démocratiser l'accès aux outils de pointe.
+---
 
-Ce site sert de plateforme principale pour présenter nos lignes de métier, et pour attirer des collaborateurs, des clients institutionnels et des investisseurs alignés sur notre vision de souveraineté technologique et de développement rural.
+## 🚀 Current Projects
 
-### Technologies Utilisées
+### 🇬🇧
+* **CultivaTech ColombIA**: IoT platform for precision agriculture in Colombian rural communities
+* **Rural Digital Hubs**: Establishing technology centers in underserved regions
+* **HPC for Social Impact**: High-performance computing solutions for research institutions
+* **E-Waste Innovation Lab**: Transforming electronic waste into functional technology
 
-Ce projet est construit avec une stack technologique moderne, évolutive et open-source, reflétant notre engagement envers l'excellence et l'indépendance :
+### 🇪🇸
+* **CultivaTech ColombIA**: Plataforma IoT para agricultura de precisión en comunidades rurales colombianas
+* **Hubs Digitales Rurales**: Establecimiento de centros tecnológicos en regiones desatendidas
+* **HPC para Impacto Social**: Soluciones de cómputo de alto rendimiento para instituciones de investigación
+* **Laboratorio de Innovación en E-Waste**: Transformando residuos electrónicos en tecnología funcional
 
-*   **Frontend :** [React](https://react.dev/)
-*   **Outil de Build :** [Vite](https://vitejs.dev/)
-*   **Langage :** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling :** [Tailwind CSS](https://tailwindcss.com/)
-*   **Composants UI :** [shadcn-ui](https://ui.shadcn.com/)
+### 🇫🇷
+* **CultivaTech ColombIA** : Plateforme IoT pour l'agriculture de précision dans les communautés rurales colombiennes
+* **Centres Numériques Ruraux** : Établissement de centres technologiques dans les régions défavorisées
+* **HPC pour Impact Social** : Solutions de calcul haute performance pour institutions de recherche
+* **Laboratoire d'Innovation E-Waste** : Transformation des déchets électroniques en technologie fonctionnelle
 
-### Comment Contribuer ou Travailler Localement
+---
 
-Si vous faites partie de l'équipe de _-IR-_ Productions ou êtes un collaborateur autorisé, vous pouvez travailler sur ce projet en local.
+## 🤝 Collaboration Opportunities
 
-**Prérequis :** [Node.js](https://nodejs.org/) & npm (l'installation avec [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) est recommandée)
+### 🇬🇧
+We're seeking strategic partnerships with:
+* Governmental entities focused on rural development
+* NGOs working in digital literacy and technology access
+* Academic institutions for research and development
+* Private companies aligned with our mission of sustainable technology
+* Community organizations implementing technology solutions
 
-Suivez ces étapes :
+### 🇪🇸
+Buscamos alianzas estratégicas con:
+* Entidades gubernamentales enfocadas en desarrollo rural
+* ONGs trabajando en alfabetización digital y acceso a tecnología
+* Instituciones académicas para investigación y desarrollo
+* Empresas privadas alineadas con nuestra misión de tecnología sostenible
+* Organizaciones comunitarias implementando soluciones tecnológicas
 
-```sh
-# 1. Clonez le dépôt.
-git clone https://github.com/IR-Productions/nom-du-depot.git # Remplacez par la bonne URL
+### 🇫🇷
+Nous recherchons des partenariats stratégiques avec :
+* Entités gouvernementales axées sur le développement rural
+* ONG travaillant sur l'alphabétisation numérique et l'accès à la technologie
+* Institutions académiques pour la recherche et le développement
+* Entreprises privées alignées sur notre mission de technologie durable
+* Organisations communautaires mettant en œuvre des solutions technologiques
 
-# 2. Accédez au répertoire du projet.
-cd nom-du-depot
+---
 
-# 3. Installez les dépendances.
-npm install
+## 🛠 Technology Stack
 
-# 4. Lancez le serveur de développement.
-npm run dev
-```
-Cela lancera un serveur local avec rechargement automatique pour un aperçu instantané de vos modifications.
+### 🇬🇧
+* **AI/ML Frameworks**: PyTorch, TensorFlow, Hugging Face
+* **IoT Systems**: RISC-V, RTOS, ESP32, LoRaWAN
+* **HPC Solutions**: AMD Instinct, ROCm, CUDA
+* **Web Technologies**: React, TypeScript, Vite, Tailwind CSS
+* **Open Source Ecosystems**: Linux, PostgreSQL, Supabase
 
-### Contact et Collaboration
+### 🇪🇸
+* **Frameworks de IA/ML**: PyTorch, TensorFlow, Hugging Face
+* **Sistemas IoT**: RISC-V, RTOS, ESP32, LoRaWAN
+* **Soluciones HPC**: AMD Instinct, ROCm, CUDA
+* **Tecnologías Web**: React, TypeScript, Vite, Tailwind CSS
+* **Ecosistemas Open Source**: Linux, PostgreSQL, Supabase
 
-Nous construisons un écosystème d'innovation et recherchons activement des alliances stratégiques. Si votre mission s'aligne sur la nôtre, connectons-nous.
+### 🇫🇷
+* **Frameworks IA/ML** : PyTorch, TensorFlow, Hugging Face
+* **Systèmes IoT** : RISC-V, RTOS, ESP32, LoRaWAN
+* **Solutions HPC** : AMD Instinct, ROCm, CUDA
+* **Technologies Web** : React, TypeScript, Vite, Tailwind CSS
+* **Écosystèmes Open Source** : Linux, PostgreSQL, Supabase
 
-*   **Fondateur :** Lukas Moyano
-*   **LinkedIn** : [linkedin.com/in/lukasmoyano](https://www.linkedin.com/in/lukasmoyano)
-*   **Email** : [lukasmoyano@ir-productions.com](mailto:lukasmoyano@ir-productions.com)
-*   **WhatsApp :** [+57 319 7919742](https://wa.me/573197919742)
-```
+---
+
+## 📫 Contact Information
+
+### 🇬🇧
+- **Company Website**: [www.ir-productions.com](https://www.ir-productions.com)
+- **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/company/ir-productions)
+- **GitHub**: [github.com/IR-Productions](https://github.com/IR-Productions)
+- **Email**: [info@ir-productions.com](mailto:info@ir-productions.com)
+- **Phone**: [+57] 319 7919742
+
+### 🇪🇸
+- **Sitio Web**: [www.ir-productions.com](https://www.ir-productions.com)
+- **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/company/ir-productions)
+- **GitHub**: [github.com/IR-Productions](https://github.com/IR-Productions)
+- **Correo**: [info@ir-productions.com](mailto:info@ir-productions.com)
+- **Teléfono**: [+57] 319 7919742
+
+### 🇫🇷
+- **Site Web**: [www.ir-productions.com](https://www.ir-productions.com)
+- **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/company/ir-productions)
+- **GitHub**: [github.com/IR-Productions](https://github.com/IR-Productions)
+- **Email**: [info@ir-productions.com](mailto:info@ir-productions.com)
+- **Téléphone**: [+57] 319 7919742
+
+---
+
+## ⚡ Our Philosophy
+
+### 🇬🇧
+We believe the most powerful technology is the one that seamlessly blends with human creativity and natural wisdom, often inspired by rediscovering ancestral knowledge and applying it with a modern, artistic lens! Our approach combines technical excellence with creative problem-solving to deliver solutions that truly make a difference.
+
+### 🇪🇸
+Creemos que la tecnología más poderosa es aquella que se fusiona armoniosamente con la creatividad humana y la sabiduría natural, ¡a menudo inspirada en el redescubrimiento del conocimiento ancestral y aplicándolo con una lente artística y moderna! Nuestro enfoque combina excelencia técnica con resolución creativa de problemas para entregar soluciones que realmente marcan la diferencia.
+
+### 🇫🇷
+Nous croyons que la technologie la plus puissante est celle qui s'intègre harmonieusement à la créativité humaine et à la sagesse naturelle, souvent inspirée par la redécouverte des savoirs ancestraux et appliquée avec une lentille artistique et moderne ! Notre approche combine excellence technique et résolution créative de problèmes pour offrir des solutions qui font vraiment une différence.
+
+---
+
+## 🌐 Deployed Solution
+
+This project is deployed at: [https://ir-productions.com](https://ir-productions.com)
+
+For custom domain configuration instructions, please refer to our [documentation](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide). 
+
+---
+
+© 2025 _-IR-_ Productions | All Rights Reserved | Fusagasugá, Cundinamarca, Colombia 🇨🇴
