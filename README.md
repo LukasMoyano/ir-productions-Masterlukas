@@ -8,10 +8,12 @@ _ _-IR-_ _ Productions is a forward-thinking technology company specializing in 
 
 ## ⚡ Our Philosophy
 
-We believe the most powerful technology is the one that seamlessly blends with human creativity and natural wisdom, often inspired by rediscovering ancestral knowledge and applying it with a modern, artistic lens! Our approach combines technical excellence with creative problem-solving to deliver solutions that truly make a difference.
 
 ### 🇪🇸
 Creemos que la tecnología más poderosa es aquella que se fusiona armoniosamente con la creatividad humana y la sabiduría natural, ¡a menudo inspirada en el redescubrimiento del conocimiento ancestral y aplicándolo con una lente artística y moderna! Nuestro enfoque combina excelencia técnica con resolución creativa de problemas para entregar soluciones que realmente marcan la diferencia.
+
+### 🇬🇧
+We believe the most powerful technology is the one that seamlessly blends with human creativity and natural wisdom, often inspired by rediscovering ancestral knowledge and applying it with a modern, artistic lens! Our approach combines technical excellence with creative problem-solving to deliver solutions that truly make a difference.
 
 ### 🇫🇷
 Nous croyons que la technologie la plus puissante est celle qui s'intègre harmonieusement à la créativité humaine et à la sagesse naturelle, souvent inspirée par la redécouverte des savoirs ancestraux et appliquée avec une lentille artistique et moderne ! Notre approche combine excellence technique et résolution créative de problèmes pour offrir des solutions qui font vraiment une différence.
