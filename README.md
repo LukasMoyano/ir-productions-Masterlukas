@@ -1,6 +1,5 @@
 # _ _-IR-_ _ Productions 
 
-# __-IR-__ Productions 
 
 ## 🌐 Integral Digital Solutions for a Connected World
 
