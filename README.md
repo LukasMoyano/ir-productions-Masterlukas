@@ -140,10 +140,10 @@ Nous recherchons des partenariats stratégiques avec :
 ## 📫 Contact Information
 
 ### 🇬🇧
-- **Company Website**: [https://ir-productions-online.netlify.app](https://www.ir-productions.com)
-- **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/in/masterlukasmoyano)
-- **GitHub**: [github.com/IR-Productions](https://github.com/IR-Productions)
-- **Email**: [info@ir-productions.com](mailto:info@ir-productions.com)
+- **Company Website**: [https://www.ir-productions.com](https://ir-productions-online.netlify.app)
+- **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/in/masterlukasmoyano/)
+- **GitHub**: [github.com/IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
+- **Email**: [info@ir-productions.com](mlukasmoyanomorales@gmail.com)
 - **Phone**: [+57] 319 7919742
 
 ### 🇪🇸
