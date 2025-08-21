@@ -128,6 +128,7 @@ Nous recherchons des partenariats stratégiques avec :
 * **Tecnologías Web**: React, TypeScript, Vite, Tailwind CSS
 * **Ecosistemas Open Source**: Linux, PostgreSQL, Supabase
 
+### 🇫🇷
 * **Frameworks IA/ML** : PyTorch, TensorFlow, Hugging Face
 * **Systèmes IoT** : RISC-V, RTOS, ESP32, LoRaWAN
 * **Solutions HPC** : AMD Instinct, ROCm, CUDA
@@ -139,8 +140,8 @@ Nous recherchons des partenariats stratégiques avec :
 ## 📫 Contact Information
 
 ### 🇬🇧
-- **Company Website**: [www.ir-productions.com](https://www.ir-productions.com)
-- **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/company/ir-productions)
+- **Company Website**: [https://ir-productions-online.netlify.app](https://www.ir-productions.com)
+- **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/in/masterlukasmoyano)
 - **GitHub**: [github.com/IR-Productions](https://github.com/IR-Productions)
 - **Email**: [info@ir-productions.com](mailto:info@ir-productions.com)
 - **Phone**: [+57] 319 7919742
