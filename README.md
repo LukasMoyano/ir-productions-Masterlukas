@@ -112,6 +112,10 @@ npm install
 npm run dev```
 This will start a local server with auto-reloading for an instant preview of your changes.
 
+
+
+
+
 ### Contact & Collaboration
 
 We are building an ecosystem of innovation and are actively seeking strategic alliances. If your mission aligns with ours, let's connect.
@@ -156,6 +160,7 @@ Si vous faites partie de l'équipe de _-IR-_ Productions ou êtes un collaborate
 
 Suivez ces étapes :
 
+
 ```sh
 # 1. Clonez le dépôt.
 git clone https://github.com/IR-Productions/nom-du-depot.git # Remplacez par la bonne URL
@@ -169,6 +174,7 @@ npm install
 # 4. Lancez le serveur de développement.
 npm run dev
 ```
+
 Cela lancera un serveur local avec rechargement automatique pour un aperçu instantané de vos modifications.
 
 ### Contact et Collaboration
