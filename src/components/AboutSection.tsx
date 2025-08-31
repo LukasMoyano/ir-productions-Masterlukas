@@ -12,7 +12,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
     es: {
       title: "Quiénes Somos",
       subtitle: "Artista Visual • Pedagogo • Tecnólogo",
-      description: "Lukas Moyano y -IR- Productions transformamos el agro y las organizaciones a través de la fusión Arte+Ciencia+Tecnología, con un enfoque en innovación accesible, sostenibilidad y la sabiduría ancestral aplicada al mundo moderno.",
+      description: "Lukas Moyano y _-IR-_ Productions transformamos el agro y las organizaciones a través de la fusión Arte+Ciencia+Tecnología, con un enfoque en innovación accesible, sostenibilidad y la sabiduría ancestral aplicada al mundo moderno.",
       mission: "Nuestra misión es democratizar la tecnología con alma creativa, respetando el conocimiento ancestral mientras construimos el futuro digital que Colombia necesita.",
       pillars: [
         {
@@ -41,7 +41,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
     en: {
       title: "Who We Are",
       subtitle: "Visual Artist • Educator • Technologist",
-      description: "Lukas Moyano and -IR- Productions transform agriculture and organizations through the fusion of Art+Science+Technology, focusing on accessible innovation, sustainability, and ancestral wisdom applied to the modern world.",
+      description: "Lukas Moyano and _-IR-_ Productions transform agriculture and organizations through the fusion of Art+Science+Technology, focusing on accessible innovation, sustainability, and ancestral wisdom applied to the modern world.",
       mission: "Our mission is to democratise technology with creative soul, respecting ancestral knowledge whilst building the digital future Colombia needs.",
       pillars: [
         {

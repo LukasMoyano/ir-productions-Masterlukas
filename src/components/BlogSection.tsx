@@ -11,13 +11,13 @@ const BlogSection = ({ language }: BlogSectionProps) => {
   const content = {
     es: {
       title: "Explora el Futuro del Agro y la Tecnología",
-      subtitle: "Conocimiento curado por IA para inspirarte",
-      description: "Próximamente: artículos seleccionados por IA sobre tendencias en Agro-Tech, Innovación, IA y Arte Digital, curados para inspirar y mantenerte al día. ¡Mantente conectado!",
+      subtitle: "Blogg de Noticias sobre el Agro, tecnologia y sus aplicaciones",
+      description: "Próximamente: artículos cuidadosamente seleccionados sobre tendencias en Agro-Tech, Innovación, IA y Arte Digital, curados para inspirar y mantenerte al día. ¡Mantente conectado!",
       features: [
         {
           icon: Brain,
           title: "IA Curativa",
-          description: "Selección inteligente de contenido relevante"
+          description: "Blogg NEWS"
         },
         {
           icon: Rss,
@@ -34,9 +34,9 @@ const BlogSection = ({ language }: BlogSectionProps) => {
       comingSoon: "Próximamente"
     },
     en: {
-      title: "Explore the Future of Agriculture and Technology",
-      subtitle: "AI-curated knowledge to inspire you",
-      description: "Coming soon: AI-selected articles on Agro-Tech trends, Innovation, AI and Digital Art, curated to inspire and keep you up to date. Stay connected!",
+      title: "Explore the Future of Agriculture and Technology"
+      subtitle: "News Blog about Agriculture, Technology, and its Applications",
+      description: "Coming soon: Articles on trends in Agro-Tech, Innovation, AI, and Digital Art, curated to inspire and keep you up-to-date. Stay connected!",
       features: [
         {
           icon: Brain,

@@ -29,7 +29,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
         github: "GitHub",
         brochure: "Descargar Brochure"
       },
-      location: "Arbeláez, Cundinamarca, Colombia",
+      location: "Fusagasugá, Cundinamarca, Colombia",
       quickContact: "Contacto Rápido",
       social: "Síguenos",
       cta: "Iniciar Conversación"
@@ -82,8 +82,8 @@ const ContactSection = ({ language }: ContactSectionProps) => {
     {
       icon: Github,
       label: text.contact.github,
-      value: "-IR- Productions",
-      link: "https://github.com/ir-productions",
+      value: "_-IR-_ Productions",
+      link: "https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md",
       color: "text-secondary",
       bg: "bg-secondary/10"
     }
@@ -188,7 +188,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
             <Button 
               size="lg" 
               className="w-full glow-red group"
-              onClick={() => window.open('https://wa.me/57XXXXXXXXX', '_blank')}
+              onClick={() => window.open('https://wa.me/573197919742', '_blank')}
             >
               {text.cta}
               <MessageSquare className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -209,7 +209,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
                   Lukas Moyano
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  -IR- Productions
+                  _-IR-_ Productions
                 </p>
               </div>
             </div>
@@ -227,7 +227,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
               <div className="flex space-x-2">
                 {[
                   { icon: Linkedin, link: "https://linkedin.com/in/lukasmoyano" },
-                  { icon: Github, link: "https://github.com/ir-productions" },
+                  { icon: Github, link: "https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md" },
                   { icon: Mail, link: "mailto:lukas@ir-productions.com" }
                 ].map((social, index) => (
                   <Button
