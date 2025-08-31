@@ -58,8 +58,8 @@ const ContactSection = ({ language }: ContactSectionProps) => {
     {
       icon: MessageSquare,
       label: text.contact.whatsapp,
-      value: "+57 XXX XXX XXXX",
-      link: "https://wa.me/57XXXXXXXXX",
+      value: "+57 319 791 9742",
+      link: "https://wa.me/573197919742",
       color: "text-green-500",
       bg: "bg-green-500/10"
     },
