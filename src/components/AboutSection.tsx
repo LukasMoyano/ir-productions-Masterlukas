@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Palette, Cpu, Lightbulb, Users } from 'lucide-react';
-import lukasPortrait from '@/assets/lukas-portrait.jpg';
+import lukasPortrait from '@/assets/ProfilePic2025_0002.png';
 
 interface AboutSectionProps {
   language: 'es' | 'en';
