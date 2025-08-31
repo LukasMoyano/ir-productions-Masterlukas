@@ -125,16 +125,15 @@ const BlogSection = ({ language }: BlogSectionProps) => {
               {/* Description */}
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 {language === 'es'
-                  ? 'Un espacio dedicado donde la inteligencia artificial selecciona y presenta los avances más relevantes en agricultura tecnológica, innovación sostenible y arte digital.'
-                  : 'A dedicated space where artificial intelligence selects and presents the most relevant advances in technological agriculture, sustainable innovation and digital art.'
+                  ? 'Un espacio dedicado donde se seleccionan y presentan los avances más relevantes en agricultura, tecnológia, innovación, sostenibilidad y noticias del agro en general.'
+                  : 'A dedicated space where the most relevant advances in agriculture, technology, innovation, sustainability, and general agricultural news are selected and presented.'
                 }
               </p>
 
               {/* Topics Preview */}
               <div className="flex flex-wrap gap-2 justify-center mb-8">
                 {[
-                  'Agro-Tech', 'IA', 'IoT', 'Sostenibilidad', 
-                  'Arte Digital', 'Innovación', 'Open Source'
+                  'Agro-Tech', 'IA', 'IoT', 'Sostenibilidad', 'Innovación', 'Open Source'
                 ].map((topic, index) => (
                   <Badge 
                     key={index} 
