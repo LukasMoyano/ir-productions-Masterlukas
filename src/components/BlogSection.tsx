@@ -12,11 +12,11 @@ const BlogSection = ({ language }: BlogSectionProps) => {
     es: {
       title: "Explora el Futuro del Agro y la Tecnología",
       subtitle: "Blogg de Noticias sobre el Agro, tecnologia y sus aplicaciones",
-      description: "Próximamente: artículos cuidadosamente seleccionados sobre tendencias en Agro-Tech, Innovación, IA y Arte Digital, curados para inspirar y mantenerte al día. ¡Mantente conectado!",
+      description: "Próximamente: artículos cuidadosamente seleccionados sobre tendencias en Agro-Tech e Innovación, curados para inspirar y mantenerte al día. ¡Mantente conectado!",
       features: [
         {
           icon: Brain,
-          title: "IA Curativa",
+          title: "Blogg NEWS",
           description: "Blogg NEWS"
         },
         {
@@ -36,12 +36,12 @@ const BlogSection = ({ language }: BlogSectionProps) => {
     en: {
       title: "Explore the Future of Agriculture and Technology",
       subtitle: "News Blog about Agriculture, Technology, and its Applications",
-      description: "Coming soon: Articles on trends in Agro-Tech, Innovation, AI, and Digital Art, curated to inspire and keep you up-to-date. Stay connected!",
+      description: "Coming soon: Articles on trends in Agro-Tech and Innovation, curated to inspire and keep you up-to-date. Stay connected!",
       features: [
         {
           icon: Brain,
-          title: "AI Curation",
-          description: "Intelligent selection of relevant content"
+          title: "Blogg NEWS",
+          description: "Blogg NEWS"
         },
         {
           icon: Rss,
