@@ -34,7 +34,7 @@ const BlogSection = ({ language }: BlogSectionProps) => {
       comingSoon: "Próximamente"
     },
     en: {
-      title: "Explore the Future of Agriculture and Technology"
+      title: "Explore the Future of Agriculture and Technology",
       subtitle: "News Blog about Agriculture, Technology, and its Applications",
       description: "Coming soon: Articles on trends in Agro-Tech, Innovation, AI, and Digital Art, curated to inspire and keep you up-to-date. Stay connected!",
       features: [
@@ -117,8 +117,8 @@ const BlogSection = ({ language }: BlogSectionProps) => {
               {/* Title */}
               <h3 className="text-3xl font-bold mb-6 gradient-text-gold">
                 {language === 'es' 
-                  ? 'Centro de Conocimiento -IR-' 
-                  : '-IR- Knowledge Centre'
+                  ? 'Centro de Conocimiento _-IR-_' 
+                  : '_-IR-_ Knowledge Centre'
                 }
               </h3>
 
