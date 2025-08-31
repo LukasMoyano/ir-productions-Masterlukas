@@ -9,7 +9,11 @@ interface HeroSectionProps {
 const HeroSection = ({ language }: HeroSectionProps) => {
   const content = {
     es: {
+<<<<<<< HEAD
       title: "-IR- Productions",
+=======
+      title: "_-IR-_ Productions",
+>>>>>>> 7eb142d (update20250831)
       subtitle: "Fusionando Arte, Ciencia y Tecnología",
       description: "Transformamos el Agro y las Empresas del Futuro con soluciones digitales integrales que conectan sabiduría ancestral con innovación de vanguardia.",
       cta1: "Talleres Agro",
@@ -18,7 +22,11 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       impact: "Alineados con PDM de Cundinamarca • PDD Cundinamarca • ODS"
     },
     en: {
+<<<<<<< HEAD
       title: "-IR- Productions",
+=======
+      title: "_-IR-_ Productions",
+>>>>>>> 7eb142d (update20250831)
       subtitle: "Fusing Art, Science and Technology",  
       description: "We transform Agriculture and Future Businesses with integral digital solutions that connect ancestral wisdom with cutting-edge innovation.",
       cta1: "Explore Agro Workshops",
