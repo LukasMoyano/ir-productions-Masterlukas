@@ -164,7 +164,7 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
             </div>
             <div className="text-left">
               <h3 className="text-xl font-bold text-foreground mb-1">
-                {language === 'es' ? 'Arbeláez, Cundinamarca' : 'Arbeláez, Cundinamarca'}
+                {language === 'es' ? 'Fusagasugá, Cundinamarca' : 'Fusagasugá, Cundinamarca'}
               </h3>
               <p className="text-muted-foreground">
                 {language === 'es' 
