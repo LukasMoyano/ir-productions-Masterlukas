@@ -38,11 +38,10 @@ const ImpactODSSection = ({ language }: ImpactODSSectionProps) => {
       alignment: {
         title: "Alineación con Políticas Públicas",
         policies: [
-          "PDM Arbeláez 2024-2027",
-          "PDD Cundinamarca 2024-2027", 
-          "Plan Nacional de Desarrollo",
+          "Política MinTIC",
           "Estrategia Digital Nacional",
-          "Política MinTIC"
+          "Plan Nacional de Desarrollo",
+          "PDD Cundinamarca 2024-2027", 
         ]
       }
     },
@@ -76,11 +75,10 @@ const ImpactODSSection = ({ language }: ImpactODSSectionProps) => {
       alignment: {
         title: "Alignment with Public Policies",
         policies: [
-          "PDM Arbeláez 2024-2027",
-          "PDD Cundinamarca 2024-2027", 
-          "National Development Plan",
+          "MinTIC Policy",
           "National Digital Strategy",
-          "MinTIC Policy"
+          "National Development Plan",
+          "PDD Cundinamarca 2024-2027", 
         ]
       }
     }
