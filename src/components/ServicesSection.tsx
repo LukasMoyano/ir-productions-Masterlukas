@@ -1,25 +1,39 @@
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Users, Server, Bot } from 'lucide-react';
+import { ArrowRight, Users, Server, Bot, Presentation } from 'lucide-react';
 import agroTechImage from '@/assets/agro-tech-farmers.jpg';
 import hpcWorkstationImage from '@/assets/hpc-workstation.jpg';
 import iotRobotImage from '@/assets/iot-robot.jpg';
+import presentationImage from '@/assets/hero-background.jpg'; // Using a placeholder image
+
+interface Service {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  benefits: string[];
+  image: string;
+  badge: string;
+  color: string;
+  target?: string;
+  link?: string;
+}
 
 interface ServicesSectionProps {
   language: 'es' | 'en';
 }
 
 const ServicesSection = ({ language }: ServicesSectionProps) => {
-  const content = {
+  const content: { [key: string]: { title: string; subtitle: string; services: Service[]; cta: string } } = {
     es: {
       title: "Nuestras Líneas de Solución",
       subtitle: "Tres pilares tecnológicos para transformar tu futuro",
-        services: [
+      services: [
         {
           icon: Users,
           title: "Talleres Agro-Innovación Integral",
-          description: "Capacitación B2G/B2B que democratiza la tecnología agrícola, fusionando sabiduría ancestral con herramientas digitales modernas. Alineados con PDM Arbeláez y PDD Cundinamarca.",
+          description: "Capacitación B2G/B2B que democratiza la tecnología agrícola, fusionando sabiduría ancestral con herramientas digitales modernas.",
           benefits: ["Capacitación institucional", "Impacto social rural", "Alineación políticas públicas"],
           image: agroTechImage,
           badge: "B2G/B2B",
@@ -29,7 +43,7 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
         {
           icon: Server,
           title: "Workstations HPC/IA Personalizadas",
-          description: "Consultoría, ensamblaje y soporte de estaciones AMD/ARM de alto rendimiento para empresas, academia y salud. Enfoque en ROI, rendimiento y control total.",
+          description: "Consultoría, ensamblaje y soporte de estaciones AMD/ARM de alto rendimiento para empresas, academia y salud.",
           benefits: ["AMD/ARM premium", "Consultoría técnica", "Open Source"],
           image: hpcWorkstationImage,
           badge: "Hardware",
@@ -39,12 +53,23 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
         {
           icon: Bot,
           title: "Kit Agro-IoT 'CultivaTech ColombIA'",
-          description: "Robot móvil autónomo con sensores, cámara IA y plataforma web/móvil local para monitoreo agrícola y apícola en tiempo real. MVP en desarrollo.",
+          description: "Robot móvil autónomo con sensores, cámara IA y plataforma web/móvil local para monitoreo agrícola y apícola en tiempo real.",
           benefits: ["Monitoreo 24/7", "IA local", "Plataforma web"],
           image: iotRobotImage,
           badge: "MVP",
           color: "tech-green",
           target: "Agricultores • Apicultores"
+        },
+        {
+          icon: Presentation,
+          title: "Proyecto Integral para el manejo de residuos de origen electronico y Agricultura Circular",
+          description: "Descubre nuestra visión integral que une Upcycling, IA y Robótica para transformar el futuro del agro y la soberanía tecnológica.",
+          benefits: ["Visión Integral", "Upcycling", "Soberanía Tecnológica"],
+          image: presentationImage,
+          badge: "Presentación",
+          color: "blue-500",
+          target: "Productores • Inversionistas • Aliados",
+          link: "/presentacion-cultivatech"
         }
       ],
       cta: "Descubre Más"
@@ -79,6 +104,17 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           image: iotRobotImage,
           badge: "IoT + AI",
           color: "tech-green"
+        },
+        {
+            icon: Presentation,
+            title: "Future Vision: Circular Agriculture",
+            description: "Discover our integral vision that unites Upcycling, AI, and Robotics to transform the future of agriculture and technological sovereignty.",
+            benefits: ["Integral Vision", "Upcycling", "Tech Sovereignty"],
+            image: presentationImage,
+            badge: "Presentation",
+            color: "blue-500",
+            target: "Producers • Investors • Partners",
+            link: "/presentacion-cultivatech"
         }
       ],
       cta: "Learn More"
@@ -90,7 +126,6 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
   return (
     <section id={language === 'es' ? 'servicios' : 'services'} className="py-20 circuit-pattern">
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-accent border-accent">
             {language === 'es' ? 'Soluciones' : 'Solutions'}
@@ -103,14 +138,12 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {text.services.map((service, index) => (
             <Card 
               key={index} 
-              className="tech-border hover-lift group overflow-hidden relative"
+              className="tech-border hover-lift group overflow-hidden relative flex flex-col"
             >
-              {/* Background Image */}
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={service.image}
@@ -119,14 +152,12 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                 
-                {/* Badge */}
                 <Badge 
                   className={`absolute top-4 left-4 bg-${service.color} text-${service.color}-foreground`}
                 >
                   {service.badge}
                 </Badge>
 
-                {/* Icon */}
                 <div className="absolute bottom-4 right-4 w-12 h-12 bg-background/80 backdrop-blur-sm rounded-xl flex items-center justify-center">
                   <service.icon className={`w-6 h-6 text-${service.color}`} />
                 </div>
@@ -138,19 +169,19 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
                 </CardTitle>
               </CardHeader>
 
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 flex-grow flex flex-col">
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
 
-                {/* Target Market */}
-                <div className="mb-3">
-                  <p className="text-sm text-muted-foreground/80 font-medium">
-                    {service.target}
-                  </p>
-                </div>
+                {service.target && (
+                  <div className="mb-3">
+                    <p className="text-sm text-muted-foreground/80 font-medium">
+                      {service.target}
+                    </p>
+                  </div>
+                )}
 
-                {/* Benefits */}
                 <div className="flex flex-wrap gap-2">
                   {service.benefits.map((benefit, idx) => (
                     <Badge 
@@ -163,23 +194,36 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
                   ))}
                 </div>
 
-                {/* CTA Button */}
-                <Button 
-                  className="w-full group/btn"
-                  variant="outline"
-                >
-                  {text.cta}
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <div className="flex-grow" />
+
+                <div className="mt-auto pt-4">
+                  {service.link ? (
+                    <Link to={service.link} className="w-full">
+                      <Button 
+                        className="w-full group/btn"
+                        variant="outline"
+                      >
+                        {text.cta}
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button 
+                      className="w-full group/btn"
+                      variant="outline"
+                    >
+                      {text.cta}
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  )}
+                </div>
               </CardContent>
 
-              {/* Hover Effect Overlay */}
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 rounded-lg transition-all duration-300 pointer-events-none" />
             </Card>
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-lg text-muted-foreground mb-6">
             {language === 'es' 

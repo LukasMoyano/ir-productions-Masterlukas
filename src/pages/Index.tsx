@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import PhilosophySection from '@/components/PhilosophySection';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
-import SolutionsSection from '@/components/SolutionsSection';
 import BusinessModelSection from '@/components/BusinessModelSection';
 import ProcessSection from '@/components/ProcessSection';
 import ImpactSection from '@/components/ImpactSection';
@@ -27,7 +26,6 @@ const Index = () => {
       <PhilosophySection language={language} />
       <AboutSection language={language} />
       <ServicesSection language={language} />
-      <SolutionsSection />
       <BusinessModelSection language={language} />
       <ProcessSection language={language} />
       <ImpactSection language={language} />
