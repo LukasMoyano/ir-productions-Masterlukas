@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Palette, Cpu, Lightbulb, Users } from 'lucide-react';
-import lukasPortrait from '@/assets/ProfilePic2025_0002.png';
+import lukasPortrait from '@/assets/ProfilePic2025_0001_original.png';
 
 interface AboutSectionProps {
   language: 'es' | 'en';
@@ -76,7 +76,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-accent border-accent">
-            -IR- Productions
+            _-IR-_ Productions
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text-primary">
             {text.title}

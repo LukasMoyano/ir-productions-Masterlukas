@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  MessageSquare, 
-  Mail, 
-  Github, 
-  Linkedin, 
-  Download, 
+import {
+  MessageSquare,
+  Mail,
+  Github,
+  Linkedin,
+  Download,
   MapPin,
   Phone,
   ExternalLink
@@ -40,7 +40,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
       description: "Looking to power up your farm with technology? Need a high-performance AI workstation? Want to explore the future of agricultural monitoring? Contact us for a personalised consultation.",
       contact: {
         whatsapp: "WhatsApp",
-        email: "Email", 
+        email: "Email",
         linkedin: "LinkedIn",
         github: "GitHub",
         brochure: "Download Brochure"
@@ -112,8 +112,8 @@ const ContactSection = ({ language }: ContactSectionProps) => {
           {/* Contact Methods */}
           <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
             {contactMethods.map((method, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="tech-border hover-lift group cursor-pointer"
                 onClick={() => window.open(method.link, '_blank')}
               >
@@ -168,14 +168,14 @@ const ContactSection = ({ language }: ContactSectionProps) => {
                   {text.contact.brochure}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  {language === 'es' 
+                  {language === 'es'
                     ? 'Información completa sobre nuestros servicios'
                     : 'Complete information about our services'
                   }
                 </p>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <Button
+                  variant="outline"
+                  size="sm"
                   className="w-full group/btn"
                 >
                   PDF
@@ -185,8 +185,8 @@ const ContactSection = ({ language }: ContactSectionProps) => {
             </Card>
 
             {/* Main CTA */}
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="w-full glow-red group"
               onClick={() => window.open('https://wa.me/573197919742', '_blank')}
             >

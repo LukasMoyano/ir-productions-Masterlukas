@@ -19,31 +19,31 @@ const HeroSection = ({ language }: HeroSectionProps) => {
     },
     en: {
       title: "_-IR-_ Productions",
-      subtitle: "Fusing Art, Science and Technology",  
+      subtitle: "Fusing Art, Science and Technology",
       description: "We transform Agriculture and Future Businesses with integral digital solutions that connect ancestral wisdom with cutting-edge innovation.",
       cta1: "Explore Agro Workshops",
       cta2: "Discover AI Workstations",
       slogan: "We do what we want, because we love what we do. Funk with us!",
-      impact: "Aligned with PDM Arbeláez • PDD Cundinamarca • SDGs"
+      impact: "Aligned with PDM of Cundinamarca • PDD Cundinamarca • SDGs"
     }
   };
 
   const text = content[language];
 
   return (
-    <section 
+    <section
       id={language === 'es' ? 'inicio' : 'home'}
       className="relative min-h-screen flex items-center justify-center circuit-pattern hero-gradient overflow-hidden"
     >
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-transparent to-background/60" />
-      
+
       {/* Animated Circuit Elements */}
       <div className="absolute top-20 left-10 w-16 h-16 border border-primary/30 rounded-lg animate-pulse-slow" />
       <div className="absolute bottom-32 right-16 w-12 h-12 bg-accent/20 rounded-full animate-float" />
@@ -67,17 +67,17 @@ const HeroSection = ({ language }: HeroSectionProps) => {
 
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-scale-in">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="cta-primary hover-lift group"
             onClick={() => document.getElementById(language === 'es' ? 'servicios' : 'services')?.scrollIntoView({ behavior: 'smooth' })}
           >
             {text.cta1}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          
-          <Button 
-            variant="outline" 
+
+          <Button
+            variant="outline"
             size="lg"
             className="border-accent hover:bg-accent/10 hover:border-accent/70 group"
             onClick={() => document.getElementById(language === 'es' ? 'servicios' : 'services')?.scrollIntoView({ behavior: 'smooth' })}
