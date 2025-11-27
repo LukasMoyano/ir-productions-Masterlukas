@@ -2,140 +2,180 @@ import { Link } from "react-router-dom";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, PieChart, Pie, Cell, Legend } from 'recharts';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Sprout, Layers, Gem, Bot, DollarSign, BarChart as BarChartIcon, Users, PieChart as PieChartIcon, TrendingUp, Scale } from "lucide-react";
+import { ArrowLeft, Sprout, Layers, Gem, BarChart as BarChartIcon, Users, PieChart as PieChartIcon, TrendingUp, Scale, Bot, DollarSign, Mail, Phone } from "lucide-react";
+
+// --- IMAGE IMPORTS ---
+import heroImage from '@/assets/hero-background.jpg';
+import ewasteGlobal from '@/assets/e-waste-assets/GEM 2024 - Figure 3. Headline Figures (2010-2030).png';
+import threePhases from '@/assets/e-waste-assets/GettyImages-2147725500.jpg';
+import robotImage from '@/assets/iot-robot.jpg';
+import educationImage from '@/assets/agro-tech-farmers.jpg';
+import businessModel from '@/assets/e-waste-assets/720x450 SCYCLE article image_0.jpg';
+
 
 // --- FINAL UNIFIED PRESENTATION DATA STRUCTURE ---
 const presentationData = [
+    // Tarjeta 1: Portada
     {
 		icon: Sprout,
-		title: "Cultivatech ColombIA: De Residuos Digitales a Cosechas del Futuro.",
+		title: "Cultivatech ColombIA: De Residuos Digitales a Cosechas del Futuro",
 		subtitle: "_-IR-_Productions: Un Ecosistema Circular que Impulsa la Agricultura Sostenible y la Soberanía Tecnológica en Colombia.",
+        image: heroImage,
+        visualSuggestion: "/* SUGERENCIA VISUAL: Una imagen que fusiona campos verdes exuberantes con elementos tecnológicos (circuitos, robots) de forma orgánica. De fondo, sutil y transparente, un ícono del 'camión de e-waste rodeando el ecuador'. */"
 	},
+    // Tarjeta 2: El Desafío
     {
         icon: BarChartIcon,
-        title: "El Desafío Global y la Oportunidad Colombiana",
+        title: "La Otra Cosecha: Residuos Electrónicos, Un Problema Global, Una Oportunidad Local.",
         content: [
-            "**Problema Global:** Se generan **62 mil millones de kg de e-waste** al año, el equivalente a 1.55 millones de camiones en una fila que daría la vuelta al mundo.",
-            "**Impacto Negativo:** Esto libera anualmente 58 mil kg de mercurio y 45 millones de kg de plásticos peligrosos al ambiente.",
-            "**Oportunidad Local:** En _-IR-_Productions, vemos cada residuo como una **mina urbana** para formalizar, dignificar y tecnificar la labor de las familias recuperadoras en Colombia.",
+            "**Problema Global:** Cada año, el mundo genera una montaña de **62 mil millones de kg** de e-waste, el equivalente a 1.55 millones de camiones de 40 toneladas en una fila que daría la vuelta al ecuador.",
+            "**Desafío Nacional (Colombia 2022):** Colombia generó **388,000 toneladas** de e-waste, pero solo un alarmante **1%** fue recolectado y gestionado formalmente.",
+            "**Impacto Negativo:** Esta gestión deficiente libera **58,000 kg de mercurio** y **45 millones de kg de plásticos tóxicos** al ambiente CADA AÑO, afectando nuestra salud y ecosistemas.",
+            "**Nuestra Visión:** Vemos cada residuo como una **mina urbana**, una oportunidad para formalizar, dignificar y tecnificar la labor de los recuperadores."
         ],
         chartData: {
-            type: 'bar',
+            type: 'pie',
             data: [
-                { name: 'Generado Globalmente', value: 62, fill: '#dc2626' },
-                { name: 'Reciclado Formalmente', value: 13.8, fill: '#16a34a' },
+                { name: 'No Recolectado Formalmente en Colombia (%)', value: 99, fill: '#dc2626' },
+                { name: 'Recolectado Formalmente en Colombia (%)', value: 1, fill: '#16a34a' },
             ],
-            source: "Global E-waste Monitor 2024"
-        }
+            source: "Datos Colombia (2022) & Global E-waste Monitor 2024"
+        },
+        image: ewasteGlobal,
+        visualSuggestion: "/* SUGERENCIA VISUAL: Gráfico circular prominente mostrando el 1% vs 99%. Íconos de mercurio y plásticos al lado del texto de 'Impacto Negativo'. Imágenes sutiles de la gráfica 'RAEE: Tesoro oculto y peligro ambiental'. */"
     },
+    // Tarjeta 3: Nuestra Solución
     {
 		icon: Layers,
-		title: "Nuestra Solución: Un Ecosistema Circular de Alto Valor",
+		title: "El Modelo _-IR-_Productions: De Residuos a Componentes de Alta Tecnología",
 		content: [
-            "**1. Recuperación Estratégica:** Certificamos y tecnificamos a familias recuperadoras para la recolección formal de residuos.",
-            "**2. Preparación y Clasificación:** Aseguramos la trazabilidad y pureza de los materiales con estándares de calidad.",
-            "**3. Transformación (Upcycling):** Convertimos los residuos en materia prima de alto valor para nuestra propia producción tecnológica.",
+            "Nuestra propuesta es un ecosistema circular que transforma el problema en un motor de desarrollo en 3 fases clave:",
+            "**1. Recuperación Estratégica:** Creamos alianzas y certificamos a familias recuperadoras para la recolección formal, digna y tecnificada de residuos.",
+            "**2. Preparación y Clasificación:** Procesamos y clasificamos los materiales recuperados bajo estándares de calidad para asegurar su trazabilidad y pureza.",
+            "**3. Transformación (Upcycling de Alto Valor):** Convertimos los residuos en materia prima de alto valor. De los **17 mil millones de kg de plásticos** en e-waste global, creamos filamento 3D. De los **31 mil millones de kg de metales**, forjamos los chasis de nuestros robots.",
         ],
+        image: threePhases,
+        visualSuggestion: "/* SUGERENCIA VISUAL: Diagrama de flujo circular simple que ilustre las 3 fases. Dentro de la fase 3, pequeños íconos de una bobina de filamento 3D y el chasis de un robot. */"
 	},
+    // Tarjeta 4: La Mina Urbana
     {
 		icon: Gem,
-		title: "RAEE: La 'Mina Urbana' que Impulsa Nuestra Soberanía",
-        content: ["La recuperación de metales preciosos y estratégicos reduce la dependencia de la minería extractiva y la importación."],
+		title: "La 'Mina Urbana' que Impulsa Nuestra Soberanía",
+        content: [
+            "**Supra-Reciclaje:** Cada residuo electrónico que procesamos es una mina que no necesitamos cavar. Al recuperar metales preciosos como **Oro (Au), Plata (Ag), Paladio (Pd) y Cobre (Cu)**, reducimos la dependencia de la minería extractiva, disminuyendo su enorme impacto ambiental y huella de carbono.",
+            "El valor económico real está en la composición. Cada tonelada procesada es una fuente de ingresos y de materiales estratégicos."
+        ],
         materials: [
             { name: "Oro", symbol: "Au", atomicNumber: 79, atomicMass: "196.97", color: "#D4AF37" },
             { name: "Plata", symbol: "Ag", atomicNumber: 47, atomicMass: "107.87", color: "#C0C0C0" },
             { name: "Paladio", symbol: "Pd", atomicNumber: 46, atomicMass: "106.42", color: "#B1B1B1" },
             { name: "Cobre", symbol: "Cu", atomicNumber: 29, atomicMass: "63.55", color: "#B87333" },
         ],
-	},
-    {
-        icon: Scale,
-        title: "Desglose de 1 Tonelada de E-Waste de Computadoras",
-        content: ["El valor económico real está en la composición. Cada tonelada procesada es una fuente de ingresos y de materiales estratégicos."],
         compositionData: {
             chart: [
                 { name: 'Plásticos', kg: 300, fill: '#3b82f6' },
                 { name: 'Cobre', kg: 80, fill: '#B87333' },
                 { name: 'Hierro', kg: 32, fill: '#4b5563' },
                 { name: 'Aluminio', kg: 8, fill: '#d1d5db' },
-                { name: 'Plomo', kg: 8, fill: '#6b7280' },
                 { name: 'Oro', kg: 0.4, fill: '#D4AF37' },
             ],
             prices: [
-                { name: 'Oro', value: "~$491,323,000" },
-                { name: 'Paladio', value: "~$166,670,000" },
-                { name: 'Plata', value: "~$6,040,000" },
-                { name: 'Cobre', value: "~$25,000" },
-                { name: 'Aluminio', value: "~$4,000" },
-                { name: 'Plomo', value: "~$4,000" },
-                { name: 'Plástico (PET)', value: "~$2,000" },
+                { name: 'Oro', value: "~$491,3M" },
+                { name: 'Paladio', value: "~$166,6M" },
+                { name: 'Plata', value: "~$6M" },
+                { name: 'Cobre', value: "~$25.000" },
+                { name: 'Aluminio', value: "~$4.000" },
             ],
             source: "ResearchGate & sondeos de mercado local (2025)"
-        }
-    },
-    {
-		icon: Bot,
-		title: "El Producto: Kit Agro-IoT 'Cultivatech ColombIA'",
-		content: [
-            "**Hechos en Colombia:** Robots autónomos, robustos y de bajo costo, con chasis de aluminio y piezas impresas en 3D con nuestros materiales reciclados.",
-            "**Tecnología Integrada:** Equipados con sensores de precisión, cámaras IA y conectividad LoRaWAN para monitoreo 24/7.",
-            "**Soberanía Tecnológica:** Reducimos la dependencia de importaciones y controlamos nuestra cadena de producción."
-        ],
+        },
+        visualSuggestion: "/* SUGERENCIA VISUAL: Mostrar la tabla periódica de materiales de forma prominente. El gráfico de desglose por tonelada debe ser claro y central. Usar íconos de lingotes de oro/plata. */"
 	},
+    // Tarjeta 5: El Producto
     {
-		icon: DollarSign,
-		title: "Impacto Real: Rentabilidad para el Agricultor",
-		content: [
-            "Nuestra tecnología permite:",
-            "**Optimización:** Reducción de hasta un 30% en pérdidas de cultivos.",
-            "**Precisión:** Control exacto de condiciones para cultivos de alto valor (ej. hongos).",
-            "**Prevención:** Monitoreo de salud en colmenas para apicultura.",
+        icon: Bot,
+        title: "Cultivatech ColombIA: La Inteligencia Agrícola Nace del Reciclaje",
+        content: [
+            "Con la materia prima que rescatamos, construimos el Kit Agro-IoT 'Cultivatech ColombIA'.",
+            "**Hechos en Colombia:** Robots autónomos, robustos y de bajo costo. Sus chasis provienen del aluminio reciclado y sus piezas son impresas en 3D con nuestro propio filamento.",
+            "**Tecnología Integrada:** Equipados con sensores de precisión, cámaras IA y conectividad LoRaWAN para monitoreo 24/7.",
+            "**Soberanía Tecnológica:** Fomentamos la independencia comercial de Colombia, haciéndonos menos vulnerables a las fluctuaciones del mercado global de componentes.",
+        ],
+        image: robotImage,
+        visualSuggestion: "/* SUGERENCIA VISUAL: Ilustración atractiva del robot, destacando sus componentes reciclados. Una infografía simple (flechas) desde íconos de 'plástico reciclado' y 'aluminio reciclado' apuntando a partes del robot. */"
+    },
+    // Tarjeta 6: El Beneficio
+    {
+        icon: DollarSign,
+        title: "Impacto Real en el Campo: Más Productividad, Más Ingresos",
+        content: [
+            "Nuestra plataforma de monitoreo 24/7 ofrece beneficios cuantificables para diversos cultivos (tradicionales, hongos, apicultura):",
+            "**Resultados (Alpha Testing):** Nuestros prototipos, validados por SENA Tecnoparque, muestran un potencial de aumento en la productividad del **15% al 25%** y una reducción de pérdidas de hasta el **30%**.",
         ],
         chartData: {
-            type: 'pie',
+            type: 'bar',
             data: [
-                { name: 'Reducción de Pérdidas', value: 30, fill: '#16a34a' },
-                { name: 'Costo de Insumos', value: 20, fill: '#f97316' },
+                { name: 'Reducción Pérdidas', value: 30, fill: '#16a34a' },
+                { name: 'Ahorro Insumos', value: 25, fill: '#f97316' },
                 { name: 'Aumento Productividad', value: 25, fill: '#3b82f6' },
             ],
-            source: "Estimaciones basadas en proyectos piloto"
-        }
-	},
+            source: "Estimaciones de Proyectos Piloto y Alpha Testing"
+        },
+        visualSuggestion: "/* SUGERENCIA VISUAL: Gráfico de barras claro con los 3 beneficios. Pequeños íconos para cada tipo de cultivo (maíz, champiñones, colmena). Un símbolo de dólar resaltando la 'Mejora de Ingresos'. */"
+    },
+    // Tarjeta 7: Educación
     {
         icon: Users,
-        title: "Empoderando al Campo: Educación como Pilar",
+        title: "Empoderando al Campo: Conocimiento, Tecnología y Comunidades",
         content: [
-            "**Talleres Tecnológicos Accesibles:** Llevamos formación práctica y adaptada a las comunidades agrícolas y a nuestros socios recuperadores.",
+            "**Talleres Tecnológicos Accesibles:** Llevamos formación práctica y adaptada a las comunidades agrícolas sobre el uso de la plataforma y el mantenimiento de los equipos.",
             "**Integración de Experiencia:** Creamos puentes generacionales de aprendizaje con mentores expertos del sector, como pensionados del SENA.",
-            "**Desarrollo de Capacidades:** Empoderamos a los agricultores para que se conviertan en líderes de la agricultura digital.",
+            "**Desarrollo de Capacidades:** Empoderamos a los agricultores para que se conviertan en líderes de la agricultura digital, promoviendo la soberanía alimentaria.",
         ],
+        image: educationImage,
+        visualSuggestion: "/* SUGERENCIA VISUAL: Imagen de personas (jóvenes, mayores) interactuando con tecnología en un entorno rural. Íconos de 'conocimiento', 'tecnología' y 'comunidad'. */"
     },
+    // Tarjeta 8: Modelo de Negocio
     {
 		icon: PieChartIcon,
-		title: "Un Modelo de Negocio Robusto: Sostenible, Sustentable y Rentable",
+		title: "El Ecosistema _-IR-_Productions: Un Negocio Sólido, Un Futuro Verde",
 		content: [
-            "**Sostenible (Ambiental):** Valorizamos toneladas de residuos y promovemos una Colombia más limpia.",
-            "**Sustentable (Social):** Generamos empleo digno y formal para recuperadores y tecnólogos.",
-            "**Rentable (Económico):** Múltiples flujos de ingreso con costos optimizados gracias al upcycling.",
+            "**Sostenible (Ambiental):** Valorizamos toneladas de residuos y evitamos la minería extractiva, promoviendo una economía circular real.",
+            "**Sustentable (Social):** Generamos empleo digno y formal para familias recuperadoras e impulsamos el desarrollo de tecnólogos locales.",
+            "**Rentable (Económico):** Múltiples flujos de ingreso (venta/arriendo de kits, servicios de datos, venta de filamento 3D) con costos optimizados gracias al upcycling.",
         ],
+        image: businessModel,
+        visualSuggestion: "/* SUGERENCIA VISUAL: Infografía del ciclo virtuoso conectando 'Recuperadores', 'Agricultores', '_-IR-_Productions' y 'Sociedad'. Tres íconos grandes para los pilares con gráficos simples debajo. */"
 	},
+    // Tarjeta 9: Inversión
     {
         icon: TrendingUp,
         title: "Invierta en el Futuro: Un Rendimiento que Cultiva Valor",
         content: [
-            "**Tracción:** Plataforma Alpha certificada por SENA Tecnoparque y prototipos funcionales.",
-            "**Oportunidad:** Buscamos capital semilla para escalar nuestra operación y llegar a 500 agricultores en los próximos 2 años.",
-            "**¿Por qué Invertir?** Mercado masivo, innovación disruptiva (Upcycling + IA + Robótica), impacto medible (económico, social, ambiental) y un equipo apasionado con validación externa.",
-        ]
+            "**Tracción Validada:** Contamos con una plataforma Alpha certificada por SENA Tecnoparque y prototipos funcionales.",
+            "**Oportunidad de Escalamiento:** Buscamos capital semilla para escalar nuestra operación y llevar Cultivatech ColombIA a **1,000 agricultores** en los próximos 2 años.",
+            "**¿Por qué Invertir?** Participe en un negocio con un triple retorno medible: económico, social (empleo, soberanía alimentaria) y ambiental (reducción de e-waste).",
+        ],
+        chartData: {
+            type: 'bar',
+            data: [
+                { name: 'Año 1', value: 250, fill: '#3b82f6' },
+                { name: 'Año 2', value: 1000, fill: '#16a34a' },
+            ],
+            source: "Proyección de Agricultores Impactados"
+        },
+        visualSuggestion: "/* SUGERENCIA VISUAL: Gráfico de proyección de crecimiento mostrando el número de agricultores impactados. Íconos para 'Mercado', 'Innovación', 'Impacto'. */"
     },
+    // Tarjeta 10: Contacto
     {
-        icon: Sprout,
+        icon: Mail,
         title: "Juntos, Sembremos el Cambio y Cosechemos el Éxito",
         content: [
             "Gracias por su tiempo. Contáctenos para transformar un desafío en una oportunidad sin precedentes para Colombia.",
-            "Lukas Moyano M. | CEO, CTO, Founder",
+            "**Lukas Moyano M. | CEO, CTO, Founder**",
             "+57 3197919742 | lukasmoyanomorales@gmail.com",
+            "Web: ir-productions-online.netlify.app",
         ],
+        visualSuggestion: "/* SUGERENCIA VISUAL: Imagen final inspiradora. Diseño limpio para los datos de contacto. Códigos QR para la web y GitHub para fácil acceso. */"
     }
 ];
 
@@ -169,8 +209,14 @@ const CultivatechPresentation = () => {
 					{presentationData.map((slide, index) => (
 						<section key={index}>
 							<Card className="overflow-hidden tech-border bg-card/80 backdrop-blur-sm">
-								<CardHeader>
-                                    <div className="flex items-center mb-4">
+								{slide.image && (
+                                    <div className="relative h-48 md:h-64 overflow-hidden">
+                                        <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/50 to-transparent" />
+                                    </div>
+                                )}
+                                <CardHeader className="text-center">
+                                    <div className="flex items-center justify-center mb-4">
 										<slide.icon className="h-10 w-10 mr-4 text-primary" />
 										<CardTitle className="text-3xl md:text-4xl">{slide.title}</CardTitle>
 									</div>
@@ -178,10 +224,10 @@ const CultivatechPresentation = () => {
 										<p className="text-xl text-muted-foreground -mt-2">{slide.subtitle}</p>
 									)}
                                 </CardHeader>
-								<CardContent className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+								<CardContent className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                                     <div className="space-y-4">
 										{slide.content && slide.content.length > 0 && slide.content.map((item, i) =>
-											<p key={i} className="text-lg text-muted-foreground" dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/- /g, '&bull; ') }} />
+											<p key={i} className="text-lg text-muted-foreground md:text-left text-center" dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/- /g, '&bull; ') }} />
 										)}
                                     </div>
                                     
@@ -190,7 +236,7 @@ const CultivatechPresentation = () => {
                                             <ResponsiveContainer width="100%" height={250}>
                                                 <BarChart data={slide.chartData.data} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
                                                     <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false}/>
-                                                    <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} label={{ value: 'Billon kg', angle: -90, position: 'insideLeft', fill: 'hsl(var(--muted-foreground))' }} />
+                                                    <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
                                                     <Tooltip content={<CustomTooltip />} cursor={{fill: 'hsla(var(--primary) / 0.1)'}}/>
                                                     <Bar dataKey="value" radius={[4, 4, 0, 0]} >
                                                         {slide.chartData.data.map((entry, idx) => <Cell key={`cell-${idx}`} fill={entry.fill} />)}
@@ -204,7 +250,8 @@ const CultivatechPresentation = () => {
                                                     <Pie data={slide.chartData.data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} label>
                                                         {slide.chartData.data.map((entry, idx) => <Cell key={`cell-${idx}`} fill={entry.fill} />)}
                                                     </Pie>
-                                                    <Tooltip content={<CustomTooltip />}/>
+                                                    <Tooltip content={<CustomTooltip />} />
+                                                    <Legend />
                                                 </PieChart>
                                             </ResponsiveContainer>
                                         )}
@@ -236,7 +283,7 @@ const CultivatechPresentation = () => {
                                                     </BarChart>
                                                 </ResponsiveContainer>
                                                 <h4 className="text-center font-bold mt-6 mb-2">Valor Estimado por Kilo (COP)</h4>
-                                                <ul className="text-sm text-center space-y-1">
+                                                <ul className="text-sm text-center space-y-1 text-muted-foreground">
                                                     {slide.compositionData.prices.map(price => <li key={price.name}><strong>{price.name}:</strong> {price.value}</li>)}
                                                 </ul>
                                             </>
