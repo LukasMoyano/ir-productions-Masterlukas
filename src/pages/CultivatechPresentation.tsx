@@ -2,31 +2,36 @@ import { Link } from "react-router-dom";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, PieChart, Pie, Cell, Legend } from 'recharts';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { ArrowLeft, Sprout, Layers, Gem, BarChart as BarChartIcon, Users, PieChart as PieChartIcon, TrendingUp, Scale, Bot, DollarSign, Mail, Phone } from "lucide-react";
 
 // --- IMAGE IMPORTS ---
 import heroImage from '@/assets/hero-background.jpg';
-import ewasteGlobal from '@/assets/e-waste-assets/GEM 2024 - Figure 3. Headline Figures (2010-2030).png';
-import threePhases from '@/assets/e-waste-assets/GettyImages-2147725500.jpg';
-import robotImage from '@/assets/iot-robot.jpg';
 import educationImage from '@/assets/agro-tech-farmers.jpg';
 import businessModel from '@/assets/e-waste-assets/720x450 SCYCLE article image_0.jpg';
+import agriculturaEficienteImage from '../assets/E-Waste_y_la_Necesidad_de_una_Agricultura_Eficiente.png';
+import residuosAltaTecnologiaImage from '../assets/De_Residuos_aComponentes_de_Alta_Tecnología.png';
+import robotImage from '@/assets/iot-robot.jpg';
+import laMinaUrbana from '../assets/La_-MinaUrbana-_.png';
 
 
 // --- FINAL UNIFIED PRESENTATION DATA STRUCTURE ---
-const presentationData = [
-    // Tarjeta 1: Portada
+import bannerPresentacion001 from '../assets/banner_presentacion001.png';
+
+const presentationData = {
+  title: "PRESENTACIÓN DE CULTIVATECH",
+  sections: [
     {
-		icon: Sprout,
-		title: "Cultivatech ColombIA: De Residuos Digitales a Cosechas del Futuro",
-		subtitle: "_-IR-_Productions: Un Ecosistema Circular que Impulsa la Agricultura Sostenible y la Soberanía Tecnológica en Colombia.",
-        image: heroImage,
-        visualSuggestion: "/* SUGERENCIA VISUAL: Una imagen que fusiona campos verdes exuberantes con elementos tecnológicos (circuitos, robots) de forma orgánica. De fondo, sutil y transparente, un ícono del 'camión de e-waste rodeando el ecuador'. */"
-	},
-    // Tarjeta 2: El Desafío
+      id: "cultivatech-vision",
+      title: "Sembrando el Futuro de la Agricultura Sostenible",
+      content: `Cultivatech es una iniciativa de IR Productions que fusiona la innovación tecnológica con la agricultura sostenible. Nuestro objetivo es transformar los desechos electrónicos (e-waste) en recursos valiosos para el campo, creando un ecosistema donde la tecnología y la naturaleza prosperan en armonía.`,
+      image: bannerPresentacion001,
+      imageAlt: "Visión de Cultivatech: Fusión de tecnología y agricultura",
+      imagePosition: 'top'
+    },
     {
-        icon: BarChartIcon,
-        title: "La Otra Cosecha: Residuos Electrónicos, Un Problema Global, Una Oportunidad Local.",
+      id: "problem-statement",
+      title: "El E-Waste y la Necesidad de una Agricultura Eficiente",
         content: [
             "**Problema Global:** Cada año, el mundo genera una montaña de **62 mil millones de kg** de e-waste, el equivalente a 1.55 millones de camiones de 40 toneladas en una fila que daría la vuelta al ecuador.",
             "**Desafío Nacional (Colombia 2022):** Colombia generó **388,000 toneladas** de e-waste, pero solo un alarmante **1%** fue recolectado y gestionado formalmente.",
@@ -41,22 +46,23 @@ const presentationData = [
             ],
             source: "Datos Colombia (2022) & Global E-waste Monitor 2024"
         },
-        image: ewasteGlobal,
+        image: agriculturaEficienteImage,
+        imageFit: 'contain',
         visualSuggestion: "/* SUGERENCIA VISUAL: Gráfico circular prominente mostrando el 1% vs 99%. Íconos de mercurio y plásticos al lado del texto de 'Impacto Negativo'. Imágenes sutiles de la gráfica 'RAEE: Tesoro oculto y peligro ambiental'. */"
     },
     // Tarjeta 3: Nuestra Solución
     {
 		icon: Layers,
-		title: "El Modelo _-IR-_Productions: De Residuos a Componentes de Alta Tecnología",
+		title: "De Residuos a Componentes de Alta Tecnología",
 		content: [
             "Nuestra propuesta es un ecosistema circular que transforma el problema en un motor de desarrollo en 3 fases clave:",
             "**1. Recuperación Estratégica:** Creamos alianzas y certificamos a familias recuperadoras para la recolección formal, digna y tecnificada de residuos.",
             "**2. Preparación y Clasificación:** Procesamos y clasificamos los materiales recuperados bajo estándares de calidad para asegurar su trazabilidad y pureza.",
             "**3. Transformación (Upcycling de Alto Valor):** Convertimos los residuos en materia prima de alto valor. De los **17 mil millones de kg de plásticos** en e-waste global, creamos filamento 3D. De los **31 mil millones de kg de metales**, forjamos los chasis de nuestros robots.",
         ],
-        image: threePhases,
-        visualSuggestion: "/* SUGERENCIA VISUAL: Diagrama de flujo circular simple que ilustre las 3 fases. Dentro de la fase 3, pequeños íconos de una bobina de filamento 3D y el chasis de un robot. */"
-	},
+        		image: residuosAltaTecnologiaImage,
+                imageFit: 'contain',
+                visualSuggestion: "/* SUGERENCIA VISUAL: Diagrama de flujo circular simple que ilustre las 3 fases. Dentro de la fase 3, pequeños íconos de una bobina de filamento 3D y el chasis de un robot. */"	},
     // Tarjeta 4: La Mina Urbana
     {
 		icon: Gem,
@@ -71,24 +77,9 @@ const presentationData = [
             { name: "Paladio", symbol: "Pd", atomicNumber: 46, atomicMass: "106.42", color: "#B1B1B1" },
             { name: "Cobre", symbol: "Cu", atomicNumber: 29, atomicMass: "63.55", color: "#B87333" },
         ],
-        compositionData: {
-            chart: [
-                { name: 'Plásticos', kg: 300, fill: '#3b82f6' },
-                { name: 'Cobre', kg: 80, fill: '#B87333' },
-                { name: 'Hierro', kg: 32, fill: '#4b5563' },
-                { name: 'Aluminio', kg: 8, fill: '#d1d5db' },
-                { name: 'Oro', kg: 0.4, fill: '#D4AF37' },
-            ],
-            prices: [
-                { name: 'Oro', value: "~$491,3M" },
-                { name: 'Paladio', value: "~$166,6M" },
-                { name: 'Plata', value: "~$6M" },
-                { name: 'Cobre', value: "~$25.000" },
-                { name: 'Aluminio', value: "~$4.000" },
-            ],
-            source: "ResearchGate & sondeos de mercado local (2025)"
-        },
-        visualSuggestion: "/* SUGERENCIA VISUAL: Mostrar la tabla periódica de materiales de forma prominente. El gráfico de desglose por tonelada debe ser claro y central. Usar íconos de lingotes de oro/plata. */"
+
+        image: laMinaUrbana,
+        imageFit: 'contain'
 	},
     // Tarjeta 5: El Producto
     {
@@ -101,6 +92,7 @@ const presentationData = [
             "**Soberanía Tecnológica:** Fomentamos la independencia comercial de Colombia, haciéndonos menos vulnerables a las fluctuaciones del mercado global de componentes.",
         ],
         image: robotImage,
+        imageFit: 'contain',
         visualSuggestion: "/* SUGERENCIA VISUAL: Ilustración atractiva del robot, destacando sus componentes reciclados. Una infografía simple (flechas) desde íconos de 'plástico reciclado' y 'aluminio reciclado' apuntando a partes del robot. */"
     },
     // Tarjeta 6: El Beneficio
@@ -132,6 +124,7 @@ const presentationData = [
             "**Desarrollo de Capacidades:** Empoderamos a los agricultores para que se conviertan en líderes de la agricultura digital, promoviendo la soberanía alimentaria.",
         ],
         image: educationImage,
+        imageFit: 'contain',
         visualSuggestion: "/* SUGERENCIA VISUAL: Imagen de personas (jóvenes, mayores) interactuando con tecnología en un entorno rural. Íconos de 'conocimiento', 'tecnología' y 'comunidad'. */"
     },
     // Tarjeta 8: Modelo de Negocio
@@ -144,6 +137,7 @@ const presentationData = [
             "**Rentable (Económico):** Múltiples flujos de ingreso (venta/arriendo de kits, servicios de datos, venta de filamento 3D) con costos optimizados gracias al upcycling.",
         ],
         image: businessModel,
+        imageFit: 'contain',
         visualSuggestion: "/* SUGERENCIA VISUAL: Infografía del ciclo virtuoso conectando 'Recuperadores', 'Agricultores', '_-IR-_Productions' y 'Sociedad'. Tres íconos grandes para los pilares con gráficos simples debajo. */"
 	},
     // Tarjeta 9: Inversión
@@ -177,7 +171,8 @@ const presentationData = [
         ],
         visualSuggestion: "/* SUGERENCIA VISUAL: Imagen final inspiradora. Diseño limpio para los datos de contacto. Códigos QR para la web y GitHub para fácil acceso. */"
     }
-];
+  ]
+};
 
 const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
@@ -206,18 +201,18 @@ const CultivatechPresentation = () => {
 			</header>
 			<main className="container mx-auto p-4 md:p-8">
 				<article className="space-y-16">
-					{presentationData.map((slide, index) => (
+					{presentationData.sections.map((slide, index) => (
 						<section key={index}>
 							<Card className="overflow-hidden tech-border bg-card/80 backdrop-blur-sm">
 								{slide.image && (
-                                    <div className="relative h-48 md:h-64 overflow-hidden">
-                                        <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                                    <div className="relative h-[60vh] overflow-hidden">
+                                        <img src={slide.image} alt={slide.imageAlt || slide.title} className={cn("w-full h-full", `object-${slide.imageFit || 'contain'}`, slide.imagePosition && `object-${slide.imagePosition}`)} />
                                         <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/50 to-transparent" />
                                     </div>
                                 )}
                                 <CardHeader className="text-center">
                                     <div className="flex items-center justify-center mb-4">
-										<slide.icon className="h-10 w-10 mr-4 text-primary" />
+										{slide.icon && <slide.icon className="h-10 w-10 mr-4 text-primary" />}
 										<CardTitle className="text-3xl md:text-4xl">{slide.title}</CardTitle>
 									</div>
 									{slide.subtitle && (
@@ -226,9 +221,14 @@ const CultivatechPresentation = () => {
                                 </CardHeader>
 								<CardContent className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                                     <div className="space-y-4">
-										{slide.content && slide.content.length > 0 && slide.content.map((item, i) =>
-											<p key={i} className="text-lg text-muted-foreground md:text-left text-center" dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/- /g, '&bull; ') }} />
-										)}
+                                        {Array.isArray(slide.content)
+                                            ? slide.content.map((item, i) => (
+                                                <p key={i} className="text-lg text-muted-foreground md:text-left text-center" dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/- /g, '&bull; ') }} />
+                                            ))
+                                            : slide.content && (
+                                                <p className="text-lg text-muted-foreground md:text-left text-center" dangerouslySetInnerHTML={{ __html: slide.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/- /g, '&bull; ') }} />
+                                            )
+                                        }
                                     </div>
                                     
                                     <div className="not-prose">
