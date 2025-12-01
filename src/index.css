@@ -1,10 +1,21 @@
+/* Importación de las directivas de Tailwind CSS.
+   Estas líneas son esenciales para que Tailwind funcione.
+   - @tailwind base: Inyecta los estilos base de Tailwind (como un reseteo de CSS moderno).
+   - @tailwind components: Inyecta las clases de componentes de Tailwind.
+   - @tailwind utilities: Inyecta las clases de utilidad de Tailwind (como `p-4`, `flex`, `text-center`, etc.).
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* -IR- Productions Design System - Arte, Ciencia, Tecnología */
 
+/* La directiva `@layer base` se usa para agrupar y organizar estilos personalizados.
+   Los estilos en esta capa tienen una baja especificidad, lo que permite que sean fácilmente sobrescritos por utilidades de Tailwind. */
 @layer base {
+  /* `:root` define variables CSS (custom properties) globales para el tema claro (por defecto).
+     Estas variables definen la paleta de colores principal, radios de borde, etc.
+     Tailwind está configurado para usar estas variables, permitiendo clases como `bg-background` o `text-primary`. */
   :root {
     /* Base colors - Inspired by -IR- logo */
     --background: 0 0% 8%;  /* Deep black */
@@ -87,6 +98,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* La clase `.dark` se aplica generalmente al elemento <html> o <body> para activar el modo oscuro.
+     Cuando está activa, estas variables CSS sobrescriben las definidas en `:root`,
+     cambiando la paleta de colores de toda la aplicación al tema oscuro. */
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -127,15 +141,22 @@
 }
 
 @layer base {
+  /* Selector universal (*) para aplicar un estilo base a TODOS los elementos.
+     Aquí se establece que el color del borde por defecto será el definido en la variable `--border`. */
   * {
     @apply border-border;
   }
 
+  /* Estilos base para el `<body>` de la aplicación.
+     - `bg-background`: Aplica el color de fondo principal.
+     - `text-foreground`: Aplica el color de texto principal.
+     - `font-sans`: Establece la fuente por defecto a la familia sans-serif configurada en Tailwind. */
   body {
     @apply bg-background text-foreground font-sans;
   }
 }
 
+/* La capa `@layer components` es para definir clases de componentes personalizados más complejos. */
 @layer components {
   /* -IR- Professional Component Styles - UX Optimized */
   .hero-gradient {
@@ -143,6 +164,7 @@
     position: relative;
   }
   
+  /* Pseudoelemento para añadir un efecto de gradiente radial sutil sobre el fondo del héroe. */
   .hero-gradient::before {
     content: '';
     position: absolute;
@@ -152,11 +174,13 @@
     pointer-events: none;
   }
   
+  /* Clase para crear un fondo con un patrón de "circuito impreso". */
   .circuit-pattern {
     position: relative;
     overflow: hidden;
   }
   
+  /* Pseudoelemento que genera el patrón visual del circuito usando gradientes radiales y lineales. */
   .circuit-pattern::before {
     content: '';
     position: absolute;
@@ -175,6 +199,7 @@
     animation: circuit-drift 20s linear infinite;
   }
   
+  /* Animación que mueve lentamente el patrón de circuito para darle un efecto dinámico. */
   @keyframes circuit-drift {
     0% { transform: translate(0, 0); }
     100% { transform: translate(50px, 50px); }
@@ -192,6 +217,7 @@
     box-shadow: var(--shadow-tech);
   }
   
+  /* Clases para crear texto con un fondo de gradiente. */
   .gradient-text-primary {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -206,6 +232,7 @@
     -webkit-text-fill-color: transparent;
   }
   
+  /* Clases para animaciones reutilizables. */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -214,6 +241,8 @@
     animation: pulse-slow 4s ease-in-out infinite;
   }
   
+  /* Estilo para un borde con efecto de "cristal" o "vidrio esmerilado".
+     Usa un fondo con gradiente y `backdrop-filter` para el efecto blur. */
   .tech-border {
     border: 1px solid var(--border);
     background: var(--gradient-surface);
@@ -230,7 +259,7 @@
     box-shadow: var(--shadow-red);
   }
   
-  /* Professional CTA Button */
+  /* Estilo para un botón de "Llamada a la Acción" (Call to Action) principal. */
   .cta-primary {
     background: var(--gradient-cta);
     border: none;
@@ -242,6 +271,7 @@
     overflow: hidden;
   }
   
+  /* Pseudoelemento para crear un efecto de brillo que se desliza al pasar el ratón por encima. */
   .cta-primary::before {
     content: '';
     position: absolute;
@@ -260,7 +290,7 @@
     box-shadow: var(--shadow-red);
   }
   
-  /* Service Cards */
+  /* Estilo base para las tarjetas de servicio. */
   .service-card {
     background: var(--gradient-surface);
     border: 1px solid hsl(var(--border) / 0.5);
@@ -290,6 +320,7 @@
   }
 }
 
+/* La capa `@layer utilities` es para crear clases de utilidad personalizadas de bajo nivel. */
 @layer utilities {
   /* Brand Color Utilities */
   .text-tech-green { color: hsl(var(--tech-green)); }
@@ -328,7 +359,7 @@
     -webkit-text-fill-color: transparent;
   }
   
-  /* Layout Utilities */
+  /* Utilidad para un contenedor principal con padding responsivo. */
   .container-ir {
     max-width: 1280px;
     margin: 0 auto;
@@ -344,11 +375,13 @@
   }
 }
 
+/* Definición de la animación `float`. Hace que un elemento suba y baje suavemente. */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
 
+/* Definición de la animación `pulse-slow`. Cambia la opacidad de un elemento para crear un pulso lento. */
 @keyframes pulse-slow {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }

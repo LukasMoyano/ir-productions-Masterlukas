@@ -1,23 +1,39 @@
+/* Este selector apunta al elemento con el id "root", que es el contenedor principal de la aplicación React.
+   - `max-width: 1280px;`: Establece un ancho máximo para el contenido.
+   - `margin: 0 auto;`: Centra el contenedor horizontalmente en la página.
+   - `padding: 2rem;`: Añade un espacio de relleno interno.
+   - `text-align: center;`: Centra el texto de todos los elementos hijos.
+   NOTA: Estos estilos probablemente están siendo sobrescritos o no se aplican, ya que el proyecto usa Tailwind CSS. */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
+/* Estilos para una clase 'logo'.
+   - `height: 6em;`: Define la altura del logo.
+   - `padding: 1.5em;`: Añade espacio de relleno alrededor del logo.
+   - `will-change: filter;`: Optimiza el rendimiento del navegador para futuras animaciones en la propiedad `filter`.
+   - `transition: filter 300ms;`: Crea una transición suave para la propiedad `filter` cuando cambia. */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+/* Efecto al pasar el ratón (hover) sobre cualquier elemento con la clase 'logo'.
+   - `filter: drop-shadow(...)`: Añade un efecto de sombra brillante de color azulado. */
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+/* Efecto hover específico para un logo que también tiene la clase 'react'.
+   - Cambia el color de la sombra brillante a uno más cercano al color oficial de React. */
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
+/* Define una animación llamada 'logo-spin'.
+   - `from { transform: rotate(0deg); }`: El estado inicial de la animación (sin rotación).
+   - `to { transform: rotate(360deg); }`: El estado final (una rotación completa). */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,17 +42,22 @@
     transform: rotate(360deg);
   }
 }
-
+/* Media query de accesibilidad.
+   Estos estilos solo se aplican si el usuario NO ha activado la opción de "movimiento reducido" en su sistema operativo.
+   - `a:nth-of-type(2) .logo`: Selecciona un logo que está dentro del segundo enlace `<a>` de la página.
+   - `animation: logo-spin infinite 20s linear;`: Aplica la animación 'logo-spin' para que se repita infinitamente, con una duración de 20 segundos y a una velocidad constante. */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-
+/* Estilos para una clase 'card', probablemente para contener información.
+   - `padding: 2em;`: Añade un relleno interno amplio. */
 .card {
   padding: 2em;
 }
-
+/* Estilos para una clase 'read-the-docs', probablemente para un texto de ayuda o un enlace.
+   - `color: #888;`: Establece el color del texto a un gris. */
 .read-the-docs {
   color: #888;
 }
