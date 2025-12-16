@@ -11,41 +11,47 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
     es: {
       title: "Impacto y Alineación",
       subtitle: "Contribuyendo a los Objetivos de Desarrollo Sostenible",
-      description: "-IR- Productions, a través de nuestras soluciones tecnológicas, contribuye activamente a los ODS clave, apoyando las metas de innovación, sostenibilidad, desarrollo económico y cierre de brecha digital de los planes de desarrollo municipal y departamental, especialmente en Arbeláez, Cundinamarca.",
+      description: "_-IR-_ Productions, a través de nuestras soluciones tecnológicas, contribuye activamente a los ODSs claves, apoyando las metas de innovación, sostenibilidad, desarrollo económico y cierre de brecha digital de los planes de desarrollo Naciolales, Municipales y Departamentales, especialmente Fusagasuga, La Region del Sumapaz y Cundinamarca.",
       sdgs: [
         {
           icon: Users,
           number: "4",
+          image: '/ODSs/ODS_4.png',
           title: "Educación de Calidad",
           description: "Talleres prácticos que democratizan el conocimiento tecnológico"
         },
         {
           icon: Zap,
           number: "8",
+          image: '/ODSs/ODS_8.png',
           title: "Trabajo Decente",
           description: "Generamos oportunidades laborales dignas en el sector agro-tech"
         },
         {
           icon: Target,
           number: "9",
+          image: '/ODSs/ODS_9.png',
           title: "Industria e Innovación",
           description: "Impulsamos la innovación tecnológica en el sector rural"
         },
         {
           icon: Leaf,
           number: "12",
+          image: '/ODSs/ODS_12.png',
           title: "Producción Responsable",
           description: "Promovemos prácticas agrícolas sostenibles con tecnología"
         },
         {
           icon: Globe,
           number: "13",
+          image: '/ODSs/ODS_13.png',
           title: "Acción Climática",
           description: "Monitoreo ambiental y optimización de recursos naturales"
         },
         {
           icon: HandHeart,
           number: "17",
+          image: '/ODSs/ODS_17.png',
           title: "Alianzas para los Objetivos",
           description: "Colaboramos con instituciones locales y globales"
         }
@@ -59,36 +65,42 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
         {
           icon: Users,
           number: "4",
+          image: '/ODSs/ODS_4.png',
           title: "Quality Education",
           description: "Practical workshops that democratise technological knowledge"
         },
         {
           icon: Zap,
           number: "8", 
+          image: '/ODSs/ODS_8.png',
           title: "Decent Work",
           description: "We generate decent employment opportunities in the agro-tech sector"
         },
         {
           icon: Target,
           number: "9",
+          image: '/ODSs/ODS_9.png',
           title: "Industry & Innovation",
           description: "We drive technological innovation in the rural sector"
         },
         {
           icon: Leaf,
           number: "12",
+          image: '/ODSs/ODS_12.png',
           title: "Responsible Production",
           description: "We promote sustainable agricultural practices with technology"
         },
         {
           icon: Globe,
           number: "13",
+          image: '/ODSs/ODS_13.png',
           title: "Climate Action", 
           description: "Environmental monitoring and natural resource optimisation"
         },
         {
           icon: HandHeart,
           number: "17",
+          image: '/ODSs/ODS_17.png',
           title: "Partnerships for Goals",
           description: "We collaborate with local and global institutions"
         }
@@ -128,7 +140,13 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
               key={index} 
               className="tech-border hover-lift group relative overflow-hidden"
             >
-              <CardContent className="p-6">
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-5 group-hover:opacity-15 transition-opacity duration-300"
+                style={{ backgroundImage: `url(${sdg.image})` }}
+              />
+              {/* Card Content */}
+              <CardContent className="p-6 relative z-10">
                 {/* SDG Number Badge */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-primary-foreground font-bold text-lg">

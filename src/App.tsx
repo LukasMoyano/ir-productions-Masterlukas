@@ -15,6 +15,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CultivatechPresentation from "./pages/CultivatechPresentation";
+import AgroInnovationWorkshops from "./pages/AgroInnovationWorkshops";
 
 // Creación de una instancia de QueryClient.
 // Este cliente se encargará de gestionar el caché de las consultas a la API.
@@ -40,8 +41,11 @@ const App = () => (
           {/* Cada componente Route define una ruta y el componente que se debe renderizar cuando esa ruta coincide. */}
           <Route path="/" element={<Index />} />
           <Route
-            path="/presentacion-cultivatech"
             element={<CultivatechPresentation />}
+          />
+          <Route
+            path="/talleres-agro-innovacion"
+            element={<AgroInnovationWorkshops />}
           />
           {/* COMENTARIO PARA DESARROLLADORES: Asegurarse de que las nuevas rutas se añadan antes de la ruta comodín. */}
           {/* La ruta con path="*" es una ruta "comodín" o "catch-all".

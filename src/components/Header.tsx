@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
   language: 'es' | 'en';
@@ -9,6 +10,8 @@ interface HeaderProps {
 
 const Header = ({ language, toggleLanguage }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = {
     es: [
@@ -27,12 +30,38 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
     ]
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+
+    if (location.pathname === '/') {
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/');
+      // Add a small delay to allow navigation to complete before scrolling
+      setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <header className="fixed top-0 w-full z-50 backdrop-blur-lg bg-background/80 border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div 
+            className="flex items-center space-x-2 cursor-pointer" 
+            onClick={() => navigate('/')}
+          >
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-sm flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">IR</span>
             </div>
@@ -47,7 +76,8 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 relative group"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-foreground hover:text-primary transition-colors duration-300 relative group cursor-pointer"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -87,8 +117,8 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-foreground hover:text-primary transition-colors px-2 py-1"
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-foreground hover:text-primary transition-colors px-2 py-1 cursor-pointer"
                 >
                   {item.label}
                 </a>
@@ -96,7 +126,10 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={toggleLanguage}
+                onClick={() => {
+                  toggleLanguage();
+                  setIsMenuOpen(false);
+                }}
                 className="flex items-center space-x-1 justify-start px-2"
               >
                 <Globe className="w-4 h-4" />
