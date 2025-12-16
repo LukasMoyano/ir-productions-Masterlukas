@@ -41,6 +41,7 @@ const App = () => (
           {/* Cada componente Route define una ruta y el componente que se debe renderizar cuando esa ruta coincide. */}
           <Route path="/" element={<Index />} />
           <Route
+            path="/presentacion-cultivatech"
             element={<CultivatechPresentation />}
           />
           <Route
