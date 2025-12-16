@@ -1,3 +1,13 @@
+/**
+ * @file HeroSection.tsx
+ * @description Componente Hero (Pantalla Principal).
+ * Punto de entrada visual y semántico del sitio.
+ *
+ * SEO Note:
+ * - Contiene el H1 principal, la etiqueta más importante para el SEO on-page.
+ * - Define la propuesta de valor inmediata con palabras clave de alto impacto.
+ */
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import heroImage from '@/assets/hero-background.jpg';
@@ -7,6 +17,9 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ language }: HeroSectionProps) => {
+  // ============================================================================
+  // CONTENIDO HERO (Propuesta de Valor)
+  // ============================================================================
   const content = {
     es: {
       title: "_-IR-_ Productions",
@@ -31,6 +44,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
   const text = content[language];
 
   return (
+    // Sección principal con ID para navegación
     <section
       id={language === 'es' ? 'inicio' : 'home'}
       className="relative min-h-screen flex items-center justify-center circuit-pattern hero-gradient overflow-hidden"
@@ -50,7 +64,8 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       <div className="absolute top-1/3 right-1/4 w-8 h-8 border-2 border-tech-green/40 rotate-45 animate-circuit-glow" />
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 lg:px-8">
-        {/* Main Title */}
+        {/* Título Principal (H1): Jerarquía máxima de SEO.
+            Debe contener el nombre de la marca o la palabra clave principal. */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
           <span className="gradient-text-primary block">
             {text.title}
@@ -60,12 +75,12 @@ const HeroSection = ({ language }: HeroSectionProps) => {
           </span>
         </h1>
 
-        {/* Description */}
+        {/* Descripción: Resumen semántico para snippets de búsqueda */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-in-right">
           {text.description}
         </p>
 
-        {/* Call to Action Buttons */}
+        {/* Botones de Llamada a la Acción (CTA) - Navegación interna */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-scale-in">
           <Button
             size="lg"

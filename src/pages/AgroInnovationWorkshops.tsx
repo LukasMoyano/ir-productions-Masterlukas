@@ -1,3 +1,15 @@
+/**
+ * @file AgroInnovationWorkshops.tsx
+ * @description Página de oferta de talleres "Agro-Innovación Integral".
+ * Diseñada para captar tráfico relacionado con educación tecnológica rural y servicios agrícolas.
+ *
+ * Estructura SEO:
+ * 1. Hero Section con H1 optimizado.
+ * 2. Contenido semántico (Introducción, Metodología, Beneficios).
+ * 3. Imágenes con atributos ALT descriptivos.
+ */
+
+// Importaciones de React y Hooks
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -5,24 +17,33 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, CheckCircle, Leaf, Brain, Coins } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+
+// Importación de Activos (Imágenes optimizadas para carga y contexto visual)
 import agroTechImage from "@/assets/agro-tech-farmers.jpg";
 import smartMonitoringImage from "@/assets/smart-monitoring.jpg";
 import smartIrrigationImage from "@/assets/smart-irrigation.jpg";
 import smartAlarmImage from "@/assets/smart-alarm.jpg";
 import weatherStationImage from "@/assets/weather-station.jpg";
 
+// Componente Principal
 const AgroInnovationWorkshops = () => {
+  // Estado para manejo de idioma (Internacionalización - i18n)
   const [language, setLanguage] = useState<"es" | "en">("es");
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "es" ? "en" : "es"));
   };
 
-  // Scroll to top on mount
+  // Efecto de montaje: Asegura que la navegación inicie desde la parte superior (UX/SEO)
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // ============================================================================
+  // ESTRUCTURA DE DATOS Y CONTENIDO (SEO COPYWRITING)
+  // ============================================================================
+  // Objeto centralizado de textos. Contiene las palabras clave principales:
+  // "Agro-Innovación", "Tecnología Agrícola", "IoT", "Cundinamarca".
   const content = {
     es: {
       breadcrumb: "Volver a Servicios",
@@ -192,11 +213,17 @@ const AgroInnovationWorkshops = () => {
   const t = content[language];
 
   return (
+    // Contenedor Principal
     <div className="min-h-screen bg-background">
+      {/* Encabezado de Navegación */}
       <Header language={language} toggleLanguage={toggleLanguage} />
+      
       <div className="pt-24 pb-16">
-        {/* Hero Section */}
+        {/* ============================================================================
+            SECCIÓN HERO: Impacto Visual y Título Principal (H1)
+           ============================================================================ */}
         <div className="relative h-[400px] w-full mb-12 overflow-hidden">
+          {/* Imagen de portada con atributo ALT descriptivo para indexación de imágenes */}
           <img
             src={agroTechImage}
             alt="Agro Tech Workshops"
@@ -214,9 +241,11 @@ const AgroInnovationWorkshops = () => {
             <Badge className="mb-6 bg-agro-green text-white hover:bg-agro-green/90">
               {t.badge}
             </Badge>
+            {/* H1: Etiqueta más importante para el SEO on-page */}
             <h1 className="text-4xl md:text-5xl font-bold mb-6 py-4 gradient-text-primary max-w-4xl mx-auto">
               {t.title}
             </h1>
+            {/* Subtítulo descriptivo con palabras clave secundarias */}
             <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto">
               {t.subtitle}
             </p>
@@ -228,10 +257,14 @@ const AgroInnovationWorkshops = () => {
 
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Main Content */}
+            {/* ============================================================================
+                COLUMNA PRINCIPAL DE CONTENIDO
+               ============================================================================ */}
             <div className="lg:col-span-2 space-y-12">
-              {/* Introduction */}
+              
+              {/* SECCIÓN: Introducción y Propuesta de Valor */}
               <section className="prose dark:prose-invert max-w-none">
+                {/* H2: Subtítulo semántico */}
                 <h2 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-2">
                   <Leaf className="h-6 w-6 text-agro-green" />
                   {t.intro.title}
@@ -241,7 +274,7 @@ const AgroInnovationWorkshops = () => {
                 </p>
               </section>
 
-              {/* Public Policy Alignment */}
+              {/* SECCIÓN: Alineación Política (Autoridad y Relevancia Local) */}
               <section className="bg-secondary/10 p-8 rounded-2xl border border-secondary/20">
                 <h3 className="text-2xl font-bold mb-4">{t.alignment.title}</h3>
                 <div className="space-y-4 text-muted-foreground">
@@ -250,7 +283,7 @@ const AgroInnovationWorkshops = () => {
                 </div>
               </section>
 
-              {/* Methodology */}
+              {/* SECCIÓN: Metodología y Módulos (Estructura de Servicios) */}
               <section>
                 <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <Brain className="h-6 w-6 text-primary" />
@@ -267,6 +300,7 @@ const AgroInnovationWorkshops = () => {
                       className="tech-border hover-lift overflow-hidden group"
                     >
                       <div className="h-48 overflow-hidden relative">
+                        {/* Imágenes de módulos con ALT dinámico */}
                         <img
                           src={item.image}
                           alt={item.title}
@@ -289,7 +323,7 @@ const AgroInnovationWorkshops = () => {
                 </div>
               </section>
 
-              {/* Benefits (Moved to main content) */}
+              {/* SECCIÓN: Beneficios (Listado optimizado para lectura rápida) */}
               <section className="bg-agro-green/5 p-8 rounded-2xl border border-agro-green/10">
                 <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <CheckCircle className="h-6 w-6 text-agro-green" />
@@ -305,7 +339,7 @@ const AgroInnovationWorkshops = () => {
                 </ul>
               </section>
 
-              {/* Budget & Financing */}
+              {/* SECCIÓN: Presupuesto y Financiación (Información Transaccional) */}
               <section className="bg-primary/5 p-8 rounded-2xl border border-primary/10">
                 <div className="flex items-start gap-4">
                   <Coins className="h-8 w-8 text-primary mt-1" />
@@ -328,7 +362,9 @@ const AgroInnovationWorkshops = () => {
               </section>
             </div>
 
-            {/* Sidebar */}
+            {/* ============================================================================
+                BARRA LATERAL (SIDEBAR): Llamadas a la Acción (CTA)
+               ============================================================================ */}
             <div className="space-y-8">
               <Card className="sticky top-24 border-agro-green/50 shadow-lg shadow-agro-green/10">
                 <CardContent className="pt-6">

@@ -1,3 +1,15 @@
+/**
+ * @file ServicesSection.tsx
+ * @description Componente de presentación de servicios y líneas de solución.
+ * Funciona como un hub de navegación hacia las páginas de detalle de servicios.
+ *
+ * Estrategia SEO:
+ * 1. Estructura de enlaces internos (Internal Linking) para distribuir autoridad.
+ * 2. Uso de palabras clave de "cola larga" en descripciones (ej. "Robot móvil autónomo", "Workstations HPC").
+ * 3. Etiquetas ALT en imágenes para búsqueda visual.
+ */
+
+// Importaciones de Navegación y UI
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,8 +18,9 @@ import { ArrowRight, Users, Server, Bot, Presentation } from "lucide-react";
 import agroTechImage from "@/assets/agro-tech-farmers.jpg";
 import hpcWorkstationImage from "@/assets/hpc-workstation.jpg";
 import iotRobotImage from "@/assets/iot-robot.jpg";
-import presentationImage from "@/assets/hero-background.jpg"; // Using a placeholder image
+import presentationImage from "@/assets/hero-background.jpg"; // Imagen de respaldo para presentación
 
+// Definición de tipos para los servicios
 interface Service {
   icon: React.ElementType;
   title: string;
@@ -24,7 +37,11 @@ interface ServicesSectionProps {
   language: "es" | "en";
 }
 
+// Componente Principal
 const ServicesSection = ({ language }: ServicesSectionProps) => {
+  // ============================================================================
+  // CONTENIDO Y PALABRAS CLAVE (SEO)
+  // ============================================================================
   const content: {
     [key: string]: {
       title: string;
@@ -34,6 +51,7 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
     };
   } = {
     es: {
+      // Títulos optimizados para búsqueda de servicios tecnológicos
       title: "Nuestras Líneas de Solución",
       subtitle: "Tres pilares tecnológicos para transformar tu futuro",
       services: [
@@ -53,7 +71,6 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           target: "Instituciones • Agricultores",
           link: "/talleres-agro-innovacion",
         },
-
         {
           icon: Bot,
           title: "Kit Agro-IoT 'CultivaTech ColombIA'",
@@ -157,11 +174,13 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
   const text = content[language];
 
   return (
+    // Sección con ID semántico para anclaje y navegación
     <section
       id={language === "es" ? "servicios" : "services"}
       className="py-20 circuit-pattern"
     >
       <div className="container mx-auto px-4 lg:px-8">
+        {/* Encabezado de Sección: H2 para jerarquía SEO */}
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-accent border-accent">
             {language === "es" ? "Soluciones" : "Solutions"}
@@ -175,12 +194,15 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          {/* Iteración de tarjetas de servicio */}
           {text.services.map((service, index) => (
             <Card
               key={index}
               className="tech-border hover-lift group overflow-hidden relative flex flex-col"
             >
               <div className="relative h-48 overflow-hidden">
+                {/* Imagen del servicio con atributo ALT dinámico.
+                    Crucial para que Google entienda el contexto visual del servicio. */}
                 <img
                   src={service.image}
                   alt={service.title}
@@ -200,6 +222,7 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
               </div>
 
               <CardHeader>
+                {/* Título del servicio (Keywords principales) */}
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
                   {service.title}
                 </CardTitle>

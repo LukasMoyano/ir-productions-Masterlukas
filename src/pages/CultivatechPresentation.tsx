@@ -1,4 +1,18 @@
+/**
+ * @file CultivatechPresentation.tsx
+ * @description Presentación interactiva del proyecto Cultivatech.
+ * Enfocada en Economía Circular, E-Waste y Agricultura de Precisión.
+ *
+ * Estrategia SEO:
+ * - Contenido rico en palabras clave: "E-Waste", "Economía Circular", "IoT Agrícola".
+ * - Estructura semántica con gráficos de datos (Recharts) para retención de usuario.
+ * - Imágenes con atributos ALT descriptivos.
+ */
+
+// Importaciones de Navegación
 import { Link } from "react-router-dom";
+
+// Librería de Gráficos (Visualización de Datos)
 import {
   ResponsiveContainer,
   BarChart,
@@ -11,8 +25,12 @@ import {
   Cell,
   Legend,
 } from "recharts";
+
+// Componentes de UI
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+// Utilidades e Iconos
 import { cn } from "@/lib/utils";
 import {
   ArrowLeft,
@@ -28,19 +46,25 @@ import {
   DollarSign,
   Mail,
 } from "lucide-react";
+
+// Componentes Globales
 import Header from "@/components/Header";
 
-// --- IMAGE IMPORTS ---
+// Importación de Activos (Imágenes)
 import heroImage from "@/assets/hero-background.jpg";
 import educationImage from "@/assets/agro-tech-farmers.jpg";
-import businessModel from "@/assets/e-waste-assets/720x450 SCYCLE article image_0.jpg";
-import agriculturaEficienteImage from "../assets/E-Waste_y_la_Necesidad_de_una_Agricultura_Eficiente.png";
-import residuosAltaTecnologiaImage from "../assets/De_Residuos_aComponentes_de_Alta_Tecnología.png";
+import businessModel from "@/assets/e-waste-assets/720x450_SCYCLE_article_image_0.jpg";
+import agriculturaEficienteImage from "@/assets/E-Waste_y_la_Necesidad_de_una_Agricultura_Eficiente.png";
+import residuosAltaTecnologiaImage from "@/assets/De_Residuos_a_Componentes_de_Alta_Tecnologia.png";
 import robotImage from "@/assets/iot-robot.jpg";
-import laMinaUrbana from "../assets/La_-MinaUrbana-_.png";
-import bannerPresentacion001 from "../assets/banner_presentacion001.png";
+import laMinaUrbana from "@/assets/La_-MinaUrbana-_.png";
+import bannerPresentacion001 from "@/assets/banner_presentacion001.png";
 
-// --- DATA STRUCTURE ---
+
+// ============================================================================
+// ESTRUCTURA DE DATOS (SEO & CONTENIDO)
+// ============================================================================
+// Contiene la narrativa del proyecto, optimizada con palabras clave.
 const presentationData = {
   title: "PRESENTACIÓN DE CULTIVATECH",
   sections: [
@@ -81,6 +105,7 @@ const presentationData = {
       image: agriculturaEficienteImage,
     },
     {
+      id: "tech-components",
       icon: Layers,
       title: "De Residuos a Componentes de Alta Tecnología",
       content: [
@@ -92,6 +117,7 @@ const presentationData = {
       image: residuosAltaTecnologiaImage,
     },
     {
+      id: "urban-mine",
       icon: Gem,
       title: "La 'Mina Urbana' que Impulsa Nuestra Soberanía",
       content: [
@@ -130,9 +156,10 @@ const presentationData = {
       image: laMinaUrbana,
     },
     {
+      id: "agri-intelligence",
       icon: Bot,
       title:
-        "Cultivatech ColombIA: La Inteligencia Agrícola Nace del Reciclaje",
+        "La Inteligencia Agrícola Nace del Reciclaje: Cultivatech ColombIA",
       content: [
         "Con la materia prima que rescatamos, construimos el Kit Agro-IoT 'Cultivatech ColombIA'.",
         "**Hechos en Colombia:** Robots autónomos de bajo costo, con chasis de aluminio reciclado y piezas impresas en 3D con nuestro filamento.",
@@ -141,6 +168,7 @@ const presentationData = {
       image: robotImage,
     },
     {
+      id: "real-impact",
       icon: DollarSign,
       title: "Impacto Real en el Campo: Más Productividad, Más Ingresos",
       content: [
@@ -157,6 +185,7 @@ const presentationData = {
       },
     },
     {
+      id: "empowerment",
       icon: Users,
       title: "Empoderando al Campo: Conocimiento, Tecnología y Comunidades",
       content: [
@@ -167,6 +196,7 @@ const presentationData = {
       image: educationImage,
     },
     {
+      id: "business-model",
       icon: PieChartIcon,
       title: "Un Modelo de Negocio Sólido y Rentable",
       content: [
@@ -177,6 +207,7 @@ const presentationData = {
       image: businessModel,
     },
     {
+      id: "investment",
       icon: TrendingUp,
       title: "Invierta en el Futuro: Un Rendimiento que Cultiva Valor",
       content: [
@@ -194,6 +225,7 @@ const presentationData = {
       },
     },
     {
+      id: "contact",
       icon: Mail,
       title: "Juntos, Sembremos el Cambio",
       content: [
@@ -205,6 +237,7 @@ const presentationData = {
   ],
 };
 
+// Componente para Tooltips personalizados en los gráficos
 interface CustomTooltipProps {
   active?: boolean;
   payload?: { name: string; value: string | number }[];
@@ -223,16 +256,23 @@ const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
   return null;
 };
 
+// ============================================================================
+// COMPONENTE PRINCIPAL
+// ============================================================================
 const CultivatechPresentation = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Encabezado */}
       <Header language={"es"} toggleLanguage={() => {}} />
+
       <main>
+        {/* Iteración de Secciones */}
         {presentationData.sections.map((slide, index) => (
           <section key={slide.id} className="py-20 circuit-pattern">
             <div className="container mx-auto px-4 lg:px-8">
               <Card className="tech-border hover-lift group overflow-hidden relative flex flex-col">
                 {slide.image && (
+                  // Contenedor de imagen con optimización visual
                   <div className="relative h-64 md:h-80 overflow-hidden">
                     <img
                       src={slide.image}
@@ -245,6 +285,7 @@ const CultivatechPresentation = () => {
                   </div>
                 )}
                 <CardHeader className="text-center pt-8">
+                  {/* Título de la Sección (H2/H3 implícito en CardTitle) */}
                   <div className="flex items-center justify-center mb-4">
                     {slide.icon && (
                       <slide.icon className="h-12 w-12 mr-4 text-primary" />
@@ -256,6 +297,7 @@ const CultivatechPresentation = () => {
                 </CardHeader>
                 <CardContent className="p-6 md:p-8 flex-grow">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    {/* Contenido Textual (Rich Text) */}
                     <div className="space-y-5 text-lg text-muted-foreground max-w-prose mx-auto lg:mx-0">
                       {Array.isArray(slide.content)
                         ? slide.content.map((item, i) => (
@@ -282,6 +324,7 @@ const CultivatechPresentation = () => {
                     </div>
 
                     <div className="not-prose space-y-8 flex flex-col items-center">
+                      {/* Visualización de Datos (Gráficos) */}
                       {slide.chartData && (
                         <div className="w-full max-w-md h-64">
                           <ResponsiveContainer width="100%" height="100%">
@@ -340,6 +383,7 @@ const CultivatechPresentation = () => {
                           </ResponsiveContainer>
                         </div>
                       )}
+                      {/* Visualización de Materiales (Tabla Periódica) */}
                       {slide.materials && (
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-lg">
                           {slide.materials.map((material) => (
@@ -377,6 +421,7 @@ const CultivatechPresentation = () => {
                       )}
                     </div>
                   </div>
+                  {/* Fuentes de Datos */}
                   {slide.chartData?.source && (
                     <p className="text-xs text-muted-foreground/70 italic text-center mt-8 pt-4 border-t border-border/50">
                       {slide.chartData.source}
