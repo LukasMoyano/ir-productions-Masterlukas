@@ -15,7 +15,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
       description:
         "Lukas Moyano y _-IR-_ Productions transformamos el Agro y las Organizaciones a través de la fusión Arte+Ciencia+Tecnología, con un enfoque en innovación accesible, sostenibilidad y la sabiduría ancestral aplicada al mundo moderno.",
       bioTitle: "Perfil del Fundador",
-      bio: "En la intersección donde el silicio encuentra al carbono, opero como un arquitecto de realidades híbridas. Mi origen en las Artes Visuales me enseñó a ver lo invisible, pero fue la ingeniería de software y la Inteligencia Artificial lo que me dio las herramientas para construirlo. No soy solo un desarrollador; soy un traductor entre la complejidad de los algoritmos (Deep Learning, Visión por Computadora) y la sabiduría pragmática del campo.\n\nDesde mi base en Fusagasugá, lidero una 'rebelión tecnológica' constructiva. Utilizo sensores IoT como extensiones nerviosas de la tierra y modelos de IA como oráculos climáticos, todo bajo una filosofía de código abierto y soberanía. En _-IR-_ Productions, perseguimos la idea de no vendemos cajas negras; forjamos llaves maestras. Mi misión es hackear la brecha digital, empoderando al agricultor con herramientas de ciencia ficción que funcionan hoy, asegurando que la tecnología sirva a la vida y no al revés.",
+      bio: "En la intersección donde el Silicio encuentra al Carbono, opero como un arquitecto de realidades híbridas. Mi origen en las Artes Visuales me enseñó a ver lo invisible, pero fue con los principios de la Ingeniería de Software, el entender el funcionamiento de la Inteligencia Artificial y la Filosofía de Código Abierto que me dieron las herramientas para poder codificar y decodificar el lenguaje con las maquinas y la sabiduría pragmática de pensar en soluciones reales para el campo usando tecnologia actual.\n\nDesde mi base en Fusagasugá, lidero una 'rebelión tecnológica' constructiva. Utilizo sensores IoT como extensiones nerviosas de la tierra y modelos de IA como oráculos climáticos, todo bajo una filosofía de código abierto y soberanía. En _-IR-_ Productions, perseguimos la idea de no vendemos cajas negras; forjamos llaves maestras. Mi misión es hackear la brecha digital, empoderando al agricultor con herramientas de ciencia ficción que funcionan hoy, asegurando que la tecnología sirva a la vida y no al revés.",
       expertiseTitle: "Áreas de Expertiza",
       expertise: [
         {
@@ -42,10 +42,10 @@ const AboutSection = ({ language }: AboutSectionProps) => {
       educationTitle: "Educación y Certificaciones",
       education: [
         "Pontificia Universidad Javeriana – Maestría en Artes Visuales, Expresión Audiovisual (2019)",
+        "MinTICs & Atenea-UNAL – IA Avanzada, HPC, Desarrollo Web y Apps (2023–2024)",
         "Uniminuto – Pedagogía para Profesionales no Licenciados (2021)",
         "AcademLo – Desarrollo Web con React JS (2023)",
         "Colsubsidio CET – Big Data y Análisis de Datos (2022)",
-        "MinTICs & Atenea-UNAL – IA Avanzada, HPC, Desarrollo Web (2023–2024)"
       ],
       slogan:
         "Hacemos lo que queremos, porque amamos lo que hacemos, Funk with us!",
