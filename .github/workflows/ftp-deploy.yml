@@ -1,0 +1,55 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install Bun
+      run: |
+        curl -fsSL https://bun.sh/install | bash
+        export BUN_INSTALL="$HOME/.bun"
+        export PATH="$BUN_INSTALL/bin:$PATH"
+        echo "$BUN_INSTALL/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies
+      run: bun install
+
+    - name: Build project
+      run: bun run build
+
+    - name: Deploy to FTP
+      run: |
+        # Install ftp client if needed
+        npm install ftp ssh2-sftp-client dotenv
+        
+        # Create .env file with secrets
+        echo "FTP_HOST=${{ secrets.FTP_HOST }}" >> .env
+        echo "FTP_USER=${{ secrets.FTP_USER }}" >> .env
+        echo "FTP_PASSWORD=${{ secrets.FTP_PASSWORD }}" >> .env
+        echo "FTP_PORT=${{ secrets.FTP_PORT }}" >> .env
+        echo "FTP_REMOTE_PATH=${{ secrets.FTP_REMOTE_PATH }}" >> .env
+        
+        # Run deployment script
+        node deploy.js
+      env:
+        FTP_HOST: ${{ secrets.FTP_HOST }}
+        FTP_USER: ${{ secrets.FTP_USER }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_PORT: ${{ secrets.FTP_PORT }}
+        FTP_REMOTE_PATH: ${{ secrets.FTP_REMOTE_PATH }}
