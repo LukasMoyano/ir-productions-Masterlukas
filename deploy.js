@@ -150,6 +150,8 @@ async function uploadDirectory(sftp, localDir, remoteDir) {
       // Create directory if it doesn't exist
       try {
         await sftp.mkdir(remotePath, true);
+        await sftp.chmod(remotePath, 0o755); // Set directory permissions
+        console.log(`Created directory ${remotePath} with 755 permissions`);
       } catch (err) {
         // Directory might already exist, which is fine
       }
@@ -160,6 +162,8 @@ async function uploadDirectory(sftp, localDir, remoteDir) {
       // Upload file
       console.log(`Uploading ${localPath} to ${remotePath}`);
       await sftp.put(localPath, remotePath);
+      await sftp.chmod(remotePath, 0o644); // Set file permissions
+      console.log(`Uploaded ${localPath} with 644 permissions`);
     }
   }
 }
@@ -168,8 +172,16 @@ async function uploadDirectoryFTP(client, localDir, remoteDir) {
   // Ensure remote directory exists
   await new Promise((resolve, reject) => {
     client.mkdir(remoteDir, true, (err) => {
-      if (err) reject(err);
-      else resolve();
+      // Ignore errors if directory already exists, but reject on others
+      if (err && err.code !== 550) { // 550: File unavailable (e.g., already exists)
+        return reject(err);
+      }
+      // Set permissions on the directory
+      client.site(`CHMOD 755 ${remoteDir}`, (chmodErr) => {
+        if (chmodErr) return reject(chmodErr);
+        console.log(`Set permissions for directory ${remoteDir} to 755`);
+        resolve();
+      });
     });
   });
   
@@ -189,8 +201,13 @@ async function uploadDirectoryFTP(client, localDir, remoteDir) {
       console.log(`Uploading ${localPath} to ${remotePath}`);
       await new Promise((resolve, reject) => {
         client.put(localPath, remotePath, (err) => {
-          if (err) reject(err);
-          else resolve();
+          if (err) return reject(err);
+          // After uploading, set file permissions
+          client.site(`CHMOD 644 ${remotePath}`, (chmodErr) => {
+            if (chmodErr) return reject(chmodErr);
+            console.log(`Set permissions for file ${remotePath} to 644`);
+            resolve();
+          });
         });
       });
     }

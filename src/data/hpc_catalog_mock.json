@@ -1,0 +1,66 @@
+{
+  "last_updated": "2026-02-04T12:00:00Z",
+  "components": [
+    {
+      "id": "cpu-tr-7980x",
+      "category": "CPU",
+      "name": "AMD Ryzen Threadripper 7980X",
+      "specs": { "cores": 64, "threads": 128, "socket": "sTR5", "tdp": 350 },
+      "price": 5499.99,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "cpu-r9-7950x",
+      "category": "CPU",
+      "name": "AMD Ryzen 9 7950X",
+      "specs": { "cores": 16, "threads": 32, "socket": "AM5", "tdp": 170 },
+      "price": 599.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "gpu-rtx-4090",
+      "category": "GPU",
+      "name": "NVIDIA GeForce RTX 4090 24GB",
+      "specs": { "vram": "24GB GDDR6X", "teraflops": 82.6, "power": 450 },
+      "price": 1999.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "gpu-a100",
+      "category": "GPU",
+      "name": "NVIDIA A100 Tensor Core 80GB",
+      "specs": { "vram": "80GB HBM2e", "teraflops": 312, "power": 300 },
+      "price": 12500.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "ram-128-ddr5",
+      "category": "RAM",
+      "name": "128GB (4x32GB) DDR5-6000 ECC",
+      "specs": { "capacity": "128GB", "type": "DDR5", "ecc": true },
+      "price": 850.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    }
+  ],
+  "platforms": [
+    {
+      "id": "genesis",
+      "name": "Genesis AI Workstation",
+      "description": "Optimizado para entrenamiento de modelos locales y renderizado.",
+      "base_price": 1200.00,
+      "compatible_sockets": ["sTR5", "AM5"]
+    },
+    {
+      "id": "titan",
+      "name": "Titan Server Node",
+      "description": "Inferencia pesada y despliegue de clusters empresariales.",
+      "base_price": 2500.00,
+      "compatible_sockets": ["sTR5"]
+    }
+  ]
+}
