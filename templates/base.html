@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IR Productions - Soluciones Digitales Integrales fusionando Arte, Ciencia y Tecnología. IoT, IA, HPC y Open Source para transformación sostenible.">
+    <meta name="keywords" content="IR Productions, tecnología, IoT, IA, HPC, Open Source, agricultura de precisión, Fusagasugá, Colombia">
+    <meta name="author" content="IR Productions">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site_url }}{{ request.path }}/">
+    <meta property="og:title" content="{% block og_title %}IR Productions{% endblock %}">
+    <meta property="og:description" content="Soluciones Digitales Integrales - Arte, Ciencia y Tecnología">
+    <meta property="og:image" content="{{ url_for('static', filename='assets/og-image.jpg') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/favicon.svg') }}">
+    
+    <title>{% block title %}IR Productions{% endblock %}</title>
+    
+    <!-- Tailwind CSS (CDN para desarrollo - en producción usar build standalone) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            content: [
+                '{{ url_for("static", filename="templates/**/*.html") }}',
+                '{{ url_for("static", filename="js/**/*.js") }}'
+            ],
+            theme: {
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '1rem',
+                        sm: '1.5rem',
+                        md: '2rem',
+                        lg: '2.5rem',
+                        xl: '3rem',
+                    },
+                    screens: {
+                        sm: '640px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1280px',
+                        '2xl': '1400px'
+                    }
+                },
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                        'tech-green': 'hsl(var(--tech-green))',
+                        'agro-green': 'hsl(var(--agro-green))',
+                        'agro-earth': 'hsl(var(--agro-earth))',
+                        'success': 'hsl(var(--success))',
+                        'warning': 'hsl(var(--warning))',
+                        'info': 'hsl(var(--info))'
+                    },
+                    borderRadius: {
+                        lg: 'var(--radius)',
+                        md: 'calc(var(--radius) - 2px)',
+                        sm: 'calc(var(--radius) - 4px)'
+                    },
+                    keyframes: {
+                        'accordion-down': {
+                            from: { height: '0' },
+                            to: { height: 'var(--radix-accordion-content-height)' }
+                        },
+                        'accordion-up': {
+                            from: { height: 'var(--radix-accordion-content-height)' },
+                            to: { height: '0' }
+                        },
+                        'fade-in': {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        'slide-in-right': {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        'scale-in': {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        'circuit-glow': {
+                            '0%, 100%': { boxShadow: '0 0 5px hsl(var(--primary))' },
+                            '50%': { boxShadow: '0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))' }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        'slide-up': {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        'bounce-subtle': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' }
+                        },
+                        'glow-pulse': {
+                            '0%, 100%': { boxShadow: '0 0 5px hsl(var(--primary) / 0.3)' },
+                            '50%': { boxShadow: '0 0 20px hsl(var(--primary) / 0.6), 0 0 30px hsl(var(--primary) / 0.4)' }
+                        }
+                    },
+                    animation: {
+                        'accordion-down': 'accordion-down 0.2s ease-out',
+                        'accordion-up': 'accordion-up 0.2s ease-out',
+                        'fade-in': 'fade-in 0.6s ease-out',
+                        'slide-in-right': 'slide-in-right 0.7s ease-out',
+                        'slide-up': 'slide-up 0.8s ease-out',
+                        'scale-in': 'scale-in 0.5s ease-out',
+                        'circuit-glow': 'circuit-glow 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
+                        'glow-pulse': 'glow-pulse 2s ease-in-out infinite'
+                    }
+                }
+            },
+            plugins: []
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* IR Productions Design System - Arte, Ciencia, Tecnología */
+        :root {
+            --background: 0 0% 8%;
+            --foreground: 0 0% 95%;
+            --card: 0 0% 12%;
+            --card-foreground: 0 0% 95%;
+            --popover: 0 0% 10%;
+            --popover-foreground: 0 0% 95%;
+            --primary: 0 85% 45%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 0 0% 82%;
+            --secondary-foreground: 0 0% 8%;
+            --accent: 42 95% 55%;
+            --accent-foreground: 0 0% 8%;
+            --tech-green: 175 60% 45%;
+            --agro-green: 120 45% 40%;
+            --agro-earth: 25 35% 45%;
+            --success: 142 76% 36%;
+            --warning: 38 92% 50%;
+            --info: 217 91% 60%;
+            --muted: 0 0% 20%;
+            --muted-foreground: 0 0% 65%;
+            --destructive: 0 84% 60%;
+            --destructive-foreground: 0 0% 95%;
+            --border: 0 0% 25%;
+            --input: 0 0% 18%;
+            --ring: 0 100% 50%;
+            --radius: 0.75rem;
+            --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 85% 8%) 30%, hsl(25 35% 8%) 70%, hsl(0 0% 6%) 100%);
+            --gradient-primary: linear-gradient(135deg, hsl(0 85% 45%) 0%, hsl(15 85% 50%) 100%);
+            --gradient-tech: linear-gradient(135deg, hsl(175 60% 45%) 0%, hsl(200 70% 50%) 100%);
+            --gradient-agro: linear-gradient(135deg, hsl(120 45% 40%) 0%, hsl(25 35% 45%) 100%);
+            --gradient-gold: linear-gradient(135deg, hsl(42 95% 55%) 0%, hsl(35 90% 50%) 100%);
+            --gradient-surface: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted) / 0.5) 100%);
+            --gradient-cta: linear-gradient(135deg, hsl(0 85% 45%) 0%, hsl(42 95% 55%) 100%);
+            --circuit-red: hsl(0 100% 50% / 0.3);
+            --circuit-gold: hsl(45 100% 50% / 0.2);
+            --shadow-red: 0 10px 40px hsl(0 100% 50% / 0.3);
+            --shadow-gold: 0 10px 30px hsl(45 100% 50% / 0.2);
+            --shadow-tech: 0 8px 25px hsl(175 70% 50% / 0.25);
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        * {
+            border-color: hsl(var(--border));
+        }
+
+        body {
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        /* Component Classes */
+        .hero-gradient {
+            background: var(--gradient-hero);
+            position: relative;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 20%, hsl(0 85% 45% / 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, hsl(42 95% 55% / 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .circuit-pattern {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circuit-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 25% 25%, var(--circuit-red) 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, var(--circuit-gold) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 48%, var(--circuit-red) 50%, transparent 52%),
+                linear-gradient(180deg, transparent 48%, var(--circuit-gold) 50%, transparent 52%);
+            background-size: 50px 50px, 70px 70px, 120px 120px, 180px 180px;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+
+        .glow-red {
+            box-shadow: var(--shadow-red);
+        }
+
+        .glow-gold {
+            box-shadow: var(--shadow-gold);
+        }
+
+        .glow-tech {
+            box-shadow: var(--shadow-tech);
+        }
+
+        .gradient-text-primary {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-text-gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-border {
+            border: 1px solid hsl(var(--border));
+            background: var(--gradient-surface);
+            backdrop-filter: blur(10px);
+        }
+
+        .hover-lift {
+            transition: var(--transition-smooth);
+            will-change: transform;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-red);
+        }
+
+        .cta-primary {
+            background: var(--gradient-cta);
+            border: none;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, hsl(0 0% 100% / 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .cta-primary:hover::before {
+            transform: translateX(100%);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-red);
+        }
+
+        .service-card {
+            background: var(--gradient-surface);
+            border: 1px solid hsl(var(--border) / 0.5);
+            backdrop-filter: blur(12px);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: hsl(var(--primary) / 0.3);
+            box-shadow: var(--shadow-red);
+        }
+
+        /* Utility Classes */
+        .text-tech-green { color: hsl(var(--tech-green)); }
+        .text-agro-green { color: hsl(var(--agro-green)); }
+        .text-agro-earth { color: hsl(var(--agro-earth)); }
+        .bg-tech-green { background-color: hsl(var(--tech-green)); }
+        .bg-agro-green { background-color: hsl(var(--agro-green)); }
+        .bg-agro-earth { background-color: hsl(var(--agro-earth)); }
+        .bg-gradient-primary { background: var(--gradient-primary); }
+        .bg-gradient-tech { background: var(--gradient-tech); }
+        .bg-gradient-agro { background: var(--gradient-agro); }
+        .bg-gradient-gold { background: var(--gradient-gold); }
+        .bg-gradient-cta { background: var(--gradient-cta); }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="min-h-screen bg-background">
+    {% block body %}
+    <!-- Header -->
+    {% include 'partials/_header.html' %}
+    
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+    
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.header.brand if t.header else 'IR Productions' }}{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION SIMPLIFICADA -->
+<section id="inicio" class="py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-5xl font-bold mb-6 gradient-text-primary">
+            {{ t.hero.title if t.hero else '_-IR-_ Productions' }}
+        </h1>
+        <p class="text-xl text-muted-foreground mb-8">
+            {{ t.hero.subtitle if t.hero else 'Fusionando Arte, Ciencia y Tecnología' }}
+        </p>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+            {{ t.hero.description if t.hero else 'Transformamos el Agro y las Empresas del Futuro.' }}
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="servicios" class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text-primary">
+            {{ t.services.title if t.services else 'Nuestras Líneas de Solución' }}
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for service in t.services.services if t.services and t.services.services %}
+            <div class="tech-border hover-lift p-6 rounded-xl">
+                <span class="px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs">{{ service.badge }}</span>
+                <h3 class="text-xl font-bold mt-4 mb-2">{{ service.title }}</h3>
+                <p class="text-muted-foreground text-sm">{{ service.desc }}</p>
+                {% if service.target %}
+                <p class="text-sm text-muted-foreground mt-2">{{ service.target }}</p>
+                {% endif %}
+                <div class="flex flex-wrap gap-2 mt-4">
+                    {% for benefit in service.benefits %}
+                    <span class="px-2 py-1 bg-secondary text-xs rounded">{{ benefit }}</span>
+                    {% endfor %}
+                </div>
+                {% if service.link %}
+                <a href="{{ service.link }}" class="inline-block mt-4 text-primary hover:underline">
+                    {{ t.services.cta if t.services else 'Descubre Más' }} →
+                </a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

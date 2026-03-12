@@ -1,0 +1,445 @@
+{
+  "index": {
+    "header": {
+      "brand": "IR Productions",
+      "nav_home": "Home",
+      "nav_services": "Services",
+      "nav_about": "About",
+      "nav_blog": "Blog",
+      "nav_contact": "Contact",
+      "lang_toggle": "ES"
+    },
+    "hero": {
+      "badge": "Integral Digital Innovation",
+      "title": "Fusing Art, Science and Technology",
+      "subtitle": "Integral digital solutions for a connected world. We drive sustainable transformation by closing the digital divide with a focus on rural development and organizational empowerment.",
+      "cta_primary": "Explore Our Services",
+      "cta_secondary": "Contact Us"
+    },
+    "philosophy": {
+      "badge": "Our Philosophy",
+      "title": "We Believe in Technology with Purpose",
+      "content": "The most powerful technology is the one that seamlessly blends with human creativity and natural wisdom, inspired by rediscovering ancestral knowledge and applying it with a modern, artistic lens.",
+      "cards": [
+        {
+          "icon": "Palette",
+          "title": "Art 🎨",
+          "desc": "Creativity and design in every solution"
+        },
+        {
+          "icon": "Brain",
+          "title": "Science 🔬",
+          "desc": "Pedagogy and applied research"
+        },
+        {
+          "icon": "Cpu",
+          "title": "Technology 💻",
+          "desc": "IoT, AI, HPC and Open Source"
+        }
+      ]
+    },
+    "about": {
+      "badge": "About Us",
+      "title": "IR Productions",
+      "content": "We are a technology company with an integral vision, creating solutions that fuse Art, Science and Technology. Our mission is to drive positive, sustainable transformation, close the digital divide and democratize access to knowledge and cutting-edge tools, with a special focus on rural development.",
+      "stats": [
+        {"number": "+5", "label": "Years Experience"},
+        {"number": "+50", "label": "Successful Projects"},
+        {"number": "+100", "label": "People Impacted"},
+        {"number": "100%", "label": "Open Source Commitment"}
+      ]
+    },
+    "services": {
+      "badge": "Solutions",
+      "title": "Our Solution Lines",
+      "subtitle": "Three technological pillars to transform your future",
+      "cta": "Learn More",
+      "services": [
+        {
+          "badge": "B2G/B2B",
+          "title": "Agro-Tech Workshops",
+          "desc": "B2G/B2B training democratizing agricultural technology, fusing ancestral wisdom with modern digital tools.",
+          "benefits": ["Institutional training", "Rural social impact", "Public policies"],
+          "target": "Institutions • Farmers"
+        },
+        {
+          "badge": "IoT + AI",
+          "title": "Agro-IoT Kit 'CultivaTech ColombIA'",
+          "desc": "Autonomous mobile robot with sensors, AI camera and local web/mobile platform for agricultural monitoring.",
+          "benefits": ["24/7 monitoring", "Local AI", "Web platform"],
+          "target": "Farmers • Beekeepers"
+        },
+        {
+          "badge": "Presentation",
+          "title": "Integral Project: E-Waste & Circular Agriculture",
+          "desc": "Integral vision uniting Upcycling, AI and Robotics to transform the future of agriculture and tech sovereignty.",
+          "benefits": ["Integral Vision", "Upcycling", "Tech Sovereignty"],
+          "target": "Producers • Investors"
+        },
+        {
+          "badge": "Hardware",
+          "title": "HPC/AI Workstations",
+          "desc": "Consulting, assembly and support for high-performance AMD/ARM stations for enterprises, academia and health.",
+          "benefits": ["Premium AMD/ARM", "Technical consulting", "Open Source"],
+          "target": "Enterprises • Academia • Health"
+        }
+      ]
+    },
+    "business_model": {
+      "badge": "Business Model",
+      "title": "Shared Value Ecosystem",
+      "content": "Our model integrates education, technology and sustainability in an ecosystem that benefits all value chain actors.",
+      "cards": [
+        {
+          "title": "Education",
+          "desc": "STEAM training and social appropriation of knowledge",
+          "icon": "GraduationCap"
+        },
+        {
+          "title": "Technology",
+          "desc": "IoT, AI and HPC solutions based on open hardware",
+          "icon": "Microchip"
+        },
+        {
+          "title": "Sustainability",
+          "desc": "E-waste upcycling and circular economy",
+          "icon": "Recycle"
+        }
+      ]
+    },
+    "process": {
+      "badge": "Process",
+      "title": "How We Work",
+      "steps": [
+        {"num": "01", "title": "Diagnosis", "desc": "Understanding your needs and context"},
+        {"num": "02", "title": "Design", "desc": "Creating custom solutions"},
+        {"num": "03", "title": "Implementation", "desc": "Deploying with support"},
+        {"num": "04", "title": "Follow-up", "desc": "Evaluating impact and improving"}
+      ]
+    },
+    "impact": {
+      "badge": "Impact",
+      "title": "Transforming Lives",
+      "content": "Our impact goes beyond technology: we build capabilities, strengthen communities and generate opportunities.",
+      "cards": [
+        {
+          "title": "Rural Communities",
+          "desc": "Technological empowerment of farmers and beekeepers",
+          "icon": "Users"
+        },
+        {
+          "title": "Educational Institutions",
+          "desc": "STEAM training and innovation labs",
+          "icon": "School"
+        },
+        {
+          "title": "Enterprises",
+          "desc": "Process optimization with AI and HPC",
+          "icon": "Building"
+        }
+      ]
+    },
+    "ods": {
+      "badge": "SDGs",
+      "title": "Aligned with SDGs",
+      "content": "Our projects contribute directly to the UN Sustainable Development Goals.",
+      "ods_list": [
+        {"num": 1, "title": "No Poverty"},
+        {"num": 2, "title": "Zero Hunger"},
+        {"num": 4, "title": "Quality Education"},
+        {"num": 8, "title": "Decent Work"},
+        {"num": 9, "title": "Industry & Innovation"},
+        {"num": 12, "title": "Responsible Consumption"}
+      ]
+    },
+    "collaboration": {
+      "badge": "Collaboration",
+      "title": "Seeking Strategic Partners",
+      "content": "Government entities, NGOs, academic institutions, private companies and community organizations.",
+      "cta": "Join Our Mission"
+    },
+    "blog": {
+      "badge": "Blog",
+      "title": "Latest News",
+      "cta": "View More Articles"
+    },
+    "contact": {
+      "badge": "Contact",
+      "title": "Let's Talk About Your Project",
+      "content": "Ready to boost your project with cutting-edge technology? Request a free consultation.",
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "organization": "Organization",
+        "message": "Message",
+        "submit": "Send Message",
+        "success": "Message sent successfully",
+        "error": "Error sending. Please try again."
+      },
+      "info": {
+        "title": "Contact Information",
+        "email": "info@ir-productions.com",
+        "phone": "+57 319 7919742",
+        "location": "Fusagasugá, Cundinamarca, Colombia",
+        "whatsapp": "Chat on WhatsApp"
+      }
+    },
+    "footer": {
+      "tagline": "Integral Digital Solutions",
+      "quick_links": "Quick Links",
+      "services": "Services",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "copyright": "All rights reserved"
+    }
+  },
+  "cultivatech": {
+    "header": {
+      "brand": "IR Productions",
+      "nav_home": "Home",
+      "lang_toggle": "ES"
+    },
+    "hero": {
+      "badge": "Precision Agriculture",
+      "title": "CultivaTech ColombIA",
+      "subtitle": "IoT platform for precision agriculture and apiculture in Colombian rural communities",
+      "breadcrumb": "Back to Home"
+    },
+    "intro": {
+      "title": "Revolutionizing Colombian Agriculture",
+      "text": "CultivaTech ColombIA is an integral platform combining IoT, Artificial Intelligence and open hardware to empower farmers and beekeepers with real-time monitoring tools and data-driven decision making."
+    },
+    "problem": {
+      "title": "The Problem",
+      "items": [
+        "Crop losses due to inadequate monitoring",
+        "Inefficient use of resources like water and fertilizers",
+        "Lack of precise data for decision making",
+        "Limited access to agricultural technology in rural areas"
+      ]
+    },
+    "solution": {
+      "title": "Our Solution",
+      "items": [
+        "Low-cost IoT sensors for 24/7 monitoring",
+        "Autonomous mobile robot with AI camera",
+        "Local web/mobile platform for data visualization",
+        "Early warnings for climate and security threats"
+      ]
+    },
+    "features": {
+      "title": "Technical Features",
+      "cards": [
+        {
+          "title": "Open Hardware",
+          "desc": "Raspberry Pi, ESP32 and low-cost sensors",
+          "icon": "Cpu"
+        },
+        {
+          "title": "Local AI",
+          "desc": "Image processing without cloud dependency",
+          "icon": "Brain"
+        },
+        {
+          "title": "Connectivity",
+          "desc": "LoRaWAN, WiFi and mesh networks for rural areas",
+          "icon": "Wifi"
+        },
+        {
+          "title": "Upcycling",
+          "desc": "Creative reuse of e-waste",
+          "icon": "Recycle"
+        }
+      ]
+    },
+    "modules": {
+      "title": "System Modules",
+      "items": [
+        {
+          "title": "Environmental Monitoring",
+          "desc": "Temperature, humidity, light and air quality"
+        },
+        {
+          "title": "Smart Irrigation",
+          "desc": "Automatic systems based on crop needs"
+        },
+        {
+          "title": "Pest Detection",
+          "desc": "AI for early threat identification"
+        },
+        {
+          "title": "Security",
+          "desc": "Alarms for intruders and adverse conditions"
+        }
+      ]
+    },
+    "impact": {
+      "title": "Expected Impact",
+      "stats": [
+        {"number": "+30%", "label": "Productivity Increase"},
+        {"number": "-40%", "label": "Water Usage Reduction"},
+        {"number": "+500", "label": "Families Impacted"},
+        {"number": "100%", "label": "Sovereign Technology"}
+      ]
+    },
+    "roadmap": {
+      "title": "Roadmap",
+      "phases": [
+        {"phase": "Phase 1", "title": "Prototyping", "desc": "MVP development with basic sensors"},
+        {"phase": "Phase 2", "title": "Pilot", "desc": "Implementation in 5 farms in Fusagasugá"},
+        {"phase": "Phase 3", "title": "Scaling", "desc": "Expansion to all Sumapaz zone"},
+        {"phase": "Phase 4", "title": "Replication", "desc": "Bringing the model to other departments"}
+      ]
+    },
+    "team": {
+      "title": "Team",
+      "content": "A multidisciplinary team of engineers, pedagogues and agriculture experts."
+    },
+    "cta": {
+      "title": "Want to Be Part?",
+      "text": "Join as partner, investor or beneficiary of this agricultural tech revolution.",
+      "button": "Contact Us"
+    }
+  },
+  "agro_workshops": {
+    "header": {
+      "brand": "IR Productions",
+      "nav_home": "Home",
+      "lang_toggle": "ES"
+    },
+    "breadcrumb": "Back to Services",
+    "badge": "Education & Technology",
+    "title": "Agro-Innovation Workshops",
+    "subtitle": "Transforming the Field with Technology and Knowledge",
+    "location": "Driving Sustainable Development in Cundinamarca, Fusagasugá and the Sumapaz Zone",
+    "intro": {
+      "title": "",
+      "text": "\"Agro-Innovation Workshops\" is an academic space designed to connect rural communities, organizations, companies and NGOs with the latest trends in technology applied to agriculture. Our goal is to strengthen the agricultural production chain through innovation, training and social appropriation of knowledge, aligned with national and departmental public policies of Colombia."
+    },
+    "alignment": {
+      "title": "Public Policy Alignment",
+      "text1": "Our project is strategically aligned with the National Development Plan (PND) 2022-2026, particularly with the \"Human Right to Food\" transformation, which promotes intensive data use and digital technology adoption for productive reconversion. Furthermore, we are in tune with the National System of Agricultural Innovation (SNIA), integrating local knowledge with cutting-edge technology.",
+      "text2": "At the departmental level, our approach fits perfectly with the strategic lines of the Development Plan of Cundinamarca 2024-2028, especially in the commitment to \"Shared Competitiveness\" and \"Countryside = Efficient Productivity\". We work to incorporate Science, Technology and Innovation (STI) in agricultural production systems, fostering social appropriation of knowledge and strengthening technological capabilities of rural communities."
+    },
+    "methodology": {
+      "title": "Methodology",
+      "text": "Our methodology is based on Project-Based Learning (PBL) and the STEAM philosophy (Science, Technology, Engineering, Arts, and Mathematics), promoting active student participation in solving real problems. Through practical workshops, participants will learn to build and program IoT nodes for crop monitoring, automatic irrigation systems, smart alarms and environmental meters, among others."
+    },
+    "modules": {
+      "title": "Contents and Themes",
+      "items": [
+        {
+          "title": "Smart Agricultural Monitoring",
+          "desc": "Learn to use IoT sensors to monitor critical variables such as humidity, temperature and light, optimizing production and reducing losses."
+        },
+        {
+          "title": "Automatic Irrigation Systems",
+          "desc": "Design and implement irrigation systems that respond to your crops' specific needs, using low-cost and high-efficiency technology."
+        },
+        {
+          "title": "Smart Alarms",
+          "desc": "Build alarms that warn you of possible threats, such as intruders or adverse weather conditions, protecting your investment."
+        },
+        {
+          "title": "Environmental Meters",
+          "desc": "Install school or peasant weather stations that provide precise data for informed decision-making."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits for Rural Communities",
+      "items": [
+        "Increased Productivity: Improve crop efficiency through precise monitoring.",
+        "Cost Reduction: Minimize use of resources like water and fertilizers.",
+        "Technical Strengthening: Acquire technological skills to maintain your own solutions.",
+        "Promotion of Popular Economy: Foster technical and economic autonomy of your community."
+      ]
+    },
+    "budget": {
+      "title": "Budgets and Financing",
+      "text": "We offer a transparent cost structure and sustainable business model. We have tiered pricing levels to adapt to needs and payment capacities of our clients, from NGOs and rural unions to private companies and government entities.",
+      "paymentTitle": "Payment Methods",
+      "paymentText": "We accept 70% advance payments upon contract signing, with remaining 15% at start of first module and final 15% upon completion and certificate delivery. Additionally, we offer in-kind financing through strategic alliances, such as institutional support, network access and use of spaces."
+    },
+    "cta": "Request Information",
+    "conclusion": "At Agro-Innovation Workshops, we are committed to sustainable development of rural communities. Join us and be part of this agricultural technological revolution."
+  },
+  "hpc_builder": {
+    "header": {
+      "brand": "IR Productions",
+      "nav_home": "Home",
+      "nav_hpc": "HPC Builder",
+      "lang_toggle": "ES"
+    },
+    "badge": "HPC E-commerce",
+    "title": "HPC/AI Workstation Builder",
+    "subtitle": "Design your high-performance workstation with premium AMD/ARM components",
+    "breadcrumb": "Back to Services",
+    "builder": {
+      "select_architecture": "Select Architecture",
+      "genesis": "Genesis (Workstation)",
+      "hive": "Hive (ARM Cluster)",
+      "titan": "Titan (EPYC Server)",
+      "configure": "Configure Components",
+      "cpu": "Processor",
+      "gpu": "GPU",
+      "motherboard": "Motherboard",
+      "ram": "RAM Memory",
+      "storage": "Storage",
+      "psu": "Power Supply",
+      "case": "Case",
+      "cooling": "Cooling",
+      "add_to_cart": "Add to Cart",
+      "request_quote": "Request Quote"
+    },
+    "metrics": {
+      "title": "System Metrics",
+      "price": "Estimated Price",
+      "teraflops": "Estimated Teraflops",
+      "power": "Power Consumption",
+      "compatibility": "Compatibility"
+    },
+    "cart": {
+      "title": "Your Configuration",
+      "empty": "Cart is empty",
+      "total": "Total",
+      "checkout": "Process Order",
+      "whatsapp": "Order via WhatsApp"
+    },
+    "features": {
+      "title": "Features",
+      "items": [
+        {
+          "title": "100% AMD/ARM",
+          "desc": "Premium latest-generation components"
+        },
+        {
+          "title": "Automatic Validation",
+          "desc": "Compatibility verified by AI agents"
+        },
+        {
+          "title": "Updated Prices",
+          "desc": "Real-time scraping from suppliers"
+        },
+        {
+          "title": "Specialized Support",
+          "desc": "Technical consulting included"
+        }
+      ]
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "text": "Sorry, the page you're looking for doesn't exist or was moved.",
+      "cta": "Back to Home"
+    },
+    "500": {
+      "title": "Server Error",
+      "text": "Something went wrong. Please try again later.",
+      "cta": "Back to Home"
+    }
+  }
+}

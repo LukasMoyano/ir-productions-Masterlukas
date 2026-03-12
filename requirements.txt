@@ -1,51 +1,54 @@
-# IR Productions Nexus - Flask Environment Variables
-# ==================================================
-# Copia este archivo a .env y configura tus variables
+# IR Productions Nexus - Flask Dependencies
+# ==========================================
+# Dependencias Python para la aplicación Flask
+# Actualizado: Febrero 2026
 
 # ============================================================================
-# FLASK CONFIGURATION
+# FRAMEWORK PRINCIPAL
 # ============================================================================
-FLASK_ENV=development
-FLASK_DEBUG=True
-FLASK_APP=app.py
-SECRET_KEY=tu-clave-secreta-muy-segura-cambiar-en-produccion
+Flask==3.0.0
+Werkzeug==3.0.1
 
 # ============================================================================
-# SERVER CONFIGURATION
+# INTERNACIONALIZACIÓN (i18n)
 # ============================================================================
-HOST=0.0.0.0
-PORT=5000
+Flask-Babel==4.0.0
+Babel==2.14.0
 
 # ============================================================================
-# DATABASE (Optional - for future expansion)
+# UTILIDADES
 # ============================================================================
-# DATABASE_URL=postgresql://user:password@localhost:5432/ir_productions
+python-dotenv==1.0.0
+requests==2.31.0
 
 # ============================================================================
-# FTP DEPLOYMENT
+# AGENTES DE SCRAPING (HPC Dropshipping)
 # ============================================================================
-FTP_SERVER=ftp.tu-dominio.com
-FTP_USERNAME=tu-usuario
-FTP_PASSWORD=tu-password
-FTP_REMOTE_PATH=/public_html
+playwright==1.40.0
+beautifulsoup4==4.12.2
+lxml==5.1.0
 
 # ============================================================================
-# EMAIL CONFIGURATION (Optional)
+# PROCESAMIENTO DE DATOS
 # ============================================================================
-# MAIL_SERVER=smtp.gmail.com
-# MAIL_PORT=587
-# MAIL_USE_TLS=True
-# MAIL_USERNAME=tu-email@gmail.com
-# MAIL_PASSWORD=tu-password
+pandas==2.1.4
+openpyxl==3.1.2
 
 # ============================================================================
-# WHATSAPP API (Optional)
+# SERVIDOR DE PRODUCCIÓN
 # ============================================================================
-# WHATSAPP_API_KEY=tu-api-key
-# WHATSAPP_PHONE=573197919742
+gunicorn==21.2.0
 
 # ============================================================================
-# SECURITY
+# BASE DE DATOS (Opcional, para futura expansión)
 # ============================================================================
-# CORS_ORIGINS=https://tu-dominio.com
-# RATE_LIMIT_ENABLED=True
+# Flask-SQLAlchemy==3.1.1
+# SQLAlchemy==2.0.23
+# psycopg2-binary==2.9.9  # PostgreSQL
+
+# ============================================================================
+# AUTENTICACIÓN (Opcional, para futura expansión)
+# ============================================================================
+# Flask-Login==0.6.3
+# Flask-WTF==1.2.1
+# email-validator==2.1.0

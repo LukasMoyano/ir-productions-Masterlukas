@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}500 - {{ t.errors['500'].title if t.errors and t.errors['500'] else 'Error del Servidor' }}{% endblock %}
+
+{% block content %}
+<section class="min-h-screen flex items-center justify-center circuit-pattern hero-gradient">
+    <div class="text-center max-w-2xl mx-auto px-4 lg:px-8">
+        <!-- 500 Number -->
+        <h1 class="text-9xl md:text-[12rem] font-bold gradient-text-primary mb-4 animate-float">
+            500
+        </h1>
+        
+        <!-- Error Message -->
+        <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            {{ t.errors['500'].title if t.errors and t.errors['500'] else 'Error del Servidor' }}
+        </h2>
+        
+        <p class="text-xl text-muted-foreground mb-8">
+            {{ t.errors['500'].text if t.errors and t.errors['500'] else 'Algo salió mal. Por favor intenta nuevamente más tarde.' }}
+        </p>
+        
+        <!-- CTA Button -->
+        <a href="{{ url_for('index', lang=lang) }}" 
+           class="inline-flex items-center cta-primary hover-lift group px-8 py-4 rounded-md font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform"><path d="m15 18-6-6 6-6"/></svg>
+            {{ t.errors['500'].cta if t.errors and t.errors['500'] else 'Volver al Inicio' }}
+        </a>
+        
+        <!-- Support Info -->
+        <div class="mt-12 p-6 tech-border rounded-xl inline-block">
+            <p class="text-sm text-muted-foreground mb-2">
+                {{ lang == 'es' and '¿Necesitas ayuda?' or 'Need help?' }}
+            </p>
+            <a href="mailto:info@ir-productions.com" class="text-primary hover:underline">
+                info@ir-productions.com
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

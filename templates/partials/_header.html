@@ -1,0 +1,96 @@
+<!-- Header Component - IR Productions -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-lg bg-background/80 border-b border-border">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <a href="{{ url_for('index', lang=lang) }}" class="flex items-center space-x-2 cursor-pointer">
+                <div class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-sm flex items-center justify-center">
+                    <span class="text-primary-foreground font-bold text-sm">IR</span>
+                </div>
+                <span class="font-bold text-lg gradient-text-primary">Productions</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'inicio' if lang == 'es' else 'home' }}" 
+                   class="text-foreground hover:text-primary transition-colors duration-300 relative group">
+                    {{ t.header.nav_home if t.header else ('Inicio' if lang == 'es' else 'Home') }}
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'servicios' if lang == 'es' else 'services' }}" 
+                   class="text-foreground hover:text-primary transition-colors duration-300 relative group">
+                    {{ t.header.nav_services if t.header else ('Servicios' if lang == 'es' else 'Services') }}
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'proceso' if lang == 'es' else 'process' }}" 
+                   class="text-foreground hover:text-primary transition-colors duration-300 relative group">
+                    {{ t.header.nav_process if t.header else ('Proceso' if lang == 'es' else 'Process') }}
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'contacto' if lang == 'es' else 'contact' }}" 
+                   class="text-foreground hover:text-primary transition-colors duration-300 relative group">
+                    {{ t.header.nav_contact if t.header else ('Contacto' if lang == 'es' else 'Contact') }}
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </nav>
+
+            <!-- Language Toggle & Menu -->
+            <div class="flex items-center space-x-4">
+                <!-- Language Toggle -->
+                <a href="?lang={{ 'en' if lang == 'es' else 'es' }}" 
+                   class="hidden md:flex items-center space-x-1 text-foreground hover:text-primary transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    <span class="text-sm font-medium">{{ 'EN' if lang == 'es' else 'ES' }}</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button type="button" 
+                        id="mobile-menu-btn"
+                        class="md:hidden text-foreground hover:text-primary transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-border animate-fade-in">
+            <nav class="flex flex-col space-y-3">
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'inicio' if lang == 'es' else 'home' }}" 
+                   class="text-foreground hover:text-primary transition-colors px-2 py-1">
+                    {{ t.header.nav_home if t.header else ('Inicio' if lang == 'es' else 'Home') }}
+                </a>
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'servicios' if lang == 'es' else 'services' }}" 
+                   class="text-foreground hover:text-primary transition-colors px-2 py-1">
+                    {{ t.header.nav_services if t.header else ('Servicios' if lang == 'es' else 'Services') }}
+                </a>
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'proceso' if lang == 'es' else 'process' }}" 
+                   class="text-foreground hover:text-primary transition-colors px-2 py-1">
+                    {{ t.header.nav_process if t.header else ('Proceso' if lang == 'es' else 'Process') }}
+                </a>
+                <a href="{{ url_for('index', lang=lang) }}#{{ 'contacto' if lang == 'es' else 'contact' }}" 
+                   class="text-foreground hover:text-primary transition-colors px-2 py-1">
+                    {{ t.header.nav_contact if t.header else ('Contacto' if lang == 'es' else 'Contact') }}
+                </a>
+                <a href="?lang={{ 'en' if lang == 'es' else 'es' }}" 
+                   class="text-foreground hover:text-primary transition-colors px-2 py-1 flex items-center space-x-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    <span>{{ 'English' if lang == 'es' else 'Español' }}</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+});
+</script>

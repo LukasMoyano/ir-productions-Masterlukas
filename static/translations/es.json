@@ -1,0 +1,467 @@
+{
+  "index": {
+    "header": {
+      "brand": "_-IR-_ Productions",
+      "nav_home": "Inicio",
+      "nav_services": "Servicios",
+      "nav_about": "Nosotros",
+      "nav_blog": "Blog",
+      "nav_contact": "Contacto",
+      "lang_toggle": "EN"
+    },
+    "hero": {
+      "badge": "Innovación Digital Integral",
+      "title": "_-IR-_ Productions",
+      "subtitle": "Fusionando Arte, Ciencia y Tecnología",
+      "description": "Transformamos el Agro y las Empresas del Futuro con soluciones digitales integrales que conectan sabiduría ancestral con innovación de vanguardia.",
+      "cta1": "Talleres Agro",
+      "cta2": "Workstations IA",
+      "slogan": "Hacemos lo que queremos, porque amamos lo que hacemos. Funk with us!",
+      "impact": "Alineados con PDM de Cundinamarca • PDD Cundinamarca • ODS"
+    },
+    "philosophy": {
+      "badge": "Nuestra Filosofía",
+      "title": "Nuestra Filosofía",
+      "subtitle": "Arte + Ciencia + Tecnología",
+      "cards": [
+        {
+          "icon": "Palette",
+          "title": "ARTE",
+          "desc": "Diseñamos experiencias digitales que inspiran y conectan.",
+          "detail": "Estética, UX y diseño que trasciende"
+        },
+        {
+          "icon": "Atom",
+          "title": "CIENCIA",
+          "desc": "Impulsamos el conocimiento y la innovación desde la pedagogía.",
+          "detail": "Investigación, educación y saberes ancestrales"
+        },
+        {
+          "icon": "Cpu",
+          "title": "TECNOLOGÍA",
+          "desc": "Creamos soluciones tangibles y escalables, desde IoT hasta IA, con enfoque AMD/Open Source.",
+          "detail": "Hardware/Software, DIY y desarrollo sostenible"
+        }
+      ]
+    },
+    "about": {
+      "badge": "_-IR-_ Productions",
+      "title": "Quiénes Somos",
+      "subtitle": "Artista Visual • Pedagogo • Tecnólogo",
+      "description": "Lukas Moyano y _-IR-_ Productions transformamos el Agro y las Organizaciones a través de la fusión Arte+Ciencia+Tecnología, con un enfoque en innovación accesible, sostenibilidad y la sabiduría ancestral aplicada al mundo moderno. Nuestra misión es democratizar la tecnología con alma creativa, respetando el conocimiento ancestral mientras construimos el futuro digital que Colombia necesita.",
+      "bioTitle": "Perfil del Fundador",
+      "bio": "En la intersección donde el Silicio encuentra al Carbono, opero como un arquitecto de realidades híbridas. Mi origen en las Artes Visuales me enseñó a ver lo invisible, pero fue con los principios de la Ingeniería de Software, el entender el funcionamiento de la Inteligencia Artificial y la Filosofía de Código Abierto que me dieron las herramientas para poder codificar y decodificar el lenguaje con las maquinas y la sabiduría pragmática de pensar en soluciones reales para el campo usando tecnologia actual.\n\nDesde mi base en Fusagasugá, lidero una 'rebelión tecnológica' constructiva. Utilizo sensores IoT como extensiones nerviosas de la tierra y modelos de IA como oráculos climáticos, todo bajo una filosofía de código abierto y soberanía. En _-IR-_ Productions, perseguimos la idea de no vendemos cajas negras; forjamos llaves maestras. Mi misión es hackear la brecha digital, empoderando al agricultor con herramientas de ciencia ficción que funcionan hoy, asegurando que la tecnología sirva a la vida y no al revés.",
+      "expertiseTitle": "Áreas de Expertiza",
+      "expertise": [
+        {
+          "title": "Arte & Diseño",
+          "items": ["Dirección de Arte", "Narrativa Visual", "Diseño UX/UI", "Producción Audiovisual", "3D Mapping"]
+        },
+        {
+          "title": "Ciencia & Pedagogía",
+          "items": ["Diseño Curricular", "Transferencia de Conocimiento", "Investigación Aplicada", "Resolución de Problemas", "Ética en IA"]
+        },
+        {
+          "title": "Tecnología & Desarrollo",
+          "items": ["IA/ML (TensorFlow, PyTorch)", "React, .NET Core", "IoT & Sensores de Campo", "HPC/GPUs", "OpenCV, NLP, Hugging Face"]
+        },
+        {
+          "title": "Impacto Social",
+          "items": ["Alfabetización Digital", "Desarrollo Rural", "AgroTech", "Inclusión Tecnológica", "Sostenibilidad"]
+        }
+      ],
+      "educationTitle": "Educación y Certificaciones",
+      "education": [
+        "Pontificia Universidad Javeriana – Maestría en Artes Visuales, Expresión Audiovisual (2019)",
+        "MinTICs & Atenea-UNAL – IA Avanzada, HPC, Desarrollo Web y Apps (2023–2024)",
+        "Uniminuto – Pedagogía para Profesionales no Licenciados (2021)",
+        "AcademLo – Desarrollo Web con React JS (2023)",
+        "Colsubsidio CET – Big Data y Análisis de Datos (2022)"
+      ],
+      "slogan": "Hacemos lo que queremos, porque amamos lo que hacemos, Funk with us!"
+    },
+    "services": {
+      "badge": "Soluciones",
+      "title": "Nuestras Líneas de Solución",
+      "subtitle": "Tres pilares tecnológicos para transformar tu futuro",
+      "cta": "Descubre Más",
+      "services": [
+        {
+          "badge": "B2G/B2B",
+          "title": "Talleres Agro-Innovación Integral",
+          "desc": "Capacitación B2G/B2B que democratiza la tecnología agrícola, fusionando sabiduría ancestral con herramientas digitales modernas. Alineados con PDM Arbeláez y PDD Cundinamarca.",
+          "benefits": ["Capacitación institucional", "Impacto social rural", "Alineación políticas públicas"],
+          "target": "Instituciones • Agricultores",
+          "link": "/talleres-agro-innovacion",
+          "color": "agro-green"
+        },
+        {
+          "badge": "MVP",
+          "title": "Kit Agro-IoT 'CultivaTech ColombIA'",
+          "desc": "Robot móvil autónomo con sensores, cámara IA y plataforma web/móvil local para monitoreo agrícola y apícola en tiempo real. MVP en desarrollo.",
+          "benefits": ["Monitoreo 24/7", "IA local", "Plataforma web"],
+          "target": "Agricultores • Apicultores",
+          "color": "tech-green"
+        },
+        {
+          "badge": "Presentación",
+          "title": "Proyecto Integral: E-Waste y Agricultura Circular",
+          "desc": "Descubre nuestra visión integral que une Upcycling, IA y Robótica para transformar el futuro del agro y la soberanía tecnológica.",
+          "benefits": ["Visión Integral", "Upcycling", "Soberanía Tecnológica"],
+          "target": "Productores • Inversionistas • Aliados",
+          "link": "/presentacion-cultivatech",
+          "color": "blue-500"
+        },
+        {
+          "badge": "Hardware",
+          "title": "Workstations HPC/IA Personalizadas",
+          "desc": "Consultoría, ensamblaje y soporte de estaciones AMD/ARM de alto rendimiento para empresas, academia y salud. Enfoque en ROI, rendimiento y control total.",
+          "benefits": ["AMD/ARM premium", "Consultoría técnica", "Open Source"],
+          "target": "Empresas • Academia • Salud",
+          "color": "primary"
+        }
+      ]
+    },
+    "business_model": {
+      "badge": "Modelo de Negocio",
+      "title": "Nuestro Modelo de Negocio y Escalabilidad",
+      "subtitle": "Visión Financiera Sostenible",
+      "models": [
+        {
+          "title": "Talleres Agro-Tech",
+          "model": "B2G/B2B + Alianzas Institucionales",
+          "pricing": "Modelo de precios por ciclo/grupo",
+          "scalability": "Formador de Formadores + Contenido e-learning",
+          "color": "agro-green"
+        },
+        {
+          "title": "Workstations HPC/IA",
+          "model": "Consultoría + Venta Directa",
+          "pricing": "Anticipo 70% + Personalización",
+          "scalability": "Alianzas con distribuidores + Expansión nichos (salud, finanzas)",
+          "color": "primary"
+        },
+        {
+          "title": "CultivaTech ColombIA",
+          "model": "Venta de Kit + Suscripción SaaS",
+          "pricing": "Hardware + Plataforma mensual",
+          "scalability": "Expansión cultivos/regiones + IA mejorada + Analítica avanzada",
+          "color": "tech-green"
+        }
+      ]
+    },
+    "process": {
+      "badge": "Metodología",
+      "title": "Nuestro Proceso",
+      "subtitle": "Metodología probada para la innovación exitosa",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Diagnóstico y Diseño Personalizado",
+          "desc": "Entendemos profundamente tu necesidad específica y co-creamos la solución ideal fusionando Arte, Ciencia y Tecnología.",
+          "features": ["Análisis detallado", "Co-creación", "Diseño a medida"]
+        },
+        {
+          "num": "02",
+          "title": "Implementación y Entrega",
+          "desc": "Desarrollamos y entregamos la solución completa (Taller, Workstation o Kit IoT) lista para usar con toda la documentación.",
+          "features": ["Desarrollo ágil", "Testing riguroso", "Entrega completa"]
+        },
+        {
+          "num": "03",
+          "title": "Impulso y Escalabilidad",
+          "desc": "Acompañamos tu crecimiento con soporte continuo, educación permanente y evolución del sistema según tus nuevas necesidades.",
+          "features": ["Soporte 24/7", "Capacitación continua", "Escalabilidad"]
+        }
+      ]
+    },
+    "impact": {
+      "badge": "Impacto Social",
+      "title": "Impacto y Alineación",
+      "subtitle": "Contribuyendo a los Objetivos de Desarrollo Sostenible",
+      "description": "_-IR-_ Productions, a través de nuestras soluciones tecnológicas, contribuye activamente a los ODSs claves, apoyando las metas de innovación, sostenibilidad, desarrollo económico y cierre de brecha digital de los planes de desarrollo Naciolales, Municipales y Departamentales, especialmente Fusagasuga, La Region del Sumapaz y Cundinamarca.",
+      "cards": [
+        {
+          "title": "Educación de Calidad",
+          "desc": "Talleres prácticos que democratizan el conocimiento tecnológico",
+          "image": "/ODSs/S_SDG goals_icons-individual-rgb-04_0.png"
+        },
+        {
+          "title": "Trabajo Decente",
+          "desc": "Generamos oportunidades laborales dignas en el sector agro-tech",
+          "image": "/ODSs/s-web-goal-08.png"
+        },
+        {
+          "title": "Industria e Innovación",
+          "desc": "Impulsamos la innovación tecnológica en el sector rural",
+          "image": "/ODSs/Sustainable_Development_Goal-es-09.jpg"
+        },
+        {
+          "title": "Producción Responsable",
+          "desc": "Promovemos prácticas agrícolas sostenibles con tecnología",
+          "image": "/ODSs/S-WEB-Goal-12.png"
+        },
+        {
+          "title": "Acción Climática",
+          "desc": "Monitoreo ambiental y optimización de recursos naturales",
+          "image": "/ODSs/S-WEB-Goal-13.png"
+        },
+        {
+          "title": "Alianzas para los Objetivos",
+          "desc": "Colaboramos con instituciones locales y globales",
+          "image": "/ODSs/S-WEB-Goal-17.png"
+        }
+      ]
+    },
+    "ods": {
+      "badge": "Impacto",
+      "title": "Impacto y Alineación Estratégica",
+      "subtitle": "Comprometidos con el desarrollo sostenible y las políticas públicas",
+      "impacts": [
+        {
+          "title": "Impacto Social",
+          "desc": "Capacitación a agricultores e instituciones",
+          "metrics": "500+ beneficiarios esperados",
+          "ods": ["ODS 4", "ODS 8"]
+        },
+        {
+          "title": "Sostenibilidad",
+          "desc": "Tecnología verde y gestión de e-waste",
+          "metrics": "Reducción 30% residuos electrónicos",
+          "ods": ["ODS 12", "ODS 13"]
+        },
+        {
+          "title": "Innovación Tecnológica",
+          "desc": "Soluciones IoT y IA para el agro",
+          "metrics": "Aumento 25% productividad",
+          "ods": ["ODS 2", "ODS 9"]
+        }
+      ],
+      "alignment": {
+        "title": "Alineación con Políticas Públicas",
+        "policies": ["Política MinTIC", "Estrategia Digital Nacional", "Plan Nacional de Desarrollo", "PDD Cundinamarca 2024-2027"]
+      }
+    },
+    "collaboration": {
+      "badge": "Colaboración",
+      "title": "Solicitud de Colaboración y Respaldo",
+      "subtitle": "Construyamos el Futuro Juntos",
+      "description": "Invitamos a instituciones, empresas y organizaciones a establecer alianzas estratégicas que generen impacto sostenible y transformación digital en el sector rural.",
+      "benefits": [
+        {
+          "title": "Alianzas Estratégicas",
+          "desc": "Difusión conjunta, espacios compartidos y co-branding para maximizar el alcance"
+        },
+        {
+          "title": "Impacto Medible",
+          "desc": "Contribución directa a ODS y planes de desarrollo con métricas claras"
+        },
+        {
+          "title": "Beneficio Mutuo",
+          "desc": "Fortalecimiento de la marca institucional a través de innovación social"
+        },
+        {
+          "title": "Escalabilidad Regional",
+          "desc": "Expansión del modelo a otros municipios y departamentos"
+        }
+      ],
+      "cta": "Solicitar una Reunión",
+      "secondary_cta": "Descargar Propuesta"
+    },
+    "blog": {
+      "coming_soon": "Próximamente",
+      "title": "Explora el Futuro del Agro y la Tecnología",
+      "subtitle": "Blog de Noticias sobre el Agro, tecnología y sus aplicaciones",
+      "description": "Próximamente: artículos cuidadosamente seleccionados sobre tendencias en Agro-Tech e Innovación, curados para inspirar y mantenerte al día. ¡Mantente conectado!",
+      "features": [
+        {
+          "title": "Blogg NEWS",
+          "desc": "Blogg NEWS"
+        },
+        {
+          "title": "Tendencias Agro-Tech",
+          "desc": "Lo último en tecnología agrícola sostenible"
+        },
+        {
+          "title": "Innovación Digital",
+          "desc": "Arte, ciencia y tecnología convergente"
+        }
+      ],
+      "cta": "Suscríbete para Actualizaciones"
+    },
+    "contact": {
+      "quick_contact": "Contacto Rápido",
+      "title": "¡Conecta con la Innovación!",
+      "subtitle": "Hablemos de tu Próximo Gran Proyecto",
+      "description": "¿Buscas potenciar tu finca con tecnología? ¿Necesitas una workstation IA de alto rendimiento? ¿Quieres explorar el futuro del monitoreo agrícola? Contáctanos para una consulta personalizada.",
+      "contact": {
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "brochure": "Descargar Brochure"
+      },
+      "location": "Fusagasugá, Cundinamarca, Colombia",
+      "cta": "Iniciar Conversación"
+    },
+    "footer": {
+      "tagline": "Soluciones Digitales Integrales",
+      "quick_links": "Enlaces Rápidos",
+      "services": "Servicios",
+      "legal": "Legal",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "copyright": "Todos los derechos reservados"
+    }
+  },
+  "cultivatech": {
+    "title": "CultivaTech - Presentación",
+    "sections": [
+      {
+        "title": "Sembrando el Futuro de la Agricultura Sostenible",
+        "content": "Cultivatech es una iniciativa de IR Productions que fusiona la innovación tecnológica con la agricultura sostenible. Nuestro objetivo es transformar los desechos electrónicos (e-waste) en recursos valiosos para el campo, creando un ecosistema donde la tecnología y la naturaleza prosperan en armonía."
+      },
+      {
+        "title": "El E-Waste y la Necesidad de una Agricultura Eficiente",
+        "content": [
+          "**Problema Global:** Cada año, el mundo genera una montaña de **62 mil millones de kg** de e-waste.",
+          "**Desafío Nacional (Colombia 2022):** Colombia generó **388,000 toneladas**, pero solo un alarmante **1%** fue gestionado formalmente.",
+          "**Impacto Negativo:** Esta gestión deficiente libera **58,000 kg de mercurio** y **45 millones de kg de plásticos tóxicos** al ambiente CADA AÑO.",
+          "**Nuestra Visión:** Vemos cada residuo como una **mina urbana**, una oportunidad para formalizar y tecnificar la labor de los recuperadores."
+        ]
+      },
+      {
+        "title": "De Residuos a Componentes de Alta Tecnología",
+        "content": [
+          "Nuestra propuesta es un ecosistema circular que transforma el problema en un motor de desarrollo en 3 fases clave:",
+          "**1. Recuperación Estratégica:** Alianzas y certificación de familias recuperadoras.",
+          "**2. Preparación y Clasificación:** Trazabilidad y pureza de materiales bajo estándares de calidad.",
+          "**3. Transformación (Upcycling):** Convertimos residuos en materia prima de alto valor: filamento 3D a partir de plásticos y chasis de robots a partir de metales."
+        ]
+      },
+      {
+        "title": "La 'Mina Urbana' que Impulsa Nuestra Soberanía",
+        "content": [
+          "**Supra-Reciclaje:** Cada residuo electrónico que procesamos es una mina que no necesitamos cavar. Al recuperar metales como Oro (Au), Plata (Ag), y Cobre (Cu), reducimos la dependencia de la minería extractiva y su impacto ambiental."
+        ]
+      },
+      {
+        "title": "La Inteligencia Agrícola Nace del Reciclaje: Cultivatech ColombIA",
+        "content": [
+          "Con la materia prima que rescatamos, construimos el Kit Agro-IoT 'Cultivatech ColombIA'.",
+          "**Hechos en Colombia:** Robots autónomos de bajo costo, con chasis de aluminio reciclado y piezas impresas en 3D con nuestro filamento.",
+          "**Soberanía Tecnológica:** Fomentamos la independencia comercial de Colombia, haciéndonos menos vulnerables a las fluctuaciones del mercado global."
+        ]
+      },
+      {
+        "title": "Impacto Real en el Campo: Más Productividad, Más Ingresos",
+        "content": [
+          "Nuestra plataforma de monitoreo 24/7 ofrece beneficios cuantificables para diversos cultivos:",
+          "**Resultados (Alpha Testing):** Prototipos validados por SENA Tecnoparque muestran un potencial de aumento en la productividad del **15% al 25%** y una reducción de pérdidas de hasta el **30%**."
+        ]
+      },
+      {
+        "title": "Empoderando al Campo: Conocimiento, Tecnología y Comunidades",
+        "content": [
+          "**Talleres Tecnológicos Accesibles:** Llevamos formación práctica y adaptada a las comunidades agrícolas.",
+          "**Integración de Experiencia:** Creamos puentes generacionales de aprendizaje con mentores expertos como pensionados del SENA.",
+          "**Desarrollo de Capacidades:** Empoderamos a los agricultores para que se conviertan en líderes de la agricultura digital."
+        ]
+      },
+      {
+        "title": "Un Modelo de Negocio Sólido y Rentable",
+        "content": [
+          "**Sostenible (Ambiental):** Valorizamos residuos y evitamos la minería extractiva.",
+          "**Sustentable (Social):** Generamos empleo digno para familias recuperadoras.",
+          "**Rentable (Económico):** Múltiples flujos de ingreso con costos optimizados gracias al upcycling."
+        ]
+      },
+      {
+        "title": "Invierta en el Futuro: Un Rendimiento que Cultiva Valor",
+        "content": [
+          "**Tracción Validada:** Plataforma Alpha certificada por SENA Tecnoparque y prototipos funcionales.",
+          "**Oportunidad de Escalamiento:** Buscamos capital semilla para escalar nuestra operación y llevar Cultivatech a 1,000 agricultores en 2 años.",
+          "**¿Por qué Invertir?** Participe en un negocio con triple retorno medible: económico, social y ambiental."
+        ]
+      },
+      {
+        "title": "Juntos, Sembremos el Cambio",
+        "content": [
+          "Gracias por su tiempo. Contáctenos para transformar un desafío en una oportunidad sin precedentes para Colombia.",
+          "**Lukas Moyano M. | CEO, CTO, Founder**",
+          "+57 3197919742 | lukasmoyanomorales@gmail.com"
+        ]
+      }
+    ]
+  },
+  "agro_workshops": {
+    "breadcrumb": "Volver a Servicios",
+    "badge": "Educación & Tecnología",
+    "title": "Talleres Agro-Innovación Integral",
+    "subtitle": "Transformando el Campo con Tecnología y Conocimiento",
+    "location": "Impulsando el Desarrollo Sostenible en Cundinamarca, Fusagasugá y la Zona del Sumapaz",
+    "intro": {
+      "title": "",
+      "text": "\"Agro-Innovación Integral\" es un espacio académico diseñado para conectar a las comunidades rurales, organizaciones, empresas y ONGs con las últimas tendencias en tecnología aplicada a la agricultura. Nuestro objetivo es fortalecer la cadena productiva agropecuaria a través de la innovación, la capacitación y la apropiación social del conocimiento, alineados con las políticas públicas nacionales y departamentales."
+    },
+    "alignment": {
+      "title": "Alineación con Políticas Públicas",
+      "text1": "Nuestro proyecto se encuentra estratégicamente alineado con el Plan Nacional de Desarrollo (PND) 2022-2026, en particular con la transformación \"Derecho Humano a la Alimentación\", que promueve el uso intensivo de datos y la adopción de tecnologías digitales para la reconversión productiva. Además, estamos en sintonía con el Sistema Nacional de Innovación Agropecuaria (SNIA), integrando saberes locales con tecnología de punta.",
+      "text2": "A nivel departamental, nuestro enfoque se ajusta perfectamente a las líneas estratégicas del Plan de Desarrollo de Cundinamarca 2024-2028, especialmente en la apuesta por la \"Competitividad Compartida\" y el \"Campo = Productividad Eficiente\". Trabajamos para incorporar Ciencia, Tecnología e Innovación (CTeI) en los sistemas de producción agropecuaria, fomentando la apropiación social del conocimiento y fortaleciendo las capacidades tecnológicas de las comunidades rurales."
+    },
+    "methodology": {
+      "title": "Metodología",
+      "text": "Nuestra metodología se basa en el Aprendizaje Basado en Proyectos (ABP) y la filosofía STEAM (Ciencia, Tecnología, Ingeniería, Artes y Matemáticas), promoviendo la participación activa de los estudiantes en la resolución de problemas reales. A través de talleres prácticos, los participantes aprenderán a construir y programar nodos IoT para el monitoreo de cultivos, sistemas de riego automáticos, alarmas inteligentes y medidores ambientales, entre otros."
+    },
+    "modules": {
+      "title": "Contenidos y Temáticas",
+      "items": [
+        {
+          "title": "Monitoreo Agrícola Inteligente",
+          "desc": "Aprenda a utilizar sensores IoT para monitorear variables críticas como humedad, temperatura y luz, optimizando la producción y reduciendo pérdidas."
+        },
+        {
+          "title": "Sistemas de Riego Automáticos",
+          "desc": "Diseñe e implemente sistemas de riego que respondan a las necesidades específicas de sus cultivos, utilizando tecnología de bajo costo y alta eficiencia."
+        },
+        {
+          "title": "Alarmas Inteligentes",
+          "desc": "Construya alarmas que le avisen de posibles amenazas, como intrusos o condiciones climáticas adversas, protegiendo su inversión."
+        },
+        {
+          "title": "Medidores Ambientales",
+          "desc": "Instale estaciones meteorológicas escolares o campesinas que le proporcionen datos precisos para la toma de decisiones informadas."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Beneficios para las Comunidades Rurales",
+      "items": [
+        "Aumento de la Productividad: Mejore la eficiencia de sus cultivos a través del monitoreo preciso.",
+        "Reducción de Costos: Minimice el uso de recursos como agua y fertilizantes.",
+        "Fortalecimiento Técnico: Adquiera habilidades tecnológicas para mantener sus propias soluciones.",
+        "Promoción de la Economía Popular: Fomente la autonomía técnica y económica de su comunidad."
+      ]
+    },
+    "budget": {
+      "title": "Presupuestos y Financiamiento",
+      "text": "Ofrecemos un modelo de negocio sostenible y transparente. Contamos con diferentes niveles de precios escalonados para adaptarnos a las necesidades y capacidades de pago de nuestros clientes, desde ONGs y gremios rurales hasta empresas privadas y entidades gubernamentales.",
+      "paymentTitle": "Métodos de Pago",
+      "paymentText": "Aceptamos pagos anticipados del 70% al firmar el contrato, con el 15% restante al inicio del primer módulo y el último 15% al finalizar y entregar certificados. Además, ofrecemos financiamiento en especie a través de alianzas estratégicas, como respaldo institucional, acceso a redes y uso de espacios."
+    },
+    "cta": "Solicitar Información",
+    "conclusion": "En Talleres Agro-Innovación Integral, estamos comprometidos con el desarrollo sostenible de las comunidades rurales. Únase a nosotros y sea parte de esta revolución tecnológica agrícola."
+  },
+  "errors": {
+    "404": {
+      "title": "Página No Encontrada",
+      "text": "Lo sentimos, la página que buscas no existe o fue movida.",
+      "cta": "Volver al Inicio"
+    },
+    "500": {
+      "title": "Error del Servidor",
+      "text": "Algo salió mal. Por favor intenta nuevamente más tarde.",
+      "cta": "Volver al Inicio"
+    }
+  }
+}

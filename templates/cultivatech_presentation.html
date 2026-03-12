@@ -1,0 +1,451 @@
+{% extends "base.html" %}
+
+{% block title %}CultivaTech - Presentación{% endblock %}
+
+{% block content %}
+<!-- Sección 1: Visión Cultivatech -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <!-- Imagen -->
+            <div class="relative h-64 md:h-80 overflow-hidden">
+                <img src="{{ url_for('static', filename='assets/banner_presentacion001.png') }}" 
+                     alt="Visión de Cultivatech: Fusión de tecnología y agricultura"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.2.4-4.8-.3-1.1-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+                    <h1 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        Sembrando el Futuro de la Agricultura Sostenible
+                    </h1>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="space-y-5 text-lg text-muted-foreground">
+                        <p>
+                            <strong>Cultivatech</strong> es una iniciativa de IR Productions que fusiona la innovación tecnológica con la agricultura sostenible. Nuestro objetivo es transformar los desechos electrónicos (e-waste) en recursos valiosos para el campo, creando un ecosistema donde la tecnología y la naturaleza prosperan en armonía.
+                        </p>
+                    </div>
+                    
+                    <div class="not-prose space-y-8 flex flex-col items-center">
+                        <div class="w-full max-w-md h-64">
+                            <!-- Placeholder para gráfico - se puede implementar con Chart.js -->
+                            <div class="w-full h-full flex items-center justify-center tech-border rounded-lg">
+                                <p class="text-muted-foreground">Gráfico: Visión del Ecosistema</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 2: El Problema - E-Waste -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="relative h-64 md:h-80 overflow-hidden">
+                <img src="{{ url_for('static', filename='assets/E-Waste_y_la_Necesidad_de_una_Agricultura_Eficiente.png') }}" 
+                     alt="E-Waste y Agricultura Eficiente"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        El E-Waste y la Necesidad de una Agricultura Eficiente
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="space-y-5 text-lg text-muted-foreground">
+                        <p>
+                            <strong>Problema Global:</strong> Cada año, el mundo genera una montaña de <strong>62 mil millones de kg</strong> de e-waste.
+                        </p>
+                        <p>
+                            <strong>Desafío Nacional (Colombia 2022):</strong> Colombia generó <strong>388,000 toneladas</strong>, pero solo un alarmante <strong>1%</strong> fue gestionado formalmente.
+                        </p>
+                        <p>
+                            <strong>Impacto Negativo:</strong> Esta gestión deficiente libera <strong>58,000 kg de mercurio</strong> y <strong>45 millones de kg de plásticos tóxicos</strong> al ambiente CADA AÑO.
+                        </p>
+                        <p>
+                            <strong>Nuestra Visión:</strong> Vemos cada residuo como una <strong>mina urbana</strong>, una oportunidad para formalizar y tecnificar la labor de los recuperadores.
+                        </p>
+                    </div>
+                    
+                    <div class="not-prose space-y-8 flex flex-col items-center">
+                        <!-- Gráfico Circular: Tasa de Recolección Colombia -->
+                        <div class="w-full max-w-md h-64">
+                            <div class="relative w-64 h-64 mx-auto">
+                                <svg viewBox="0 0 100 100" class="w-full h-full">
+                                    <!-- 99% No recolectado (rojo) -->
+                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#dc2626" stroke-width="20"
+                                            stroke-dasharray="251.2 251.2" stroke-dashoffset="62.8"
+                                            transform="rotate(-90 50 50)"/>
+                                    <!-- 1% Recolectado (verde) -->
+                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#16a34a" stroke-width="20"
+                                            stroke-dasharray="251.2 251.2" stroke-dashoffset="248.688"
+                                            transform="rotate(-90 50 50)"/>
+                                </svg>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-foreground">1%</div>
+                                        <div class="text-xs text-muted-foreground">Recolectado</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-muted-foreground/70 italic text-center">
+                            Datos Colombia (2022) & Global E-waste Monitor 2024
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 3: De Residuos a Componentes -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="relative h-64 md:h-80 overflow-hidden">
+                <img src="{{ url_for('static', filename='assets/De_Residuos_a_Componentes_de_Alta_Tecnologia.png') }}" 
+                     alt="De Residuos a Componentes de Alta Tecnología"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M9 3v4"/><path d="M3 7h8"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        De Residuos a Componentes de Alta Tecnología
+                    </h2>
+                </div>
+                
+                <div class="space-y-5 text-lg text-muted-foreground max-w-4xl mx-auto">
+                    <p>
+                        Nuestra propuesta es un ecosistema circular que transforma el problema en un motor de desarrollo en 3 fases clave:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="tech-border p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-foreground mb-3">1. Recuperación Estratégica</h3>
+                            <p class="text-muted-foreground">Alianzas y certificación de familias recuperadoras.</p>
+                        </div>
+                        <div class="tech-border p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-foreground mb-3">2. Preparación y Clasificación</h3>
+                            <p class="text-muted-foreground">Trazabilidad y pureza de materiales bajo estándares de calidad.</p>
+                        </div>
+                        <div class="tech-border p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-foreground mb-3">3. Transformación (Upcycling)</h3>
+                            <p class="text-muted-foreground">Convertimos residuos en materia prima de alto valor: filamento 3D y chasis de robots.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 4: La Mina Urbana -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="relative h-64 md:h-80 overflow-hidden">
+                <img src="{{ url_for('static', filename='assets/La_-MinaUrbana-_.png') }}" 
+                     alt="La Mina Urbana"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.89 5.85"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        La 'Mina Urbana' que Impulsa Nuestra Soberanía
+                    </h2>
+                </div>
+                
+                <div class="space-y-5 text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
+                    <p>
+                        <strong>Supra-Reciclaje:</strong> Cada residuo electrónico que procesamos es una mina que no necesitamos cavar. Al recuperar metales como Oro (Au), Plata (Ag), y Cobre (Cu), reducimos la dependencia de la minería extractiva y su impacto ambiental.
+                    </p>
+                </div>
+                
+                <!-- Tabla Periódica de Materiales -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl mx-auto">
+                    <!-- Oro -->
+                    <div class="p-4 rounded-lg border-2 aspect-square flex flex-col justify-between"
+                         style="background-color: #D4AF37; box-shadow: 0 0 25px -5px #D4AF37;">
+                        <span class="text-2xl font-bold text-black/80">79</span>
+                        <h3 class="text-6xl font-black text-center text-black/90" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.2);">Au</h3>
+                        <div class="text-center text-black/80">
+                            <p class="font-bold text-md uppercase">Oro</p>
+                            <p class="text-sm opacity-80">196.97</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Plata -->
+                    <div class="p-4 rounded-lg border-2 aspect-square flex flex-col justify-between"
+                         style="background-color: #C0C0C0; box-shadow: 0 0 25px -5px #C0C0C0;">
+                        <span class="text-2xl font-bold text-black/80">47</span>
+                        <h3 class="text-6xl font-black text-center text-black/90" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.2);">Ag</h3>
+                        <div class="text-center text-black/80">
+                            <p class="font-bold text-md uppercase">Plata</p>
+                            <p class="text-sm opacity-80">107.87</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Paladio -->
+                    <div class="p-4 rounded-lg border-2 aspect-square flex flex-col justify-between"
+                         style="background-color: #B1B1B1; box-shadow: 0 0 25px -5px #B1B1B1;">
+                        <span class="text-2xl font-bold text-black/80">46</span>
+                        <h3 class="text-6xl font-black text-center text-black/90" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.2);">Pd</h3>
+                        <div class="text-center text-black/80">
+                            <p class="font-bold text-md uppercase">Paladio</p>
+                            <p class="text-sm opacity-80">106.42</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cobre -->
+                    <div class="p-4 rounded-lg border-2 aspect-square flex flex-col justify-between"
+                         style="background-color: #B87333; box-shadow: 0 0 25px -5px #B87333;">
+                        <span class="text-2xl font-bold text-black/80">29</span>
+                        <h3 class="text-6xl font-black text-center text-black/90" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.2);">Cu</h3>
+                        <div class="text-center text-black/80">
+                            <p class="font-bold text-md uppercase">Cobre</p>
+                            <p class="text-sm opacity-80">63.55</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 5: Cultivatech ColombIA -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="relative h-64 md:h-80 overflow-hidden">
+                <img src="{{ url_for('static', filename='assets/iot-robot.jpg') }}" 
+                     alt="Robot Cultivatech ColombIA"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        La Inteligencia Agrícola Nace del Reciclaje: Cultivatech ColombIA
+                    </h2>
+                </div>
+                
+                <div class="space-y-5 text-lg text-muted-foreground max-w-4xl mx-auto">
+                    <p>
+                        Con la materia prima que rescatamos, construimos el Kit Agro-IoT 'Cultivatech ColombIA'.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="tech-border p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-foreground mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-agro-green"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                Hechos en Colombia
+                            </h3>
+                            <p class="text-muted-foreground">Robots autónomos de bajo costo, con chasis de aluminio reciclado y piezas impresas en 3D con nuestro filamento.</p>
+                        </div>
+                        <div class="tech-border p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-foreground mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                Soberanía Tecnológica
+                            </h3>
+                            <p class="text-muted-foreground">Fomentamos la independencia comercial de Colombia, haciéndonos menos vulnerables a las fluctuaciones del mercado global.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 6: Impacto Real -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        Impacto Real en el Campo: Más Productividad, Más Ingresos
+                    </h2>
+                </div>
+                
+                <div class="space-y-5 text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
+                    <p>
+                        Nuestra plataforma de monitoreo 24/7 ofrece beneficios cuantificables para diversos cultivos:
+                    </p>
+                    <p>
+                        <strong>Resultados (Alpha Testing):</strong> Prototipos validados por SENA Tecnoparque muestran un potencial de aumento en la productividad del <strong>15% al 25%</strong> y una reducción de pérdidas de hasta el <strong>30%</strong>.
+                    </p>
+                </div>
+                
+                <!-- Gráfico de Barras: Impacto -->
+                <div class="w-full max-w-2xl mx-auto h-64">
+                    <div class="flex items-end justify-center gap-8 h-full">
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 bg-success rounded-t-lg" style="height: 240px;"></div>
+                            <p class="text-center text-sm font-semibold text-foreground mt-2">Reducción Pérdidas</p>
+                            <p class="text-center text-2xl font-bold text-success">30%</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-24 bg-info rounded-t-lg" style="height: 200px;"></div>
+                            <p class="text-center text-sm font-semibold text-foreground mt-2">Aumento Productividad</p>
+                            <p class="text-center text-2xl font-bold text-info">25%</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-muted-foreground/70 italic text-center mt-4">
+                    Estimaciones de Proyectos Piloto y Alpha Testing
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 7: Empoderamiento -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="relative h-64 md:h-80 overflow-hidden">
+                <img src="{{ url_for('static', filename='assets/agro-tech-farmers.jpg') }}" 
+                     alt="Empoderamiento de comunidades agrícolas"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        Empoderando al Campo: Conocimiento, Tecnología y Comunidades
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold text-foreground">Talleres Tecnológicos Accesibles</h3>
+                        <p class="text-muted-foreground">Llevamos formación práctica y adaptada a las comunidades agrícolas.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold text-foreground">Integración de Experiencia</h3>
+                        <p class="text-muted-foreground">Creamos puentes generacionales de aprendizaje con mentores expertos como pensionados del SENA.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold text-foreground">Desarrollo de Capacidades</h3>
+                        <p class="text-muted-foreground">Empoderamos a los agricultores para que se conviertan en líderes de la agricultura digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 8: Modelo de Negocio -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="relative h-64 md:h-80 overflow-hidden">
+                <img src="{{ url_for('static', filename='assets/e-waste-assets/720x450_SCYCLE_article_image_0.jpg') }}" 
+                     alt="Modelo de Negocio Sostenible"
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+            </div>
+            
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        Un Modelo de Negocio Sólido y Rentable
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="tech-border p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-foreground mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-agro-green"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.2.4-4.8-.3-1.1-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/></svg>
+                            Sostenible (Ambiental)
+                        </h3>
+                        <p class="text-muted-foreground">Valorizamos residuos y evitamos la minería extractiva.</p>
+                    </div>
+                    <div class="tech-border p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-foreground mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-info"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            Sustentable (Social)
+                        </h3>
+                        <p class="text-muted-foreground">Generamos empleo digno para familias recuperadoras.</p>
+                    </div>
+                    <div class="tech-border p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-foreground mb-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            Rentable (Económico)
+                        </h3>
+                        <p class="text-muted-foreground">Múltiples flujos de ingreso con costos optimizados gracias al upcycling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 9: Contacto -->
+<section class="py-20 circuit-pattern">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="tech-border hover-lift group overflow-hidden relative">
+            <div class="p-6 md:p-8 text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 mr-4 text-primary"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text-primary text-center">
+                        Juntos, Sembremos el Cambio
+                    </h2>
+                </div>
+                
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <p class="text-lg text-muted-foreground">
+                        Gracias por su tiempo. Contáctenos para transformar un desafío en una oportunidad sin precedentes para Colombia.
+                    </p>
+                    
+                    <div class="tech-border p-6 rounded-lg inline-block">
+                        <p class="text-xl font-semibold text-foreground mb-2">Lukas Moyano M.</p>
+                        <p class="text-muted-foreground mb-4">CEO, CTO, Founder</p>
+                        <div class="space-y-2">
+                            <a href="tel:+573197919742" class="block text-primary hover:underline">
+                                +57 319 7919742
+                            </a>
+                            <a href="mailto:lukasmoyanomorales@gmail.com" class="block text-primary hover:underline">
+                                lukasmoyanomorales@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Navegación Inferior -->
+<div class="py-12 bg-background">
+    <div class="container mx-auto px-4 lg:px-8 text-center">
+        <a href="{{ url_for('index', lang=lang) }}" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m15 18-6-6 6-6"/></svg>
+            Volver al Inicio
+        </a>
+    </div>
+</div>
+{% endblock %}

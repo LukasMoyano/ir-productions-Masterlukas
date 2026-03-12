@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.title if t.title else 'Talleres Agro-Innovación Integral' }} - IR Productions{% endblock %}
+
+{% block content %}
+<div class="pt-24 pb-16">
+    <!-- HERO SECTION -->
+    <div class="relative h-[400px] w-full mb-12 overflow-hidden">
+        <img src="{{ url_for('static', filename='assets/agro-tech-farmers.jpg') }}" 
+             alt="Agro Tech Workshops"
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 container mx-auto px-4 pb-16 flex flex-col items-center text-center">
+            <a href="{{ url_for('index', lang=lang) }}" class="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+                {{ t.breadcrumb if t.breadcrumb else 'Volver a Servicios' }}
+            </a>
+            <span class="mb-6 px-4 py-2 rounded-full bg-agro-green text-white text-sm font-medium">{{ t.badge if t.badge else 'Educación & Tecnología' }}</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 py-4 gradient-text-primary max-w-4xl mx-auto">
+                {{ t.title if t.title else 'Talleres Agro-Innovación Integral' }}
+            </h1>
+            <p class="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto">
+                {{ t.subtitle if t.subtitle else 'Transformando el Campo con Tecnología y Conocimiento' }}
+            </p>
+            <p class="text-sm md:text-base text-primary/80 mt-4 font-medium">
+                {{ t.location if t.location else 'Impulsando el Desarrollo Sostenible en Cundinamarca, Fusagasugá y la Zona del Sumapaz' }}
+            </p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <!-- COLUMNA PRINCIPAL DE CONTENIDO -->
+            <div class="lg:col-span-2 space-y-12">
+                
+                <!-- SECCIÓN: Introducción -->
+                <section class="prose dark:prose-invert max-w-none">
+                    <h2 class="text-3xl font-bold text-foreground mb-4 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-agro-green"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.2.4-4.8-.3-1.1-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/></svg>
+                        {{ t.intro.title if t.intro and t.intro.title else '' }}
+                    </h2>
+                    <p class="text-lg text-muted-foreground leading-relaxed">
+                        {{ t.intro.text if t.intro and t.intro.text else '"Agro-Innovación Integral" es un espacio académico diseñado para conectar a las comunidades rurales, organizaciones, empresas y ONGs con las últimas tendencias en tecnología aplicada a la agricultura.' }}
+                    </p>
+                </section>
+                
+                <!-- SECCIÓN: Alineación Política -->
+                <section class="bg-secondary/10 p-8 rounded-2xl border border-secondary/20">
+                    <h3 class="text-2xl font-bold mb-4">{{ t.alignment.title if t.alignment else 'Alineación con Políticas Públicas' }}</h3>
+                    <div class="space-y-4 text-muted-foreground">
+                        <p>{{ t.alignment.text1 if t.alignment else 'Nuestro proyecto se encuentra estratégicamente alineado con el Plan Nacional de Desarrollo (PND) 2022-2026...' }}</p>
+                        <p>{{ t.alignment.text2 if t.alignment else 'A nivel departamental, nuestro enfoque se ajusta perfectamente a las líneas estratégicas del Plan de Desarrollo de Cundinamarca 2024-2028...' }}</p>
+                    </div>
+                </section>
+                
+                <!-- SECCIÓN: Metodología y Módulos -->
+                <section>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                        {{ t.methodology.title if t.methodology else 'Metodología' }}
+                    </h3>
+                    <p class="text-lg text-muted-foreground mb-8">
+                        {{ t.methodology.text if t.methodology else 'Nuestra metodología se basa en el Aprendizaje Basado en Proyectos (ABP) y la filosofía STEAM...' }}
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        {% for item in t.modules['items'] if t.modules and t.modules['items'] %}
+                        <div class="tech-border hover-lift overflow-hidden group rounded-xl">
+                            <div class="h-48 overflow-hidden relative">
+                                <img src="{{ url_for('static', filename='assets/' + ('smart-monitoring.jpg' if loop.index == 1 else ('smart-irrigation.jpg' if loop.index == 2 else ('smart-alarm.jpg' if loop.index == 3 else 'weather-station.jpg')))) }}" 
+                                     alt="{{ item.title }}"
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="text-lg text-primary font-semibold mb-2">{{ item.title }}</h4>
+                                <p class="text-sm text-muted-foreground">{{ item.desc }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+                
+                <!-- SECCIÓN: Beneficios -->
+                <section class="bg-agro-green/5 p-8 rounded-2xl border border-agro-green/10">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-agro-green"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        {{ t.benefits.title if t.benefits else 'Beneficios para las Comunidades Rurales' }}
+                    </h3>
+                    <ul class="space-y-4">
+                        {% for item in t.benefits['items'] if t.benefits and t.benefits['items'] %}
+                        <li class="flex gap-3 text-foreground/80">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-agro-green flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>{{ item }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                
+                <!-- SECCIÓN: Presupuesto y Financiación -->
+                <section class="bg-primary/5 p-8 rounded-2xl border border-primary/10">
+                    <div class="flex items-start gap-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-primary mt-1"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">{{ t.budget.title if t.budget else 'Presupuestos y Financiamiento' }}</h3>
+                            <p class="text-muted-foreground mb-6">{{ t.budget.text if t.budget else 'Ofrecemos un modelo de negocio sostenible y transparente...' }}</p>
+                            
+                            <h4 class="text-xl font-semibold mb-2">{{ t.budget.paymentTitle if t.budget else 'Métodos de Pago' }}</h4>
+                            <p class="text-muted-foreground">{{ t.budget.paymentText if t.budget else 'Aceptamos pagos anticipados del 70% al firmar el contrato...' }}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- BARRA LATERAL (SIDEBAR) -->
+            <div class="space-y-8">
+                <div class="tech-border p-6 rounded-xl border-agro-green/50 shadow-lg shadow-agro-green/10 sticky top-24">
+                    <a href="#contacto" class="inline-flex items-center justify-center w-full bg-agro-green hover:bg-agro-green/90 text-white px-6 py-4 rounded-md font-semibold transition-colors">
+                        {{ t.cta if t.cta else 'Solicitar Información' }}
+                    </a>
+                </div>
+                
+                <div class="p-6 bg-accent/20 rounded-xl border border-accent/30 text-center">
+                    <p class="text-sm font-medium italic">"{{ t.conclusion if t.conclusion else 'En Talleres Agro-Innovación Integral, estamos comprometidos con el desarrollo sostenible de las comunidades rurales.' }}"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

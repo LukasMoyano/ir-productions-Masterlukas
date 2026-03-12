@@ -1,0 +1,246 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="probleemtooteregister, proto, probleemtoodete maaletooja">
+    <meta name="description" content="Probleemtooteregistri eesmärk on andmete koondamine probleemtoodete tootjate ja tootjate ühenduste kohta ning arvestuse pidamine turule lastud probleemtoodete ja neist tekkinud jäätmete taaskasutamise ning taaskasutamise sihtarvude saavutamise üle">
+    <title>Probleemtooteregister</title>
+    <link rel="shortcut icon" type="image/ico" href="/proto/default_theme/img/favicon.ico">
+	<link href="/proto/default_theme/style.css" rel="stylesheet">
+	<script src="/proto/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/proto/webjars/jquery-ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="/proto/webjars/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="/proto/webjars/riot/2.6.5/riot+compiler.min.js"></script>
+    <script src="/proto/default_theme/scripts/scripts.js"></script>
+</head>
+
+<body>
+<div class="bodywrap">
+    <noscript>JavaScript ei ole lubatud. Aga võiks olla. Palun luba.</noscript>
+
+    <header id="header">
+        <div class="wrap">
+            <h1 id="branding">
+                <a style="background: transparent url(/proto/default_theme/tvr_logos/logo-proto-live.png) 50% 50% no-repeat;" href="/proto/main/welcome">Proto</a>
+            </h1>
+            <div id="system">
+                
+
+
+
+<div id="user">
+    
+    
+        <a class="login" href="/proto/oauth2/authorization/keycloak">Logi sisse</a>
+    
+</div>
+
+<script type="text/javascript">
+    var _menu = {};
+
+	$(document).ready(function() {
+        _menu.init();
+	});
+
+	_menu.init = function() {
+        _menu.initActivateRoleButton();
+        _menu.initLogoutButton();
+	};
+
+	_menu.initActivateRoleButton = function() {
+        var button = $('#btnActivateRole');
+
+        button.prop('disabled', !_menu.isRoleRadioChecked());
+        button.addClass('disabled');
+
+        $('input[name=permission]').on('change', function(){
+            button.prop('disabled', !_menu.isRoleRadioChecked());
+
+            if(_menu.isRoleRadioChecked()) {
+                button.removeClass('disabled');
+            }
+            else {
+                button.addClass('disabled');
+            }
+        }).change();
+	};
+
+	_menu.initLogoutButton = function() {
+        $("#logoutLink").click(function () {
+            $("#logoutForm").submit();
+        });
+	};
+
+    _menu.isRoleRadioChecked = function(){
+        return $('input[name=permission]:checked').length != 0;
+    };
+</script>
+            </div>
+            <div id="i18n">
+                
+
+
+
+
+    <a class="button alt" href="/proto/main/welcome?request_locale=et">
+        Eesti
+    </a>
+    <a class="button alt" href="/proto/main/welcome?request_locale=en">
+        English
+    </a>
+
+            </div>
+        </div>
+    </header>
+
+    
+
+
+
+    <nav id="menu">
+        <div class="wrap">
+
+            
+
+            
+                <ul>
+                    <li>
+                        <a href="/proto/main/welcome">
+                            Avaleht
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proto/registration/publicList">
+                            Registreeritud tootjad
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proto/main/laws">
+                            Õigusaktid ja lingid
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proto/main/help">
+                            Abimaterjalid
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/proto/main/contact">
+                            Kontakt
+                        </a>
+                    </li>                    
+                    <li>
+                        <a href="/proto/main/opendata">
+                            Avaandmed
+                        </a>
+                    </li>
+                </ul>
+            
+
+        </div>
+    </nav>
+
+
+
+
+
+
+    <section id="content">
+        <div class="wrap">
+            <main>
+                
+
+
+
+
+
+<h1>
+    Avaleht
+</h1>
+
+<div class="manageable-content">
+    <p>Probleemtooteregistri (l&uuml;hend: PROTO) pidamise eesm&auml;rk on andmete koondamine probleemtoodete tootjate kohta Eestis turule lastud probleemtoodete ning nendest tekkinud j&auml;&auml;tmete (edaspidi j&auml;&auml;tmed) taaskasutamise ja k&otilde;rvaldamise ning Eestist v&auml;ljaveetud j&auml;&auml;tmete taaskasutamise ja k&otilde;rvaldamise arvestuse pidamiseks. Eesti &otilde;igusaktides s&auml;testatud taaskasutamise sihtarvude t&auml;itmise arvestuse pidamine ning registrisse kantud andmete alusel Euroopa Komisjonile j&auml;&auml;tmealase teabe esitamine.</p>
+<p class="MsoNormal">PROTOs registreerimine on kohustuslik k&otilde;igile isikutele, kes majandus- v&otilde;i kutsetegevuse k&auml;igus teevad Eesti turul esmakordselt k&auml;ttesaadavaks probleemtooteid.</p>
+<p class="MsoNormal">Probleemtooted on:</p>
+<ol style="margin-top: 0cm;" start="1" type="1">
+<li class="MsoNormal">patareid ja akud</li>
+<li class="MsoNormal">mootors&otilde;idukid ja nende osad</li>
+<li class="MsoNormal">elektri- ja elektroonikaseadmed ja nende osad</li>
+<li class="MsoNormal">rehvid</li>
+<li class="MsoNormal">p&otilde;llumajandusplast</li>
+<li class="MsoNormal">niisutatud p&uuml;hkepaberid</li>
+<li class="MsoNormal">&otilde;hupallid</li>
+<li class="MsoNormal">filtriga tubakatooted ja tubakatoodete kasutamiseks m&otilde;eldud filtrid</li>
+<li class="MsoNormal">plasti sisaldavad kalap&uuml;&uuml;givahendid</li>
+</ol>
+<ul>
+<li>Andmeid saavad muuta ja parandada ainult andmesisestajad. Andmete &otilde;igsuse eest vastutavad tootjad, kes esitavad PROTO-le andmeid.</li>
+<li>S&uuml;steemi kasutamine toimub mistahes hariliku internetisirvija (MS Explorer, FireFox) kaudu.</li>
+<li>Kogu suhtlemine toimub standardse ja turvalise kr&uuml;pteeritud side (https) kaudu.</li>
+<li>Keskses serveris asuv tarkvara on kasutatav korraga paljude kasutajate poolt, s&otilde;ltumata nende asukohast ja ajast.</li>
+<li>PROTO vastutav t&ouml;&ouml;tleja on&nbsp;<a style="color: #090ee6; text-decoration-line: none;" href="http://www.envir.ee/">Kliimaministeerium</a>, volitatud t&ouml;&ouml;tlejad on <a href="https://www.kemit.ee/">Keskonnaministeeriumi Infotehnoloogiakeskus</a> ja&nbsp;<a style="color: #090ee6; text-decoration-line: none;" href="http://www.keskkonnaagentuur.ee//">Keskkonnaagentuur.</a></li>
+<li>Avalikule osale on suletud k&otilde;ik kinnitamata dokumendid.</li>
+<li>PROTO-s saavad end registreerida ja PROTO-le otse esitada andmeid ainult Eesti tootjad. V&auml;lismaised tootjad peavad kas &uuml;hinema m&otilde;ne tootjavastutusorganisatsiooniga v&otilde;i leidma teise lahenduse.</li>
+<li>PROTO-sse esitatavad andmed peavad olema eesti keeles.</li>
+<li><strong>NB!</strong>&nbsp;Tootja ei ole registreeritud enne, kui talle saadetakse vastav kiri koos tema&nbsp;<strong>registreeringu numbriga</strong>&nbsp;ning tootja nimi muutub n&auml;htavaks PROTO avalikus osas.</li>
+</ul>
+<p class="MsoNormal">&nbsp;</p>
+<p>Juhatuse liikmetele luuakse infos&uuml;steemi poolt automaatselt uus kasutajakonto vastavalt &auml;riregistri esindus&otilde;iguse p&auml;ringule. Juhatuse liige saab sisselogituna ise kasutajaid hallata ja m&auml;&auml;rata oma t&ouml;&ouml;tajatele juurdep&auml;&auml;su&otilde;igused. Isiku tuvastus toimub ID-kaardi, Mobiil-ID v&otilde;i Smart-ID abil<span style="color: #444444; font-family: Calibri; font-size: medium;">. </span>Andmed eelmise kalendriaasta kohta esitatakse hiljemalt 31. jaanuariks.</p>
+<p class="MsoNormal"><br /><br /><br /><span style="color: red;"><strong>KORDUMA KIPPUVAD K&Uuml;SIMUSED</strong></span></p>
+<p>* <a href="/proto/content/download?fileToDownload=ELEKTRI-JA+ELEKTROONIKASEADMED+JA+ELEKTROONIKAROMUD_07032025.pdf&amp;currentApp=PROTO">Elektri- ja elektroonikaseadmed</a></p>
+<p>* <a href="/proto/content/download?fileToDownload=PATAREID+JA+AKUD_07032025.pdf&amp;currentApp=PROTO">Patareid ja akud</a></p>
+<p>* <a href="/proto/content/download?fileToDownload=REHVID+JA+VANAREHVID_07032025.pdf&amp;currentApp=PROTO">Rehvid</a></p>
+<p>* <a href="/proto/content/download?fileToDownload=MOOTORS%C3%95IDUKID+JA+NENDE+OSAD+NING+ROMUS%C3%95IDUKID+JA+KASUTATUD+OSAD_07032025.pdf&amp;currentApp=PROTO">Mootors&otilde;idukid ja nende osad</a></p>
+<p>* <a href="/proto/content/download?fileToDownload=P%C3%95LLUMAJANDUSPLAST+JA+P%C3%95LLUMAJANDUSPLASTI+J%C3%84%C3%84TMED_07032025.pdf&amp;currentApp=PROTO">P&otilde;llumajandusplast</a></p>
+<p>* <a href="/proto/content/download?fileToDownload=Proto+KKK+kalap%C3%BC%C3%BCgivahendid.pdf&amp;currentApp=PROTO">Kalap&uuml;&uuml;givahendid</a></p>
+</div>
+
+<div class="notifications">
+    
+</div>
+
+            </main>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="wrap">
+            <p>Kliimaministeerium <a href="/cdn-cgi/l/email-protection#7c0c0e131e1019191108131308190e191b150f08190e3c19120a150e521919">Abi</a></p>
+        </div>
+    </footer>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    function addFieldError( errorUlContainer, msg){
+        errorUlContainer.empty().append( "<li><span>" + msg +"</span></li>")
+    }
+    function clearFieldError( errorUlContainer){
+        errorUlContainer.empty()
+    }
+</script>
+
+
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+var _paq = _paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+var u="//stat.envir.ee/";
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+_paq.push(['setSiteId', '86']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<!-- End Piwik Code -->
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a21b761bf3dd598',t:'MTc2Mzc0NDE0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
