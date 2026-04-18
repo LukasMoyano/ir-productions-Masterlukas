@@ -9,10 +9,6 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  build: {
-    outDir: "../backend/static",
-    emptyOutDir: true,
-  },
   plugins: [
     react(),
     mode === 'development' &&
