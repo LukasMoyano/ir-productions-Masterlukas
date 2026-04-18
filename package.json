@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "cd frontend && bun install && bun run build"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "ftp": "^0.3.10",
+    "ssh2-sftp-client": "^12.1.1"
+  }
+}

@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
 
-// Load environment variables
-dotenv.config();
+// Load environment variables from project root
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 const ftpConfig = {
   host: process.env.FTP_HOST || process.env.SFTP_HOST,
@@ -32,7 +32,9 @@ async function deploy() {
   console.log('Building project...');
   const { spawn } = require('child_process');
   
-  const buildProcess = spawn('bun', ['run', 'build']);
+  // Usar 'bun' ya que se confirmó que es el que genera los ejecutables correctamente
+  const buildCommand = 'bun';
+  const buildProcess = spawn(buildCommand, ['run', 'build'], { cwd: path.join(__dirname, '../frontend') });
   
   buildProcess.stdout.on('data', (data) => {
     console.log(`Build: ${data}`);
@@ -79,10 +81,10 @@ async function uploadViaSFTP() {
     
     console.log('Connected to SFTP server');
     
-    // Upload dist folder contents
-    const distPath = path.join(__dirname, 'dist');
+    // Upload dist folder contents - Apuntar a backend/static según vite.config.ts
+    const distPath = path.join(__dirname, '../backend/static');
     if (!fs.existsSync(distPath)) {
-      throw new Error('Build directory (dist) does not exist. Please run build first.');
+      throw new Error('Build directory (backend/static) does not exist. Please run build first.');
     }
     
     await uploadDirectory(sftp, distPath, ftpConfig.remotePath);
@@ -107,9 +109,10 @@ async function uploadViaFTP() {
       console.log('Connected to FTP server');
       
       try {
-        const distPath = path.join(__dirname, 'dist');
+        // Upload dist folder contents - Apuntar a backend/static según vite.config.ts
+        const distPath = path.join(__dirname, '../backend/static');
         if (!fs.existsSync(distPath)) {
-          throw new Error('Build directory (dist) does not exist. Please run build first.');
+          throw new Error('Build directory (backend/static) does not exist. Please run build first.');
         }
         
         await uploadDirectoryFTP(client, distPath, ftpConfig.remotePath);
@@ -125,15 +128,25 @@ async function uploadViaFTP() {
     
     client.on('error', (err) => {
       console.error('FTP Connection Error:', err);
+      if (err.code === 530) {
+        console.error('❌ ERROR 530: Usuario o contraseña incorrectos. Por favor, verifica el archivo .env');
+      }
       reject(err);
     });
     
-    client.connect({
+    const connectConfig = {
       host: ftpConfig.host,
       port: ftpConfig.port,
       user: ftpConfig.user,
-      password: ftpConfig.password
-    });
+      password: ftpConfig.password,
+      secure: false, // Cambiar a true si el servidor requiere FTPS (puerto 990 o explícito)
+      connTimeout: 10000,
+      pasvTimeout: 10000,
+      keepalive: 10000
+    };
+
+    console.log(`Attempting to connect to ${ftpConfig.host}:${ftpConfig.port} as ${ftpConfig.user}...`);
+    client.connect(connectConfig);
   });
 }
 

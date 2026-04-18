@@ -11,83 +11,83 @@ const AboutSection = ({ language }: AboutSectionProps) => {
   const content = {
     es: {
       title: "Quiénes Somos",
-      subtitle: "Artista Visual • Pedagogo • Tecnólogo",
+      subtitle: "Consultor en Transformación Digital • Maestro en Artes Visuales",
       description:
-        "Lukas Moyano y _-IR-_ Productions transformamos el Agro y las Organizaciones a través de la fusión Arte+Ciencia+Tecnología, con un enfoque en innovación accesible, sostenibilidad y la sabiduría ancestral aplicada al mundo moderno.",
+        "Lukas Moyano y _-IR-_ Productions lideramos la adopción de soberanía tecnológica en el Agro y las Organizaciones. Fusionamos Arte, Ciencia y Web3 para crear infraestructuras inmutables y resilientes.",
       bioTitle: "Perfil del Fundador",
-      bio: "En la intersección donde el Silicio encuentra al Carbono, opero como un arquitecto de realidades híbridas. Mi origen en las Artes Visuales me enseñó a ver lo invisible, pero fue con los principios de la Ingeniería de Software, el entender el funcionamiento de la Inteligencia Artificial y la Filosofía de Código Abierto que me dieron las herramientas para poder codificar y decodificar el lenguaje con las maquinas y la sabiduría pragmática de pensar en soluciones reales para el campo usando tecnologia actual.\n\nDesde mi base en Fusagasugá, lidero una 'rebelión tecnológica' constructiva. Utilizo sensores IoT como extensiones nerviosas de la tierra y modelos de IA como oráculos climáticos, todo bajo una filosofía de código abierto y soberanía. En _-IR-_ Productions, perseguimos la idea de no vendemos cajas negras; forjamos llaves maestras. Mi misión es hackear la brecha digital, empoderando al agricultor con herramientas de ciencia ficción que funcionan hoy, asegurando que la tecnología sirva a la vida y no al revés.",
+      bio: "En la intersección donde el Silicio encuentra al Carbono, opero como un arquitecto de realidades híbridas. Mi origen en las Artes Visuales me enseñó a ver lo invisible, pero fue la ingeniería de software y la adopción de IA soberana lo que me permitió codificar soluciones reales para el mundo físico.\n\nDesde Fusagasugá, lidero el movimiento de 'Soberanía Tecnológica'. Implemento redes VPN Mesh privadas, modelos de IA locales (sin dependencia de la nube) y registros inmutables mediante Smart Contracts. En _-IR-_ Productions, no vendemos 'Software as a Service'; forjamos 'Freedom as a Service'. Mi misión es hackear la brecha digital, empoderando al agricultor y al empresario con herramientas de 'Cyberpunk Andino' que garantizan la propiedad absoluta de sus datos y procesos.",
       expertiseTitle: "Áreas de Expertiza",
       expertise: [
         {
-          icon: Palette,
-          title: "Arte & Diseño",
-          items: ["Dirección de Arte", "Narrativa Visual", "Diseño UX/UI", "Producción Audiovisual", "3D Mapping"]
+          icon: Cpu,
+          title: "Soberanía Tecnológica",
+          items: ["IA Local (Ollama/GGUF)", "Infraestructura On-Premise", "Redes VPN Mesh Privadas", "Linux CLI & Bash Experto", "Privacidad de Datos"]
         },
         {
           icon: FlaskConical,
-          title: "Ciencia & Pedagogía",
-          items: ["Diseño Curricular", "Transferencia de Conocimiento", "Investigación Aplicada", "Resolución de Problemas", "Ética en IA"]
-        },
-        {
-          icon: Cpu,
-          title: "Tecnología & Desarrollo",
-          items: ["IA/ML (TensorFlow, PyTorch)", "React, .NET Core", "IoT & Sensores de Campo", "HPC/GPUs", "OpenCV, NLP, Hugging Face"]
+          title: "Web3 & Blockchain",
+          items: ["Smart Contracts (Solidity)", "Auditoría Inmutable de Datos", "Integración IoT/Blockchain", "Ethereum Network", "Optimización de Gas"]
         },
         {
           icon: Sprout,
-          title: "Impacto Social",
-          items: ["Alfabetización Digital", "Desarrollo Rural", "AgroTech", "Inclusión Tecnológica", "Sostenibilidad"]
+          title: "AgroTech & IoT",
+          items: ["CultivaTech ColombIA", "Nodos de Monitoreo ESP32", "Automatización de Cultivos", "Sensores de Alta Precisión", "Resiliencia Climática"]
+        },
+        {
+          icon: Palette,
+          title: "Arte & Estrategia",
+          items: ["Cyberpunk Andino Estética", "Consultoría Transformación", "Diseño de Sistemas Complejos", "Narrativa de Marca Soberana", "Full Stack (React/Django)"]
         },
       ],
       educationTitle: "Educación y Certificaciones",
       education: [
-        "Pontificia Universidad Javeriana – Maestría en Artes Visuales, Expresión Audiovisual (2019)",
-        "MinTICs & Atenea-UNAL – IA Avanzada, HPC, Desarrollo Web y Apps (2023–2024)",
-        "Uniminuto – Pedagogía para Profesionales no Licenciados (2021)",
-        "AcademLo – Desarrollo Web con React JS (2023)",
-        "Colsubsidio CET – Big Data y Análisis de Datos (2022)",
+        "SENA – Desarrollador de Smart Contracts / Solidity (Certificación 2026)",
+        "Consultoría en Transformación Digital & Adopción de IA (Desde 2024)",
+        "Pontificia Universidad Javeriana – Maestro en Artes Visuales, Expresión Audiovisual (2019)",
+        "MinTICs & UNAL – IA Avanzada, HPC y Desarrollo Full Stack (2023–2024)",
+        "IELTS B2 – Inglés Técnico Profesional",
       ],
       slogan:
-        "Hacemos lo que queremos, porque amamos lo que hacemos, Funk with us!",
+        "Infraestructura Soberana para un Futuro Inmutable. Funk with us!",
     },
     en: {
       title: "Who We Are",
-      subtitle: "Visual Artist • Educator • Technologist",
-      description: "Lukas Moyano and _-IR-_ Productions transform agriculture and organizations through the fusion of Art+Science+Technology, focusing on accessible innovation, sustainability, and ancestral wisdom applied to the modern world.",
+      subtitle: "Digital Transformation Consultant • Master in Visual Arts",
+      description: "Lukas Moyano and _-IR-_ Productions lead the adoption of technological sovereignty in Agriculture and Organizations. We merge Art, Science, and Web3 to create immutable and resilient infrastructures.",
       bioTitle: "Founder Profile",
-      bio: "At the intersection where silicon meets carbon, I operate as an architect of hybrid realities. My background in Visual Arts taught me to see the invisible, but it was software engineering and Artificial Intelligence that gave me the tools to build it. I am not just a developer; I am a translator between the complexity of algorithms (Deep Learning, Computer Vision) and the pragmatic wisdom of the countryside.\n\nFrom my base in Fusagasugá, I lead a constructive 'technological rebellion'. I use IoT sensors as nervous extensions of the earth and AI models as climatic oracles, all under a philosophy of open source and sovereignty. At _-IR-_ Productions, we don't sell black boxes; we forge master keys. My mission is to hack the digital divide, empowering farmers with science fiction tools that work today, ensuring that technology serves life and not the other way around.",
+      bio: "At the intersection where Silicon meets Carbon, I operate as an architect of hybrid realities. My background in Visual Arts taught me to see the invisible, but it was software engineering and sovereign AI adoption that allowed me to code real solutions for the physical world.\n\nFrom Fusagasugá, I lead the 'Technological Sovereignty' movement. I implement private Mesh VPN networks, local AI models (cloud-independent), and immutable records through Smart Contracts. At _-IR-_ Productions, we don't sell 'Software as a Service'; we forge 'Freedom as a Service'. My mission is to hack the digital divide, empowering farmers and entrepreneurs with 'Andean Cyberpunk' tools that guarantee absolute ownership of their data and processes.",
       expertiseTitle: "Areas of Expertise",
       expertise: [
         {
-          icon: Palette,
-          title: "Art & Design",
-          items: ["Art Direction", "Visual Storytelling", "UX/UI Design", "Audiovisual Production", "3D Mapping"]
+          icon: Cpu,
+          title: "Tech Sovereignty",
+          items: ["Local AI (Ollama/GGUF)", "On-Premise Infrastructure", "Private Mesh VPNs", "Linux CLI & Bash Expert", "Data Privacy"]
         },
         {
           icon: FlaskConical,
-          title: "Science & Pedagogy",
-          items: ["Curriculum Design", "Knowledge Transfer", "Applied Research", "Problem Solving", "AI Ethics"]
-        },
-        {
-          icon: Cpu,
-          title: "Technology & Development",
-          items: ["AI/ML (TensorFlow, PyTorch)", "React, .NET Core", "IoT & Field Sensors", "HPC/GPUs", "OpenCV, NLP, Hugging Face"]
+          title: "Web3 & Blockchain",
+          items: ["Smart Contracts (Solidity)", "Immutable Data Auditing", "IoT/Blockchain Integration", "Ethereum Network", "Gas Optimization"]
         },
         {
           icon: Sprout,
-          title: "Social Impact",
-          items: ["Digital Literacy", "Rural Development", "AgroTech", "Tech Inclusion", "Sustainability"]
+          title: "AgroTech & IoT",
+          items: ["CultivaTech ColombIA", "ESP32 Monitoring Nodes", "Crop Automation", "High Precision Sensors", "Climate Resilience"]
+        },
+        {
+          icon: Palette,
+          title: "Art & Strategy",
+          items: ["Andean Cyberpunk Aesthetic", "Transformation Consulting", "Complex Systems Design", "Sovereign Brand Narrative", "Full Stack (React/Django)"]
         },
       ],
       educationTitle: "Education and Certifications",
       education: [
-        "Pontificia Universidad Javeriana – Master in Visual Arts, Audiovisual Expression (2019)",
-        "Uniminuto – Pedagogy for Non-Licensed Professionals (2021)",
-        "AcademLo – Web Development with React JS (2023)",
-        "Colsubsidio CET – Big Data and Data Analysis (2022)",
-        "MinTICs & Atenea-UNAL – Advanced AI, HPC, Web Development (2023–2024)"
+        "SENA – Smart Contract Developer / Solidity (2026 Certification)",
+        "Digital Transformation & AI Adoption Consulting (Since 2024)",
+        "Pontificia Universidad Javeriana – Master in Visual Arts (2019)",
+        "MinTICs & UNAL – Advanced AI, HPC & Full Stack Development (2023–2024)",
+        "IELTS B2 – Professional Technical English"
       ],
-      slogan: "We do what we want, because we love what we do, Funk with us!",
+      slogan: "Sovereign Infrastructure for an Immutable Future. Funk with us!",
     },
   };
 

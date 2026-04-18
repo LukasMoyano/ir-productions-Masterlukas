@@ -19,10 +19,14 @@ jobs:
           bun-version: latest
 
       - name: Install Dependencies
-        run: bun install
+        run: |
+          cd frontend
+          bun install
 
       - name: Build Project
-        run: bun run build
+        run: |
+          cd frontend
+          bun run build
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -30,4 +34,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
+          local-dir: ./backend/static/
