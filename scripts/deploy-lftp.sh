@@ -35,7 +35,8 @@ FTP_PORT="${FTP_PORT:-21}"
 FTP_REMOTE_PATH="${FTP_REMOTE_PATH:-/public_html}"
 
 # Directorios del proyecto
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPTS_DIR/.." && pwd)"
 BUILD_DIR="$PROJECT_ROOT/dist"
 
 # =============================================================================
