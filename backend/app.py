@@ -18,7 +18,7 @@ from datetime import datetime
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 DIST_DIR = os.path.join(ROOT_DIR, 'dist')
 
-app = Flask(__name__, static_folder=DIST_DIR, static_url_path='/')
+app = Flask(__name__, static_folder=DIST_DIR, static_url_path='')
 
 # ============================================================================
 # FUNCIONES AUXILIARES
@@ -58,12 +58,19 @@ def api_contact():
 def serve_react(path):
     """
     Sirve la aplicación de React. 
-    Si el archivo existe en dist, lo sirve. 
-    Si no, sirve index.html para que React Router maneje la ruta.
+    1. Si path está vacío, sirve index.html.
+    2. Si el archivo existe físicamente en dist/, lo sirve (Flask lo maneja por extensión).
+    3. Si no existe, sirve index.html (soporte para React Router).
     """
-    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+    if path == "" or path is None:
+        return send_from_directory(app.static_folder, 'index.html')
+    
+    # Verificar si el archivo existe en la carpeta dist
+    file_path = os.path.join(app.static_folder, path)
+    if os.path.isfile(file_path):
         return send_from_directory(app.static_folder, path)
     else:
+        # Fallback para React Router (rutas virtuales)
         return send_from_directory(app.static_folder, 'index.html')
 
 # ============================================================================
