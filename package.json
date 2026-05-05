@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "cd frontend && bun install && bun run build && cd .. && rm -rf dist && cp -r frontend/dist ./dist"
+    "build": "cd frontend && bun install && bun run build"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

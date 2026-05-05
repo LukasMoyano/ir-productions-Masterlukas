@@ -148,26 +148,26 @@ Nous recherchons des partenariats stratégiques avec :
 ## 📫 Contact Information
 
 ### 🇪🇸
-- **Sitio Web**: [https://www.ir-productions.com](https://ir-productions-online.netlify.app)
+- **Sitio Web**: [MasterLukasMoyano.com](https://www.masterlukasmoyano.com)
 - **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/in/masterlukasmoyano/)
 - **GitHub**: [github.com/IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
-- **Correo**: [info@ir-productions.com](mlukasmoyanomorales@gmail.com)
+- **Correo electronico**: [Planeación y Genrencia](managementandplanning@masterlukasmoyano.com)
 - **Teléfono**: [+57 319 7919742](https://wa.me/+573197919742?text=Vi%20tu%20proyecto%20en%20Github%20y%20estoy%20interesado%20en%20poderte%20apoyar,%20dime%20que%20necesitas%20para%20tu%20proyecto🇪🇸)
 
 ### 🇬🇧
-- **Company Website**: [https://www.ir-productions.com](https://ir-productions-online.netlify.app)
+- **Company Website**: [MasterLukasMoyano.com](https://www.masterlukasmoyano.com)
 - **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/in/masterlukasmoyano/)
 - **GitHub**: [github.com/IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
-- **Email**: [info@ir-productions.com](mlukasmoyanomorales@gmail.com)
+- **E-mail**: [Planning and management](managementandplanning@masterlukasmoyano.com)
 - **Phone**: [+57 319 7919742](https://wa.me/+573197919742?text=Vi%20tu%20proyecto%20en%20Github%20y%20estoy%20interesado%20en%20poderte%20apoyar,%20dime%20que%20necesitas%20para%20tu%20proyecto🇬🇧)
 
 ### 🇫🇷
-- **Site Web**: [https://www.ir-productions.com](https://ir-productions-online.netlify.app)
+- **Site Web**: [MasterLukasMoyano.com](https://www.masterlukasmoyano.com)
 - **LinkedIn**: [linkedin.com/company/ir-productions](https://www.linkedin.com/in/masterlukasmoyano/)
 - **GitHub**: [github.com/IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
-- **Email**: [info@ir-productions.com](mlukasmoyanomorales@gmail.com)
+- **Adresse E-mail**: [Planification et gestion](managementandplanning@masterlukasmoyano.com)
 - **Téléphone**: [+57 319 7919742](https://wa.me/+573197919742?text=Vi%20tu%20proyecto%20en%20Github%20y%20estoy%20interesado%20en%20poderte%20apoyar,%20dime%20que%20necesitas%20para%20tu%20proyecto🇫🇷)
 
 
-© 2025 _ _-IR-_ _ Productions | All Rights Reserved | Fusagasugá, Cundinamarca, Colombia 🇨🇴
+© 2026 _ _-IR-_ _ Productions | All Rights Reserved | Fusagasugá, Cundinamarca, Colombia 🇨🇴
 ---

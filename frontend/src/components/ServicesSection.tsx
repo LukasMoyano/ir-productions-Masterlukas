@@ -108,6 +108,7 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           badge: "Hardware",
           color: "primary",
           target: "Empresas • Academia • Salud",
+          link: "/servicios/hpc-builder",
         },
       ],
       cta: "Descubre Más",
@@ -167,6 +168,8 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           image: hpcWorkstationImage,
           badge: "Hardware",
           color: "primary",
+          target: "Companies • Academia • Health",
+          link: "/servicios/hpc-builder",
         }
       ],
       cta: "Learn More",

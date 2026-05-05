@@ -27,7 +27,7 @@ echo -e "[1/3] Construyendo proyecto..."
 cd "$PROJECT_ROOT"
 bun run build
 
-echo -e "[2/3] Sincronizando con la RAÍZ del servidor..."
+# 2. Sincronización con la RAÍZ del servidor...
 
 # Crear archivo de credenciales temporal para evitar problemas de shell
 cat <<LNETRC > ~/.lftp_nexus
@@ -39,16 +39,19 @@ open -u "$FTP_USER","$FTP_PASS" ftp://$FTP_HOST
 LNETRC
 
 lftp -f ~/.lftp_nexus <<EOF
-# LIMPIEZA DE RAÍZ
-echo "Limpiando raíz del servidor..."
+# LIMPIEZA DE LA RAÍZ
+echo "Limpiando archivos estáticos en la RAÍZ..."
+# Intentamos borrar los archivos principales si existen
 rm index.html || true
 rm placeholder.svg || true
 rm robots.txt || true
+rm _redirects || true
 rm -rf assets || true
+rm -rf ODSs || true
+rm -rf favicon_io || true
 
 # SUBIDA A LA RAÍZ
-echo "Subiendo archivos a la raíz (.)..."
-cd /
+echo "Subiendo archivos a la RAÍZ..."
 mirror \
     --reverse \
     --verbose \

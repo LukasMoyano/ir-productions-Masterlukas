@@ -1,0 +1,19 @@
+services:
+  nexus_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nexus_productions_v2
+    restart: unless-stopped
+    ports:
+      - "5055:5000"
+    environment:
+      - FLASK_DEBUG=False
+      - PORT=5000
+    networks:
+      - nexus_network
+
+networks:
+  nexus_network:
+    external: true
+    name: ir_productions_nexus_nexus_network

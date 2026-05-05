@@ -1,0 +1,17 @@
+node_modules
+frontend/node_modules
+dist
+venv
+.venv
+__pycache__
+*.log
+.git
+.github
+.vscode
+moveback
+backend_agents
+scripts
+config/ssl_2026
+Dockerfile
+docker-compose.yml
+.env

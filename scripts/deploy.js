@@ -81,10 +81,10 @@ async function uploadViaSFTP() {
     
     console.log('Connected to SFTP server');
     
-    // Upload dist folder contents - Apuntar a backend/static según vite.config.ts
-    const distPath = path.join(__dirname, '../backend/static');
+    // Upload dist folder contents
+    const distPath = path.join(__dirname, '../dist');
     if (!fs.existsSync(distPath)) {
-      throw new Error('Build directory (backend/static) does not exist. Please run build first.');
+      throw new Error('Build directory (dist) does not exist. Please run build first.');
     }
     
     await uploadDirectory(sftp, distPath, ftpConfig.remotePath);
@@ -109,10 +109,10 @@ async function uploadViaFTP() {
       console.log('Connected to FTP server');
       
       try {
-        // Upload dist folder contents - Apuntar a backend/static según vite.config.ts
-        const distPath = path.join(__dirname, '../backend/static');
+        // Upload dist folder contents
+        const distPath = path.join(__dirname, '../dist');
         if (!fs.existsSync(distPath)) {
-          throw new Error('Build directory (backend/static) does not exist. Please run build first.');
+          throw new Error('Build directory (dist) does not exist. Please run build first.');
         }
         
         await uploadDirectoryFTP(client, distPath, ftpConfig.remotePath);

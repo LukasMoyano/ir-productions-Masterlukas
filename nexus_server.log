@@ -1,0 +1,36 @@
+🚀 Nexus Central iniciado en http://localhost:5000
+📂 Sirviendo archivos desde: /mnt/Proyectos4TB/backup_masterlukas/Documents/_-IR_Productions_2025/WwW_EndesarrolloWEB/ir-productions-nexus-main/dist
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 100-265-226
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /assets/index-CthBGzZL.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /assets/index-DorOLFUo.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /assets/agro-tech-farmers-BsDX3AmC.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /assets/hero-background-CAievsUs.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /assets/iot-robot-CyThQ7Tb.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /ODSs/ODS_4.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /assets/hpc-workstation-Bm44DVLH.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /assets/ProfilePic2025_0001_original-DZaK9jtt.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /ODSs/ODS_8.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /ODSs/ODS_9.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /ODSs/ODS_12.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /ODSs/ODS_13.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:07] "GET /ODSs/ODS_17.png HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:51:08] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 07:52:32] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:05:30] "HEAD /assets/index-DorOLFUo.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 08:07:58] "HEAD /assets/index-CthBGzZL.js HTTP/1.1" 200 -
+ * Detected change in '/mnt/Proyectos4TB/backup_masterlukas/Documents/_-IR_Productions_2025/WwW_EndesarrolloWEB/ir-productions-nexus-main/backend/app.py', reloading
+🚀 Nexus Central iniciado en http://localhost:5000
+📂 Sirviendo archivos desde: /mnt/Proyectos4TB/backup_masterlukas/Documents/_-IR_Productions_2025/WwW_EndesarrolloWEB/ir-productions-nexus-main/dist
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 100-265-226

@@ -27,6 +27,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CultivatechPresentation from "./pages/CultivatechPresentation";
 import AgroInnovationWorkshops from "./pages/AgroInnovationWorkshops";
+import HPCBuilder from "./pages/HPCBuilder";
 
 // ============================================================================
 // 2. CONFIGURACIÓN DEL CLIENTE DE DATOS
@@ -59,6 +60,10 @@ const App = () => (
           <Route
             path="/talleres-agro-innovacion"
             element={<AgroInnovationWorkshops />}
+          />
+          <Route
+            path="/servicios/hpc-builder"
+            element={<HPCBuilder />}
           />
           
           {/* Ruta de Error 404 (Catch-all) */}
