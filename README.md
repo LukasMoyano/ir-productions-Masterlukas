@@ -121,50 +121,27 @@ Nous recherchons des partenariats stratégiques avec :
 * **Web Technologies**: React, TypeScript, Vite, Tailwind CSS
 * **Open Source Ecosystems**: Linux, PostgreSQL, Supabase
 
----
-
-## 💰 Configuraciones 100% AMD: 5 Niveles de Presupuesto
-
-### 📊 Tabla Comparativa de Componentes por Nivel
-
-| **Componente** | **Nivel Premium (Pro)** | **Nivel Alto (Enterprise)** | **Nivel Medio (Business)** | **Nivel Básico (Starter)** | **Nivel Mínimo (IoT Edge)** |
-|----------------|-------------------------|-----------------------------|----------------------------|----------------------------|-----------------------------|
-| **CPU** | AMD EPYC 9684X (128 cores) | AMD EPYC 9554 (64 cores) | AMD EPYC 8324P (16 cores) | AMD Ryzen 9 7950X3D (16 cores) | AMD Ryzen 5 7600X (6 cores) |
-| **GPU** | 2x AMD Instinct MI300X (192GB HBM3 cada una) | 1x AMD Instinct MI300X (192GB) | 1x AMD Instinct MI250X (128GB) | 1x AMD Radeon RX 7900 XTX (24GB) | 1x AMD Radeon PRO W7600 (16GB) |
-| **Placa Base** | Supermicro H13DSi-O (SP5) | ASRock Rack ROMED8-2T (SP5) | Gigabyte MZ32-AR0 (SP3) | ASUS ProArt X670E-CREATOR | MSI PRO B650-P |
-| **RAM** | 1TB DDR5 ECC 5600MHz (8x128GB) | 512GB DDR5 ECC 4800MHz (4x128GB) | 256GB DDR5 ECC 4400MHz (2x128GB) | 64GB DDR5 6000MHz (2x32GB) | 32GB DDR5 5200MHz (2x16GB) |
-| **Almacenamiento** | 4x 2TB NVMe PCIe 5.0 (RAID 10) | 2x 2TB NVMe PCIe 5.0 (RAID 1) | 1x 2TB NVMe PCIe 4.0 | 1x 2TB NVMe PCIe 4.0 + 4TB HDD | 500GB NVMe PCIe 4.0 |
-| **Fuente de Poder** | 2x 2000W 80+ Titanium (redundante) | 1600W 80+ Platinum | 1000W 80+ Gold | 850W 80+ Gold | 650W 80+ Bronze |
-| **Gabinete** | Supermicro SC853BTQ-R1K60B (2U) | Chenbro RM41306 (1U) | Supermicro SC513 (Micro-ATX) | Fractal Design Meshify 2 | NZXT H5 Flow |
-| **Refrigeración** | Refrigeración líquida directa (Asetek) | Ventiladores Noctua NF-A14 PWM (6x) | Ventiladores Noctua NF-F12 PWM (4x) | Thermalright Phantom Spirit 120 | Stock AMD Wraith |
-| **Conexión ARM** | 4x USB4 (40Gbps) + 2x 10G SFP+ para ARM devices | 2x USB4 + 1x 10G SFP+ | 2x USB 3.2 Gen 2 + 1x 2.5G LAN | 2x USB 3.2 Gen 2 | 2x USB 3.2 Gen 1 |
-| **Red** | Mellanox ConnectX-7 200GbE | Intel X550-T2 10GbE | Realtek 2.5GbE | Intel I225-V 2.5GbE | Realtek 1GbE |
-| **Sistema Operativo** | Ubuntu 22.04 LTS + ROCm 5.7 | Ubuntu 22.04 LTS + ROCm 5.7 | Ubuntu 22.04 LTS + ROCm 5.6 | Ubuntu 22.04 LTS + ROCm 5.6 | Ubuntu 22.04 LTS + ROCm 5.5 |
-
----
-
----
 
 ## 📫 Contact Information
 
 ### 🇪🇸
 - **Sitio Web**: [MasterLukasMoyano.com](https://www.masterlukasmoyano.com)
 - **LinkedIn**: [linkedin](https://www.linkedin.com/in/masterlukasmoyano/)
-- **GitHub**: [github.com/IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
+- **GitHub**: [github IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
 - **Correo electronico**: [Planeación y Genrencia](managementandplanning@masterlukasmoyano.com)
 - **Teléfono**: [+57 319 7919742](https://wa.me/+573197919742?text=Vi%20tu%20proyecto%20en%20Github%20y%20estoy%20interesado%20en%20poderte%20apoyar,%20dime%20que%20necesitas%20para%20tu%20proyecto🇪🇸)
 
 ### 🇬🇧
 - **Company Website**: [MasterLukasMoyano.com](https://www.masterlukasmoyano.com)
 - **LinkedIn**: [linkedin](https://www.linkedin.com/in/masterlukasmoyano/)
-- **GitHub**: [github.com/IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
+- **GitHub**: [github IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
 - **E-mail**: [Planning and management](managementandplanning@masterlukasmoyano.com)
 - **Phone**: [+57 319 7919742](https://wa.me/+573197919742?text=Vi%20tu%20proyecto%20en%20Github%20y%20estoy%20interesado%20en%20poderte%20apoyar,%20dime%20que%20necesitas%20para%20tu%20proyecto🇬🇧)
 
 ### 🇫🇷
 - **Site Web**: [MasterLukasMoyano.com](https://www.masterlukasmoyano.com)
 - **LinkedIn**: [linkedin](https://www.linkedin.com/in/masterlukasmoyano/)
-- **GitHub**: [github.com/IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
+- **GitHub**: [github IR-Productions](https://github.com/LukasMoyano/ir-productions-nexus/blob/main/README.md)
 - **Adresse E-mail**: [Planification et gestion](managementandplanning@masterlukasmoyano.com)
 - **Téléphone**: [+57 319 7919742](https://wa.me/+573197919742?text=Vi%20tu%20proyecto%20en%20Github%20y%20estoy%20interesado%20en%20poderte%20apoyar,%20dime%20que%20necesitas%20para%20tu%20proyecto🇫🇷)
 
