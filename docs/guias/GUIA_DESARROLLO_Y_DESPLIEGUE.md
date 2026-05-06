@@ -4,60 +4,35 @@ Este documento resume las últimas actualizaciones y proporciona las instruccion
 
 ---
 
-## 🛠️ 1. Cambios Recientes (Marzo 2026)
+## 🛠️ 1. Infraestructura Soberana (Mayo 2026)
 
-### **Seguridad y Git**
-- **Protección de Credenciales**: El archivo `.gitignore` ha sido configurado para excluir archivos sensibles (`.key`, `.crt`, `.pem`, `.env`). **NO** los elimines de esa lista.
-- **Sincronización**: Todo el código actual ha sido subido a GitHub (`origin/main`).
-- **Estructura Flask**: Se integró un backend base en Python/Flask (`app.py`) con sus respectivas rutas y carpetas de plantillas.
-
-### **Frontend**
-- **Contacto**: Se actualizaron los emails a `managementandplanning@masterlukasmoyano.com`.
-- **Integración CultivaTech**: El botón del Kit Agro-IoT ahora apunta correctamente a la versión desplegada en Netlify.
+### **Docker & Orquestación**
+- **Arquitectura**: El proyecto se ha migrado a contenedores. Frontend y Backend conviven en una imagen unificada basada en Debian Bookworm.
+- **Red**: Se utiliza la red `ir_productions_nexus_nexus_network` para comunicación interna.
+- **Servidor de Producción**: Gunicorn gestiona las peticiones Flask en el puerto 5000 (mapeado al 5055).
 
 ---
 
 ## 📦 2. Requisitos de Sistema (Instalación Local)
 
-Para ejecutar el despliegue por FTP desde tu terminal, asegúrate de tener instaladas estas herramientas:
+### **A. Docker y Docker Compose**
+Es la única dependencia necesaria en el host para poner el proyecto al aire con un solo clic.
 
-### **A. Instalar LFTP (Sincronizador FTP)**
+### **B. Script de Lanzamiento Rápido**
+Ejecuta el siguiente comando para construir e iniciar todo el stack:
 ```bash
-sudo apt update && sudo apt install lftp -y
-```
-
-### **B. Instalar Bun (Runtime de JS/Build)**
-```bash
-curl -fsSL https://bun.sh/install | bash
-# Después de instalar, recarga tu terminal:
-source ~/.bashrc
+./scripts/run_sovereign_docker.sh
 ```
 
 ---
 
-## 🌐 3. Configuración de Despliegue (FTP Claro Cloud)
+## 🌐 3. Configuración de Salida (Nginx Proxy Manager)
 
-El script `deploy-lftp.sh` requiere un archivo de configuración secreto llamado `.env`.
+Para exponer el proyecto al exterior de forma segura:
 
-### **Paso 1: Crear el archivo .env**
-En la raíz del proyecto, ejecuta este comando reemplazando los valores en **MAYÚSCULAS** con tus datos de Claro Cloud:
-
-```bash
-cat > .env << EOF
-FTP_HOST=ftp.masterlukasmoyano.com
-FTP_USER=TU_USUARIO_FTP
-FTP_PASS=TU_CONTRASEÑA_FTP
-FTP_PORT=21
-FTP_REMOTE_PATH=/public_html
-EOF
-```
-
-### **Paso 2: Ejecutar el Despliegue**
-Una vez configurado el `.env`, simplemente corre el script:
-
-```bash
-./deploy-lftp.sh
-```
+1.  **Host Proxy**: Apuntar el dominio a la IP del host y el puerto `5055`.
+2.  **SSL**: Generar certificado Let's Encrypt mediante el panel de NPM (`http://192.168.0.7:81`).
+3.  **Seguridad**: Activar "Block Common Exploits" y "Force SSL".
 
 **¿Qué hace este script?**
 1. Limpia builds anteriores.

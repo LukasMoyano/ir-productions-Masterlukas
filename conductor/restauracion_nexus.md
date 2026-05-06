@@ -27,13 +27,16 @@ Este plan tiene como objetivo resolver la "desconexión" de archivos y servicios
     *   Eliminar `backend/static` y `backend/templates` (si no se usan para rutas específicas de Flask) para evitar confusiones.
     *   Asegurar que todas las imágenes en los componentes utilicen rutas relativas consistentes o importaciones de assets de Vite.
 
-## 5. Corrección del Despliegue (Hosting)
-*   **Problema:** Los scripts de despliegue están subiendo los archivos a `/public` o `/public_html` mientras que el hosting parece usar la raíz como document root, causando que el sitio no cargue los estilos o archivos correctos.
-*   **Acción:**
-    *   Actualizar `scripts/deploy-lftp.sh` y `scripts/deploy-total.sh` para limpiar y subir directamente a la raíz (`/`) del servidor FTP, según las notas de `TAREAS_PENDIENTES.md`.
+## 6. Soberanía Tecnológica y Dockerización (Mayo 2026)
+*   **Estado:** Completado. El proyecto ya no depende de configuraciones locales de Python/Bun, sino que está totalmente encapsulado.
+*   **Acción:** 
+    *   Implementación de `Dockerfile` multietapa (Frontend Builder + Runtime Python).
+    *   Orquestación con `docker-compose.yml` para persistencia y reinicio automático.
+    *   Aislamiento de red mediante `ir_productions_nexus_nexus_network`.
+*   **Exposición:** El servicio se sirve en `http://192.168.0.7:5055` y se administra mediante Nginx Proxy Manager en la IP `192.168.0.7:81`.
 
-## Pasos de Verificación
-1.  Ejecutar `bun run build` desde la raíz y verificar que `dist/data/hpc_catalog_mock.json` exista.
-2.  Iniciar el servidor con `python backend/app.py` y probar la API `/api/hpc/catalog`.
-3.  Navegar por el sitio localmente y verificar que el enlace de HPC funcione y lleve a la nueva página.
-4.  Realizar un despliegue de prueba y verificar la carga de activos en el dominio principal.
+## Pasos de Verificación Finalizados
+1.  Construcción de imagen sin errores (Base Debian Bookworm).
+2.  Arranque del contenedor `nexus_productions_v2` verificado con `docker ps`.
+3.  Acceso local exitoso al puerto 5055.
+4.  Configuración de Proxy Host en NPM lista para tráfico externo.
