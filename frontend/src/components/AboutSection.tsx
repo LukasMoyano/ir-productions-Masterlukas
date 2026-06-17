@@ -41,11 +41,12 @@ const AboutSection = ({ language }: AboutSectionProps) => {
       ],
       educationTitle: "Educación y Certificaciones",
       education: [
-        "SENA – Desarrollador de Smart Contracts / Solidity (Certificación 2026)",
-        "Consultoría en Transformación Digital & Adopción de IA (Desde 2024)",
         "Pontificia Universidad Javeriana – Maestro en Artes Visuales, Expresión Audiovisual (2019)",
+        "Universidad Nacional de Colombia – Diplomado en Desarrollo Web y Apps (2023)",
         "MinTICs & UNAL – IA Avanzada, HPC y Desarrollo Full Stack (2023–2024)",
-        "IELTS B2 – Inglés Técnico Profesional",
+        "Consultoría en Transformación Digital & Adopción de IA (Desde 2024)",
+        "IELTS B2 – Inglés Técnico Profesional – British Council (2024)",
+        "SENA – Desarrollador de Smart Contracts / Solidity (Certificación 2026)",
       ],
       slogan:
         "Infraestructura Soberana para un Futuro Inmutable. Funk with us!",
@@ -81,11 +82,12 @@ const AboutSection = ({ language }: AboutSectionProps) => {
       ],
       educationTitle: "Education and Certifications",
       education: [
-        "SENA – Smart Contract Developer / Solidity (2026 Certification)",
-        "Digital Transformation & AI Adoption Consulting (Since 2024)",
         "Pontificia Universidad Javeriana – Master in Visual Arts (2019)",
-        "MinTICs & UNAL – Advanced AI, HPC & Full Stack Development (2023–2024)",
-        "IELTS B2 – Professional Technical English"
+        "National University of Colombia – Diploma in Web & Apps Development (2023)",
+        "MinTIC – Advanced Artificial Intelligence (2023–2024)",
+        "Digital Transformation & AI Adoption Consulting (Since 2024)",
+        "IELTS B2 – Professional Technical English – British Council (2024)",
+        "SENA – Smart Contract Developer / Solidity (2026 Certification)",
       ],
       slogan: "Sovereign Infrastructure for an Immutable Future. Funk with us!",
     },
@@ -152,7 +154,7 @@ const AboutSection = ({ language }: AboutSectionProps) => {
         {/* Expertise Grid */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold mb-8 text-center">{text.expertiseTitle}</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {text.expertise.map((area, index) => (
               <Card key={index} className="tech-border hover-lift group h-full">
                 <CardContent className="p-6">
