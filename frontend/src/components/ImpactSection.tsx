@@ -134,41 +134,41 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
         </div>
 
         {/* SDGs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {text.sdgs.map((sdg, index) => (
             <Card 
               key={index} 
-              className="tech-border hover-lift group relative overflow-hidden"
+              className="tech-border hover-lift group relative overflow-hidden flex flex-col items-center text-center"
             >
-              {/* Background Image */}
+              {/* Background Image - Significantly increased visibility */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-5 group-hover:opacity-15 transition-opacity duration-300"
-                style={{ backgroundImage: `url(${sdg.image})` }}
+                className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-20 group-hover:opacity-45 transition-opacity duration-500 p-4"
+                style={{ backgroundImage: `url(${sdg.image})`, backgroundSize: '70%' }}
               />
               {/* Card Content */}
-              <CardContent className="p-6 relative z-10">
-                {/* SDG Number Badge */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-primary-foreground font-bold text-lg">
+              <CardContent className="p-8 relative z-10 flex flex-col items-center w-full">
+                {/* SDG Number Badge & Icon Container */}
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-primary-foreground font-black text-xl shadow-lg shadow-primary/20">
                     {sdg.number}
                   </div>
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <sdg.icon className="w-6 h-6 text-primary group-hover:text-accent transition-colors" />
+                  <div className="w-14 h-14 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <sdg.icon className="w-7 h-7 text-primary group-hover:text-accent transition-colors" />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-black text-foreground mb-4 group-hover:text-primary transition-colors tracking-tight uppercase">
                   {sdg.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed max-w-[250px]">
                   {sdg.description}
                 </p>
 
                 {/* Hover effect gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </CardContent>
             </Card>
           ))}

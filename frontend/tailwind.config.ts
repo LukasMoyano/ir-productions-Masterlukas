@@ -67,6 +67,7 @@ export default {
 				'success': 'hsl(var(--success))',
 				'warning': 'hsl(var(--warning))',
 				'info': 'hsl(var(--info))',
+				'violet': 'hsl(270, 60%, 60%)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

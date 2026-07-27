@@ -1,4 +1,4 @@
-# IR Productions Nexus - Flask Dependencies
+# IR Productions - Flask Dependencies
 # ==========================================
 # Dependencias Python para la aplicación Flask
 # Actualizado: Febrero 2026

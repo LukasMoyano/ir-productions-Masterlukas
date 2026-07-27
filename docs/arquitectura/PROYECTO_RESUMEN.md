@@ -1,4 +1,4 @@
-# IR Productions Nexus - Resumen del Proyecto
+# IR Productions - Resumen del Proyecto
 
 **Fecha:** Febrero 2026  
 **Estado:** ✅ En Producción (Flask)  
@@ -8,7 +8,7 @@
 
 ## 🎯 VISIÓN GENERAL
 
-IR Productions Nexus es la plataforma web oficial de **IR Productions**, empresa dedicada a fusionar **Arte 🎨, Ciencia 🔬 y Tecnología 💻** para crear soluciones digitales integrales con enfoque en:
+IR Productions es la plataforma web oficial de **IR Productions**, empresa dedicada a fusionar **Arte 🎨, Ciencia 🔬 y Tecnología 💻** para crear soluciones digitales integrales con enfoque en:
 
 - Desarrollo rural y agrícola
 - Democratización tecnológica

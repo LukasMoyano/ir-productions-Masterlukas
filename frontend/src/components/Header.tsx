@@ -17,6 +17,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
     es: [
       { href: '#inicio', label: 'Inicio' },
       { href: '#servicios', label: 'Servicios' },
+      { href: '/portfolio', label: 'Portafolio' },
       { href: '#proceso', label: 'Proceso' },
       { href: '#equipo', label: 'Equipo' },
       { href: '#contacto', label: 'Contacto' }
@@ -24,13 +25,22 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
     en: [
       { href: '#home', label: 'Home' },
       { href: '#services', label: 'Services' },
+      { href: '/portfolio', label: 'Portfolio' },
       { href: '#process', label: 'Process' },
       { href: '#team', label: 'Team' },
       { href: '#contact', label: 'Contact' }
     ]
-  };
+    };
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/')) {
+      // For absolute routes like /portfolio
+      e.preventDefault();
+      setIsMenuOpen(false);
+      navigate(href);
+      return;
+    }
+
     e.preventDefault();
     setIsMenuOpen(false);
 
@@ -51,7 +61,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
         }
       }, 100);
     }
-  };
+    };
 
   return (
     <header className="fixed top-0 w-full z-50 backdrop-blur-lg bg-background/80 border-b border-border">

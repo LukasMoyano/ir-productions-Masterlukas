@@ -1,4 +1,4 @@
-# Plan de Restauración y Consolidación Nexus
+# Plan de Restauración y Consolidación
 
 Este plan tiene como objetivo resolver la "desconexión" de archivos y servicios en el proyecto masterlukasmoyano.com, consolidando la arquitectura y restaurando la funcionalidad del catálogo HPC y las rutas del sitio.
 

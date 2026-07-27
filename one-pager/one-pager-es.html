@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Pager -IR- Productions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #131313;
+            --surface-color: #1c1b1b;
+            --primary-red: #CC0000;
+            --text-main: #e5e2e1;
+            --text-dim: #a1a1aa;
+            --accent-gold: #854D0E;
+            --outline: #353534;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px;
+            box-sizing: border-box;
+            width: 210mm;
+            height: 297mm;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--outline);
+        }
+
+        header {
+            border-left: 4px solid var(--primary-red);
+            padding-left: 24px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--primary-red);
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            flex-grow: 1;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--outline);
+            padding: 24px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-red);
+            margin-right: 12px;
+        }
+
+        p, li {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-dim);
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 12px 0 0 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--outline);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 24px;
+        }
+
+        .brand-ir {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .brand-ir span {
+            color: var(--primary-red);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-ir">_-<span>IR</span>-_ Productions</div>
+        <h1>Soberanía Tecnológica</h1>
+        <div class="subtitle">Investigación Avanzada & Infraestructura Soberana</div>
+    </header>
+
+    <div class="grid">
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+            <section>
+                <h2>El Problema</h2>
+                <p>La investigación moderna en Colombia enfrenta una <span class="highlight">dependencia crítica</span> de servicios en la nube extranjeros, lo que conlleva altos costos operativos (OPEX) y vulnerabilidad en la privacidad de datos sensibles.</p>
+            </section>
+
+            <section>
+                <h2>Nuestra Solución</h2>
+                <p>Implementamos infraestructura <span class="highlight">On-Premise</span> y hardware abierto. Garantizamos <span class="highlight">Privacidad Total</span> mediante modelos de IA locales y soberanía de datos, eliminando la fuga de información hacia terceros.</p>
+            </section>
+
+            <section>
+                <h2>Impacto Social y Ecológico</h2>
+                <p>Lideramos la transformación digital en el Sumapaz con proyectos <span class="highlight">AgriTech</span>. Aplicamos <span class="highlight">Supra-reciclaje</span> de hardware para reducir la huella de carbono y democratizar el acceso a la computación de alto rendimiento.</p>
+            </section>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+            <section>
+                <h2>Capacidad Técnica</h2>
+                <ul>
+                    <li><span class="highlight">Estaciones HPC:</span> Workstations optimizadas para entrenamiento de IA y procesamiento masivo de datos.</li>
+                    <li><span class="highlight">Edge Computing:</span> Nodos de monitoreo IoT para agricultura de precisión en tiempo real.</li>
+                    <li><span class="highlight">Redes Privadas:</span> Infraestructura VPN Mesh para conectividad segura y soberana.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Modelo de Trabajo</h2>
+                <p>Facilitamos la integración academia-empresa mediante:</p>
+                <ul>
+                    <li>Convenios de colaboración técnica.</li>
+                    <li>Prestación de servicios de consultoría especializada.</li>
+                    <li>Desarrollo de proyectos TRL (Technology Readiness Level).</li>
+                </ul>
+            </section>
+
+            <section style="border-color: var(--accent-gold);">
+                <h2 style="color: var(--accent-gold); border-color: var(--accent-gold);">Diferencial</h2>
+                <p>"No solo vendemos tecnología; construimos <span class="highlight">Soberanía</span>. Nuestra infraestructura es propiedad del cliente, sin suscripciones forzosas ni control externo."</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <div>Fusa/Arbeláez, Cundinamarca</div>
+            <div>managementandplanning@masterlukasmoyano.com</div>
+        </div>
+        <div style="text-align: right;">
+            MASTERLUKASMOYANO.COM<br>
+            <span style="font-style: italic; color: var(--primary-red);">"Funk with us!"</span>
+        </div>
+    </footer>
+</body>
+</html>

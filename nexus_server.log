@@ -1,4 +1,4 @@
-🚀 Nexus Central iniciado en http://localhost:5000
+🚀 Servidor iniciado en http://localhost:5000
 📂 Sirviendo archivos desde: /mnt/Proyectos4TB/backup_masterlukas/Documents/_-IR_Productions_2025/WwW_EndesarrolloWEB/ir-productions-nexus-main/dist
  * Serving Flask app 'app'
  * Debug mode: on
@@ -29,7 +29,7 @@
 127.0.0.1 - - [25/Apr/2026 08:05:30] "HEAD /assets/index-DorOLFUo.css HTTP/1.1" 200 -
 127.0.0.1 - - [25/Apr/2026 08:07:58] "HEAD /assets/index-CthBGzZL.js HTTP/1.1" 200 -
  * Detected change in '/mnt/Proyectos4TB/backup_masterlukas/Documents/_-IR_Productions_2025/WwW_EndesarrolloWEB/ir-productions-nexus-main/backend/app.py', reloading
-🚀 Nexus Central iniciado en http://localhost:5000
+🚀 Servidor iniciado en http://localhost:5000
 📂 Sirviendo archivos desde: /mnt/Proyectos4TB/backup_masterlukas/Documents/_-IR_Productions_2025/WwW_EndesarrolloWEB/ir-productions-nexus-main/dist
  * Restarting with stat
  * Debugger is active!

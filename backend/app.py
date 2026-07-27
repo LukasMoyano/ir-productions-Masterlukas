@@ -1,5 +1,5 @@
 """
-IR Productions Nexus - Unified Flask & React Backend
+IR Productions - Unified Flask & React Backend
 =====================================================
 Este servidor sirve la aplicación moderna de React desde la carpeta /dist
 y proporciona los servicios de API necesarios.
@@ -47,7 +47,7 @@ def api_contact():
     """API endpoint para formulario de contacto."""
     data = request.json
     app.logger.info(f"Nuevo mensaje de contacto recibido: {data}")
-    return jsonify({'success': True, 'message': 'Mensaje recibido en el Nexus'})
+    return jsonify({'success': True, 'message': 'Mensaje recibido'})
 
 # ============================================================================
 # MANEJO DEL FRONTEND (React SPA)
@@ -78,7 +78,7 @@ def serve_react(path):
 # ============================================================================
 
 if __name__ == '__main__':
-    print(f"🚀 Nexus Central iniciado en http://localhost:5000")
+    print(f"🚀 Servidor iniciado en http://localhost:5000")
     print(f"📂 Sirviendo archivos desde: {DIST_DIR}")
     
     app.run(

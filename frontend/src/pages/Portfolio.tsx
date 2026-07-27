@@ -15,7 +15,7 @@ import imgNexusHpc from '@/assets/portfolio/nexus-hpc.png';
 import imgMetabuscador from '@/assets/portfolio/metabuscador.png';
 import imgAgentesMqtt from '@/assets/portfolio/agentes-mqtt.png';
 import imgSoberaniaFusa from '@/assets/portfolio/soberania-fusa.png';
-import imgOrquestacionGpu from '@/assets/portfolio/nexus-hpc.png'; // TODO: Cambiar a orquestacion-gpu.png cuando subas el archivo
+import imgOrquestacionGpu from '@/assets/portfolio/nexus-hpc.png'; // TODO: Cambiar a orquestacion-gpu.png cuando el asset esté disponible
 import imgGemmaLocal from '@/assets/portfolio/gemma-local.png';
 import imgEstacionAgro from '@/assets/portfolio/estacion-agrometeorologica.png';
 import imgSistemaRaee from '@/assets/portfolio/sistema-raee.png';
@@ -273,8 +273,27 @@ const Portfolio = () => {
           </div>
         </section>
 
+        {/* Sticky Section Navigation */}
+        <nav className="sticky top-20 z-20 mb-8 -mx-4 px-4 py-3 bg-[#0A0A0B]/90 backdrop-blur-md border-b border-white/5 flex flex-wrap gap-2 md:gap-4 text-xs uppercase tracking-widest">
+          {[
+            { id: 'portfolio-perfil', label: language === 'es' ? 'Perfil' : 'Profile' },
+            { id: 'portfolio-proyectos', label: language === 'es' ? 'Proyectos' : 'Projects' },
+            { id: 'portfolio-ia', label: language === 'es' ? 'IA Local' : 'Local AI' },
+            { id: 'portfolio-galeria', label: language === 'es' ? 'Galería' : 'Gallery' },
+            { id: 'contacto', label: language === 'es' ? 'Contacto' : 'Contact' },
+          ].map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="text-muted-foreground hover:text-primary transition-colors px-2 py-1"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
         {/* Academic Profile */}
-        <section className="mb-24">
+        <section id="portfolio-perfil" className="mb-24 scroll-mt-28">
           <div className="tech-border p-8 md:p-12 rounded-[2rem] bg-muted/20 backdrop-blur-md border-white/5 flex flex-col items-center text-center">
             <h2 className="text-2xl md:text-4xl font-black mb-8 flex items-center gap-4 uppercase tracking-tighter">
               <Award className="text-accent w-8 h-8 md:w-10 md:h-10" /> {t.sections.background}
@@ -309,7 +328,7 @@ const Portfolio = () => {
         </section>
 
         {/* Applied Research Projects */}
-        <section className="mb-24">
+        <section id="portfolio-proyectos" className="mb-24 scroll-mt-28">
           <h2 className="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-4">
             <Microscope className="text-primary w-6 h-6 md:w-8 md:h-8" /> {t.sections.research}
           </h2>
@@ -343,7 +362,7 @@ const Portfolio = () => {
         </section>
 
         {/* AI & Sovereignty */}
-        <section className="mb-24">
+        <section id="portfolio-ia" className="mb-24 scroll-mt-28">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
               <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-4">
@@ -378,7 +397,7 @@ const Portfolio = () => {
         </section>
 
         {/* Results Gallery */}
-        <section className="mb-24">
+        <section id="portfolio-galeria" className="mb-24 scroll-mt-28">
            <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center uppercase tracking-widest">{t.results}</h2>
            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {t.gallery.map((item, idx) => (
@@ -420,8 +439,8 @@ const Portfolio = () => {
            </div>
            <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">
               <a href="https://github.com/LukasMoyano" className="hover:text-primary transition-colors">Github</a>
-              <a href="#" className="hover:text-primary transition-colors">Legal</a>
-              <a href="#" className="hover:text-primary transition-colors">Privacy</a>
+               <a href="/legal" className="hover:text-primary transition-colors">Legal</a>
+               <a href="/privacy" className="hover:text-primary transition-colors">Privacy</a>
            </div>
            <p className="text-[10px] text-muted-foreground/50 uppercase tracking-widest text-center md:text-right">© 2026 Lukas Moyano Morales. Soberanía Tecnológica.</p>
         </div>

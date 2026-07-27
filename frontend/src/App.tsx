@@ -24,6 +24,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Páginas de la Aplicación (Rutas)
 import Index from "./pages/Index";
+import Portfolio from "./pages/Portfolio";
 import NotFound from "./pages/NotFound";
 import CultivatechPresentation from "./pages/CultivatechPresentation";
 import AgroInnovationWorkshops from "./pages/AgroInnovationWorkshops";
@@ -51,6 +52,9 @@ const App = () => (
         <Routes>
           {/* Ruta Principal (Home) */}
           <Route path="/" element={<Index />} />
+          
+          {/* Ruta de Portafolio Profesional */}
+          <Route path="/portfolio" element={<Portfolio />} />
           
           {/* Rutas de Presentaciones y Servicios (Landing Pages) */}
           <Route

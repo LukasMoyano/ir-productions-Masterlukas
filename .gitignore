@@ -1,4 +1,4 @@
-# IR Productions Nexus - Flask Git Ignore
+# IR Productions - Flask Git Ignore
 # ========================================
 
 # Python
@@ -71,3 +71,10 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Reportes técnicos y evidencias (no subir al host ni al repo)
+INFORME_TECNICO_PERICIAL.md
+INFORME_DIAGNOSTICO_UNICO.md
+EVIDENCIA_TECNICA/
+auditoria_*.txt
+docs/RESUMEN_SESION_22JUL2026.md

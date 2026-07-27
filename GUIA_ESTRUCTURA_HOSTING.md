@@ -8,9 +8,9 @@ Para mantener el orden y evitar conflictos, la estructura en la raíz del servid
 
 ```text
 / (Raíz del Servidor)
-├── index.html                # Proyecto Principal (Nexus)
+├── index.html                # Proyecto Principal
 ├── assets/                   # Assets del Proyecto Principal
-├── .htaccess                 # Configuración Global y de Nexus
+├── .htaccess                 # Configuración Global
 │
 ├── /proyecto-2/              # SUBDIRECTORIO para Proyecto 2
 │   ├── index.html

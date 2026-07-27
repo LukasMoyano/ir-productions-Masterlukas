@@ -1,4 +1,4 @@
-# 📋 Bitácora de Control Nexus - Estado Actual
+# 📋 Bitácora de Control - Estado Actual
 
 ## 📝 Resumen de la Situación (Abril 2026)
 Se identificó un conflicto de despliegue en el hosting CarrierZone. El sitio web está sirviendo archivos obsoletos desde la raíz (`/`) mientras que los archivos actualizados están confinados en la subcarpeta `/public`. Esto causa un renderizado "crudo" porque el `index.html` de la raíz apunta a activos inexistentes o versiones inconsistentes.

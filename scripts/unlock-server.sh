@@ -1,23 +1,34 @@
 #!/bin/bash
 # =============================================================================
-# IR Productions Nexus - DESBLOQUEO DE PERMISOS Y LIMPIEZA
+# IR Productions - DESBLOQUEO DE PERMISOS Y LIMPIEZA
 # =============================================================================
 
 set -e
 
 echo "🔓 Iniciando Desbloqueo de Servidor..."
 
-# Credenciales literales
-FTP_HOST='masterlukasmoyano.com'
-FTP_USER='masterlukasmoyano.com'
-FTP_PASS='mASTER@60748$6020'
+# Cargar variables de entorno
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+if [ -f "$PROJECT_ROOT/.env" ]; then
+    export $(grep -v '^#' "$PROJECT_ROOT/.env" | xargs)
+else
+    echo "❌ Error: No se encontró el archivo .env en $PROJECT_ROOT"
+    exit 1
+fi
+
+# Validar que las variables necesarias existan
+if [ -z "$FTP_HOST" ] || [ -z "$FTP_USER" ] || [ -z "$FTP_PASSWORD" ]; then
+    echo "❌ Error: Faltan variables FTP en el archivo .env"
+    exit 1
+fi
 
 lftp <<EOF
 set ftp:ssl-allow no
 set ftp:passive-mode yes
 set cmd:fail-exit no
 
-open -u "$FTP_USER","$FTP_PASS" ftp://$FTP_HOST
+open -u "$FTP_USER","$FTP_PASSWORD" ftp://$FTP_HOST
 
 echo "1. Intentando vaciar y eliminar la carpeta conflictiva..."
 cd public

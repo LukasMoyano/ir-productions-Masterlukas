@@ -66,7 +66,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
     {
       icon: Mail,
       label: text.contact.email,
-      value: "MasterLukasMoyano@MasterLukasMoyano.com",
+      value: "managementandplanning@masterlukasmoyano.com",
       link: "mailto:managementandplanning@masterlukasmoyano.com",
       color: "text-primary",
       bg: "bg-primary/10"
@@ -75,7 +75,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
       icon: Linkedin,
       label: text.contact.linkedin,
       value: "MasterLukasMoyano",
-      link: "https://www.linkedin.com/in/masterlukasmoyano/",
+      link: "https://linkedin.com/in/lukasmoyano",
       color: "text-blue-500",
       bg: "bg-blue-500/10"
     },
@@ -159,7 +159,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
             </Card>
 
             {/* Brochure Download */}
-            <Card className="tech-border hover-lift group cursor-pointer glow-gold">
+            <Card className="tech-border hover-lift group cursor-pointer glow-gold" onClick={() => window.open('/portfolio-download.html', '_blank')}>
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Download className="w-8 h-8 text-accent" />

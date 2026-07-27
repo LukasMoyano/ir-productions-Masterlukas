@@ -1,5 +1,5 @@
 # Product Requirements Document (PRD)
-## Nexus HPC: Plataforma de Dropshipping Automatizado de Supercómputo
+## HPC: Plataforma de Dropshipping Automatizado de Supercómputo
 
 **Fecha:** 4 de Febrero de 2026
 **Objetivo:** Lanzamiento y Facturación en < 4 Semanas.

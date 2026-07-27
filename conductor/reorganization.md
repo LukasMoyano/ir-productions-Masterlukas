@@ -1,4 +1,4 @@
-# Plan de Reorganización y Estructuración Visual (IR Productions Nexus)
+# Plan de Reorganización y Estructuración Visual (IR Productions)
 
 ## 1. Análisis de la Situación Actual
 El proyecto presenta una arquitectura híbrida en transición (Vite/React + Python/Flask) con responsabilidades mezcladas:

@@ -232,7 +232,7 @@ const AgroInnovationWorkshops = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 container mx-auto px-4 pb-16 flex flex-col items-center text-center">
             <Link
-              to="/"
+              to="/#servicios"
               className="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-colors"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />

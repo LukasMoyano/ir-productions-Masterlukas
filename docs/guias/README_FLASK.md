@@ -1,4 +1,4 @@
-# IR Productions Nexus - Flask
+# IR Productions - Flask
 
 **Migración de Vite/React a Flask** para simplificar la arquitectura y el despliegue.
 

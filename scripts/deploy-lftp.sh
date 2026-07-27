@@ -1,6 +1,6 @@
 #!/bin/bash
 # =============================================================================
-# IR Productions Nexus - RESTAURACIÓN FINAL EN /PUBLIC
+# IR Productions - RESTAURACIÓN FINAL EN /PUBLIC
 # =============================================================================
 
 set -e
@@ -13,14 +13,26 @@ NC='\033[0m'
 
 echo -e "${BLUE}🚀 Iniciando Restauración en Carpeta 'public'...${NC}"
 
-# 1. Credenciales literales
-FTP_HOST='masterlukasmoyano.com'
-FTP_USER='masterlukasmoyano.com'
-FTP_PASS='mASTER@60748$6020'
-
-# 2. Rutas locales
+# 1. Cargar variables de entorno
 SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPTS_DIR/.." && pwd)"
+
+if [ -f "$PROJECT_ROOT/.env" ]; then
+    # Cargar variables correctamente (source preserva las comillas y caracteres especiales como $)
+    set -a
+    source "$PROJECT_ROOT/.env"
+    set +a
+else
+    echo -e "${RED}❌ Error: No se encontró el archivo .env en $PROJECT_ROOT${NC}"
+    exit 1
+fi
+
+# Validar que las variables necesarias existan
+if [ -z "$FTP_HOST" ] || [ -z "$FTP_USER" ] || [ -z "$FTP_PASSWORD" ]; then
+    echo -e "${RED}❌ Error: Faltan variables FTP en el archivo .env${NC}"
+    exit 1
+fi
+
 BUILD_DIR="$PROJECT_ROOT/dist"
 
 echo -e "[1/3] Construyendo proyecto..."
@@ -35,23 +47,21 @@ set ftp:ssl-allow no
 set ftp:passive-mode yes
 set net:timeout 60
 set cmd:fail-exit yes
-open -u "$FTP_USER","$FTP_PASS" ftp://$FTP_HOST
+open -u "$FTP_USER","$FTP_PASSWORD" ftp://$FTP_HOST
 LNETRC
 
 lftp -f ~/.lftp_nexus <<EOF
-# LIMPIEZA DE LA RAÍZ
-echo "Limpiando archivos estáticos en la RAÍZ..."
-# Intentamos borrar los archivos principales si existen
-rm index.html || true
-rm placeholder.svg || true
-rm robots.txt || true
-rm _redirects || true
-rm -rf assets || true
-rm -rf ODSs || true
-rm -rf favicon_io || true
+# IR A LA CARPETA public/ (web root en CarrierZone)
+echo "Cambiando a la carpeta public/..."
+cd public 2>/dev/null || (mkdir public && cd public)
 
-# SUBIDA A LA RAÍZ
-echo "Subiendo archivos a la RAÍZ..."
+# LIMPIEZA SELECTIVA
+echo "Limpiando archivos anteriores en public/..."
+rm -f index.html placeholder.svg robots.txt _redirects .htaccess portfolio-download.html favicon.ico
+rm -rf assets ODSs favicon_io data .well-known
+
+# SUBIDA A PUBLIC/
+echo "Subiendo archivos a public/..."
 mirror \
     --reverse \
     --verbose \
@@ -59,16 +69,19 @@ mirror \
     --delete \
     --exclude-glob=".git*" \
     --exclude-glob="node_modules" \
+    --exclude-glob="public/*" \
     "$BUILD_DIR/" \
     ./
 
 echo "Aplicando permisos..."
 chmod -R 755 .
+echo "Contenido final:"
+ls -la
 bye
 EOF
 
 # Limpiar credenciales
 rm ~/.lftp_nexus
 
-echo -e "[3/3] ${GREEN}🎉 ¡PÁGINA RESTAURADA EN LA RAÍZ!${NC}"
-echo -e "Por favor, verifica ahora: http://masterlukasmoyano.com/"
+echo -e "[3/3] ${GREEN}🎉 ¡PÁGINA DESPLEGADA EN /public/ !${NC}"
+echo -e "Por favor, verifica ahora: https://masterlukasmoyano.com/"

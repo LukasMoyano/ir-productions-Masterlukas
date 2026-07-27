@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# IR Productions - Nexus Sovereign V4
+# IR Productions - Sovereign V4
 # Corrección de configuración ngrok + Persistencia
 
 PROJECT_ROOT="/mnt/Proyectos4TB/backup_masterlukas/Documents/_-IR_Productions_2025/WwW_EndesarrolloWEB/ir-productions-nexus-main"
@@ -13,7 +13,7 @@ sudo pkill -9 python3
 kill $(jobs -p) 2>/dev/null
 sleep 2
 
-echo "📂 Iniciando Nexus Backend (Flask) en puerto 5000..."
+echo "📂 Iniciando Backend (Flask) en puerto 5000..."
 ./venv/bin/python3 backend/app.py > nexus_server.log 2>&1 &
 SERVER_PID=$!
 

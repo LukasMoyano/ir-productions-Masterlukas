@@ -1,11 +1,11 @@
 #!/bin/bash
-# IR Productions Nexus - Build Script
+# IR Productions - Build Script
 # ====================================
 # Compila Tailwind CSS standalone para Flask
 
 set -e
 
-echo "🔨 IR Productions Nexus - Building CSS..."
+echo "🔨 IR Productions - Building CSS..."
 
 # Verificar si tailwindcss CLI está instalado
 if ! command -v tailwindcss &> /dev/null

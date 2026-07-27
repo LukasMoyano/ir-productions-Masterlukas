@@ -114,6 +114,7 @@ const CollaborationSection = ({ language }: CollaborationSectionProps) => {
             <Button 
               size="lg" 
               className="glow-red hover-lift group bg-primary hover:bg-primary/90"
+              onClick={() => window.open('https://wa.me/573197919742?text=Hola%20IR%20Productions!%20Quisiera%20solicitar%20una%20reuni%C3%B3n%20para%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.', '_blank')}
             >
               {text.cta}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -123,6 +124,7 @@ const CollaborationSection = ({ language }: CollaborationSectionProps) => {
               variant="outline" 
               size="lg"
               className="border-accent hover:bg-accent/10 group"
+              onClick={() => window.open('/portfolio-download.html', '_blank')}
             >
               {text.secondary_cta}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

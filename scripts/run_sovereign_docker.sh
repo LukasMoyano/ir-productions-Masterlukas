@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Script para arrancar IR Productions Nexus v2 con Docker
+# Script para arrancar IR Productions v2 con Docker
 # Autor: Gemini CLI
 # Fecha: Mayo 2026
 
-echo "🚀 Iniciando despliegue de IR Productions Nexus v2..."
+echo "🚀 Iniciando despliegue de IR Productions v2..."
 
 # 1. Asegurarse de estar en el directorio correcto
 cd "$(dirname "$0")"

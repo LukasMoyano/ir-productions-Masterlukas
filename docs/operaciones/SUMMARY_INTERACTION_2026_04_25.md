@@ -1,4 +1,4 @@
-# Resumen de Intervención Técnica - Nexus Soberano
+# Resumen de Intervención Técnica - Soberano
 **Fecha:** 25 de Abril de 2026
 **ID de Sesión:** session-8580cac8-ec89-4709-97e6-6fbd82d7b406
 
@@ -22,7 +22,7 @@
 ## 3. Infraestructura Soberana (Scripts)
 Se creó y optimizó el script `scripts/run_sovereign.sh` que realiza:
 1. Limpieza agresiva de procesos zombie (Python y ngrok).
-2. Inicio automático del backend Nexus (`app.py`) usando el entorno virtual (`venv`).
+2. Inicio automático del backend (`app.py`) usando el entorno virtual (`venv`).
 3. Lanzamiento de un túnel ngrok persistente con reescritura de cabeceras (`--host-header="localhost:5000"`) para asegurar la carga de assets.
 4. Detección automática de la URL pública para mostrarla en consola.
 

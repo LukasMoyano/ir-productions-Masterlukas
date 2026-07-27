@@ -1,4 +1,4 @@
-# 🚀 Guía de Desarrollo y Despliegue - IR Productions Nexus
+# 🚀 Guía de Desarrollo y Despliegue - IR Productions
 
 Este documento resume las últimas actualizaciones y proporciona las instrucciones necesarias para continuar con el desarrollo y despliegue del proyecto **masterlukasmoyano.com** de forma local.
 

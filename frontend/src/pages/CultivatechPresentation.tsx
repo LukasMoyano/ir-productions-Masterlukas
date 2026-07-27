@@ -9,6 +9,9 @@
  * - Imágenes con atributos ALT descriptivos.
  */
 
+// Importaciones de React
+import { useEffect } from "react";
+
 // Importaciones de Navegación
 import { Link } from "react-router-dom";
 
@@ -260,12 +263,27 @@ const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
 // COMPONENTE PRINCIPAL
 // ============================================================================
 const CultivatechPresentation = () => {
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Encabezado */}
-      <Header language={"es"} toggleLanguage={() => {}} />
+      <Header language={"es"} toggleLanguage={() => window.location.href = '/'} />
 
-      <main>
+      <main className="pt-24">
+        <div className="container mx-auto px-4 lg:px-8 mb-6">
+          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+            <ArrowLeft className="mr-2 w-4 h-4" />
+            Volver al Inicio
+          </Link>
+        </div>
         {/* Iteración de Secciones */}
         {presentationData.sections.map((slide, index) => (
           <section key={slide.id} className="py-20 circuit-pattern">
