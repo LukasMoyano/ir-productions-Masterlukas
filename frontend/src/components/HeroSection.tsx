@@ -22,7 +22,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
   // ============================================================================
   const content = {
     es: {
-      title: "_-IR-_ Productions",
+      title: "_-IR-_Productions",
       subtitle: "Fusionando Arte, Ciencia y Tecnología",
       description: "Transformamos el Agro y las Empresas del Futuro con soluciones digitales integrales que conectan sabiduría ancestral con innovación de vanguardia.",
       cta1: "Talleres Agro",
