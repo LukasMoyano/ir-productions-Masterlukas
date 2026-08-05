@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>-IR- Productions · Investor Deck 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #141414;
+    --card: #1f1f1f;
+    --red: #cc0000;
+    --gold: #d9a441;
+    --tech: #2a9d8f;
+    --agro: #4d7c4d;
+    --text: #f2f2f2;
+    --muted: #a6a6a6;
+  }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    background: #0a0a0a;
+    color: var(--text);
+    font-family: 'Inter', -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    padding: 0;
+  }
+  .page { background: var(--bg); max-width: 1000px; margin: 0 auto; padding: 40px 48px; }
+  .grad-text { background: linear-gradient(135deg, #cc0000, #e0531a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .grad-gold { background: linear-gradient(135deg, #d9a441, #c98a2e); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  .hero { text-align: center; padding: 20px 0 12px; }
+  .logo {
+    width: 72px; height: 72px; margin: 0 auto 18px;
+    background: linear-gradient(135deg, #cc0000, #d9a441);
+    border-radius: 16px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 30px; color: #fff;
+  }
+  .hero h1 { font-size: 46px; font-weight: 800; letter-spacing: -1px; }
+  .hero h2 { font-size: 22px; font-weight: 600; color: var(--gold); margin: 8px 0 14px; }
+  .hero p { color: var(--muted); max-width: 720px; margin: 0 auto 16px; font-size: 15px; }
+  .pill {
+    display: inline-block; border: 1px solid rgba(217,164,65,.5); color: var(--gold);
+    padding: 5px 14px; border-radius: 999px; font-size: 13px; font-weight: 600;
+  }
+
+  section { margin: 30px 0; }
+  .head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .head .kick { color: var(--gold); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .head h3 { font-size: 24px; font-weight: 700; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid #3a3a3a; border-radius: 14px; padding: 16px;
+  }
+  .card .t { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+  .card .lbl { font-size: 12px; color: var(--tech); font-weight: 700; text-transform: uppercase; }
+  .card p { color: var(--muted); font-size: 13px; }
+  .stat { text-align: center; }
+  .stat .n { font-size: 32px; font-weight: 800; color: var(--gold); }
+  .stat .k { font-size: 13px; color: var(--muted); }
+
+  ul { list-style: none; }
+  ul li { display: flex; gap: 8px; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  ul li b { color: var(--text); font-weight: 600; }
+  .dot { color: var(--gold); }
+
+  .bic-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .bic-grid .card { text-align: center; }
+  .bic-grid .em { font-size: 26px; }
+
+  .footer { text-align: center; margin-top: 34px; padding-top: 20px; border-top: 1px solid #3a3a3a; }
+  .cta {
+    display: inline-block; background: linear-gradient(135deg, #cc0000, #d9a441);
+    color: #fff; font-weight: 700; padding: 12px 26px; border-radius: 12px; text-decoration: none; font-size: 16px;
+  }
+  .footer .email { margin-top: 12px; color: var(--text); font-size: 16px; font-weight: 600; }
+  .footer .copy { margin-top: 8px; color: var(--muted); font-size: 12px; }
+
+  @media print { body { background: #fff; } body, .page { background: #141414 !important; } }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="logo">IR</div>
+      <div class="pill">Pitch Deck · Capital Semilla · 2026</div>
+      <h1 class="grad-text">-IR- Productions</h1>
+      <h2>Inteligencia Artificial para Empresas de Beneficio e Interés Colectivo</h2>
+      <p>Tecnología ética, soberana y de doble impacto: monitoreo con IA, soberanía tecnológica, computación cuántica y formación STEAM al servicio del bien común.</p>
+    </div>
+
+    <section>
+      <div class="head"><span class="kick">Problema</span><h3>Las empresas quieren doble impacto, pero no tienen acceso a IA</h3></div>
+      <div class="grid">
+        <div class="card"><div class="t">IA inaccesible</div><p>Soluciones caras y dependientes de la nube que no respetan la soberanía de los datos.</p></div>
+        <div class="card"><div class="t">Brecha de talento</div><p>Falta formación práctica en IA, STEAM y transformación digital para equipos y emprendedores.</p></div>
+        <div class="card"><div class="t">Doble impacto sin tecnología</div><p>Las empresas BIC quieren valor económico, social y ambiental, pero les falta quien lo implemente.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><span class="kick">Solución</span><h3>Cuatro líneas de IA con propósito</h3></div>
+      <div class="grid-4">
+        <div class="card"><div class="lbl">Agro-IoT</div><div class="t">Monitoreo con IA</div><p>CultivaTech ColombIA: sensores ESP32/RPi, detección de anomalías y alertas por Telegram.</p></div>
+        <div class="card"><div class="lbl">HPC</div><div class="t">Soberanía Tecnológica</div><p>Infraestructura local de alto desempeño y self-hosting que devuelve el control de los datos.</p></div>
+        <div class="card"><div class="lbl">Emerging Tech</div><div class="t">IA y Cuántica</div><p>Modelos locales (Qwen, scikit-learn), criptografía y formación en computación cuántica.</p></div>
+        <div class="card"><div class="lbl">STEAM</div><div class="t">Formación STEAM</div><p>Academias digitales, talleres y certificaciones de IA para equipos y afiliados.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><span class="kick">Mercado</span><h3>Ecosistema BIC en plena expansión</h3></div>
+      <div class="grid-4">
+        <div class="card stat"><div class="n">421</div><div class="k">empresas BIC en Colombia</div></div>
+        <div class="card stat"><div class="n">43%</div><div class="k">en Bogotá y la Región</div></div>
+        <div class="card stat"><div class="n">65%</div><div class="k">son microempresas</div></div>
+        <div class="card stat"><div class="n">72%</div><div class="k">sector servicios</div></div>
+      </div>
+      <div class="card" style="margin-top:14px"><p>Cada año la marca GOFEST de la Cámara de Comercio de Bogotá reúne a 40.000 asistentes y conecta startups, inversionistas y corporativos de toda LATAM. Nuestra vertical de registro: <b>IA</b>, con foco en <b>empresas BIC</b>.</p></div>
+    </section>
+
+    <section>
+      <div class="head"><span class="kick">Tracción</span><h3>Construyendo desde la acción, no desde la promesa</h3></div>
+      <div class="grid-2">
+        <div class="card"><div class="lbl" style="color:var(--tech)">TRL6</div><div class="t">CultivaTech ColombIA</div><p>Prototipo funcional Agro-IoT probado en entorno real en Fusagasugá.</p></div>
+        <div class="card"><div class="lbl">Propuesta formal</div><div class="t">Cámara de Comercio — Fusagasugá</div><p>Alianza estratégica: educación STEAM, monitoreo con IA y transformación digital.</p></div>
+        <div class="card"><div class="lbl">Propuesta formal</div><div class="t">Convocatoria Viveros Fusagasugá 2026</div><p>Propuesta técnico-financiera a la convocatoria de innovación (Resolución 102/2026).</p></div>
+        <div class="card"><div class="lbl">Aliado</div><div class="t">The Aslan Group SAS — Ing. Ricardo Moyano</div><p>Suite web corporativa Django (constructora, inversiones, ingeniería, CRM).</p></div>
+        <div class="card"><div class="lbl">Talleres</div><div class="t">Fundación Tenores (FUNDA-RUNTH)</div><p>Soberanía tecnológica para el grupo de validación de la fundación.</p></div>
+        <div class="card"><div class="lbl">En producción</div><div class="t">Talleres de Soberanía Tecnológica Fusagasugá 2026</div><p>Plataforma propia, dashboard de KPIs y leads calificados.</p></div>
+        <div class="card"><div class="lbl">Divulgación</div><div class="t">FLISoL Fusagasugá 2026</div><p>Ponencia sobre HPC local, modelos puros y soberanía de datos.</p></div>
+        <div class="card"><div class="lbl">Acercamiento</div><div class="t">Oficina TIC Fusagasugá</div><p>Conversaciones para escalar la oferta de IA y soberanía en la región.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><span class="kick">Qué buscamos</span><h3>Capital semilla y un ecosistema que crezca con nosotros</h3></div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="t" style="color:var(--red)">Capital Semilla · Pre-seed</div>
+          <ul>
+            <li><span class="dot">●</span> <b>Producto:</b> escalar CultivaTech y la plataforma de IA.</li>
+            <li><span class="dot">●</span> <b>Talento:</b> equipo técnico y comercial.</li>
+            <li><span class="dot">●</span> <b>Operación:</b> pilotos, marketing y expansión regional.</li>
+            <li><span class="dot">●</span> Monto objetivo: <b>[US$ XX,000 — editable]</b>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="t" style="color:var(--tech)">Networking & Alianzas</div>
+          <ul>
+            <li><span class="dot">●</span> Aliados estratégicos y clientes B2B / B2G.</li>
+            <li><span class="dot">●</span> Mentorías, visibilidad y conexiones corporativas.</li>
+            <li><span class="dot">●</span> Red de impacto BIC.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="t">¿Por qué invertir?</div>
+        <p>Equipo multidisciplinario (arte + ciencia + tecnología), prototipo funcional TRL6, propuestas formales en curso, foco en el segmento BIC en crecimiento y un modelo con triple retorno: económico, social y ambiental.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><span class="kick">Sociedad BIC</span><h3>Beneficio e Interés Colectivo en el ADN</h3></div>
+      <div class="bic-grid">
+        <div class="card"><div class="em">🧑\u200d🌾</div><p>Proveedores locales y minorías</p></div>
+        <div class="card"><div class="em">🏛️</div><p>Gobierno diverso e inclusivo</p></div>
+        <div class="card"><div class="em">🎓</div><p>Prácticas laborales justas y formación</p></div>
+        <div class="card"><div class="em">🌿</div><p>Prácticas ambientales y economía circular</p></div>
+        <div class="card"><div class="em">❤️</div><p>Creación de oportunidades de empleo</p></div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <a class="cta" href="mailto:managementandplanning@masterlukasmoyano.com">Contactar</a>
+      <div class="email">managementandplanning@masterlukasmoyano.com</div>
+      <div class="copy">-IR- Productions · Bogotá / Fusagasugá, Colombia · GOMATCH · GOFEST 2026</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -18,6 +18,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
       { href: '#inicio', label: 'Inicio' },
       { href: '#servicios', label: 'Servicios' },
       { href: '/portfolio', label: 'Portafolio' },
+      { href: '/inversionistas', label: 'Inversionistas' },
       { href: '#proceso', label: 'Proceso' },
       { href: '#equipo', label: 'Equipo' },
       { href: '#contacto', label: 'Contacto' }
@@ -26,6 +27,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
       { href: '#home', label: 'Home' },
       { href: '#services', label: 'Services' },
       { href: '/portfolio', label: 'Portfolio' },
+      { href: '/inversionistas', label: 'Investors' },
       { href: '#process', label: 'Process' },
       { href: '#team', label: 'Team' },
       { href: '#contact', label: 'Contact' }

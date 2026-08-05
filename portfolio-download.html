@@ -101,10 +101,13 @@
             border-bottom: 4px solid var(--primary);
             padding-bottom: 40px;
             margin-bottom: 50px;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            align-items: end;
-            gap: 20px;
+        }
+
+        .name-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .name-brand h1 {
@@ -127,14 +130,38 @@
         }
 
         .contact-info {
-            text-align: right;
+            margin-top: 28px;
+            padding: 16px 24px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 20px;
             font-family: 'JetBrains Mono', monospace;
             font-size: 11px;
             color: var(--muted);
-            line-height: 2;
+            line-height: 1.8;
+            max-width: 100%;
         }
 
-        .contact-info strong { color: var(--text); }
+        .contact-info-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .contact-info-item .label {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .contact-info-item .separator {
+            color: var(--primary);
+            margin: 0 2px;
+        }
 
         /* SECTIONS */
         h2 {
@@ -289,7 +316,37 @@
             letter-spacing: 4px;
         }
 
-        .page-break { page-break-before: always; }
+        @media screen { .page-break { page-break-before: auto; } }
+
+        .project-card { display: flex; flex-direction: column; height: 100%; }
+        .project-card .badge-row { margin-top: auto; }
+
+        .skill-group { display: flex; flex-direction: column; height: 100%; }
+        .skill-list { flex-grow: 1; }
+
+        @media (max-width: 640px) {
+            .container { padding: 20px; }
+            .contact-info { gap: 4px 16px; }
+            .contact-info-item { white-space: normal; }
+            .name-brand h1 { font-size: 38px; letter-spacing: -2px; }
+            .summary-box { max-width: 100%; font-size: 16px; }
+            .skills-container { grid-template-columns: 1fr; }
+            .project-card h3 { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .project-card h3 span { align-self: flex-start; }
+            .edu-item { flex-direction: column; gap: 4px; }
+            .edu-date { align-self: flex-start; }
+            .btn-print { bottom: 20px; right: 20px; padding: 14px 24px; font-size: 11px; }
+        }
+
+        @media (min-width: 641px) and (max-width: 900px) {
+            .name-brand h1 { font-size: 48px; }
+            .skills-container { grid-template-columns: repeat(2, 1fr); }
+            .container { padding: 30px; }
+        }
+
+        @media (max-width: 480px) {
+            .btn-print { width: calc(100% - 40px); justify-content: center; border-radius: 8px; }
+        }
     </style>
 </head>
 <body>
@@ -303,12 +360,12 @@
             <div class="name-brand">
                 <h1>Lukas<br>Moyano</h1>
                 <div class="tagline">Consultor en Transformación Digital & IA</div>
-            </div>
-            <div class="contact-info">
-                <div><strong>Email:</strong> managementandplanning@masterlukasmoyano.com</div>
-                <div><strong>Web:</strong> www.MasterLukasMoyano.com</div>
-                <div><strong>Loc:</strong> Fusagasugá, Cundinamarca // Colombia</div>
-                <div><strong>Philosophy:</strong> GNU/Linux First • Open Source • Soberanía</div>
+                <div class="contact-info">
+                    <span class="contact-info-item"><span class="label">Email:</span> managementandplanning@masterlukasmoyano.com</span>
+                    <span class="contact-info-item"><span class="separator">//</span> <span class="label">Web:</span> www.MasterLukasMoyano.com</span>
+                    <span class="contact-info-item"><span class="separator">//</span> <span class="label">Loc:</span> Fusagasugá, Cundinamarca // Colombia</span>
+                    <span class="contact-info-item"><span class="separator">//</span> <span class="label">Philosophy:</span> GNU/Linux First • Open Source • Soberanía</span>
+                </div>
             </div>
         </header>
 
