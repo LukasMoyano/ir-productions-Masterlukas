@@ -22,7 +22,8 @@ const HeroSection = ({ language }: HeroSectionProps) => {
   // ============================================================================
   const content = {
     es: {
-      title: "_-IR-_Productions",
+      title: "_-IR-_",
+      title2: "Productions",
       subtitle: "Fusionando Arte, Ciencia y Tecnología",
       description: "Transformamos el Agro y las Empresas del Futuro con soluciones digitales integrales que conectan sabiduría ancestral con innovación de vanguardia.",
       cta1: "Talleres Agro",
@@ -31,7 +32,8 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       impact: "Alineados con PDM de Cundinamarca • PDD Cundinamarca • ODS"
     },
     en: {
-      title: "_-IR-_ Productions",
+      title: "_-IR-_ ",
+      title2: "Productions",
       subtitle: "Fusing Art, Science and Technology",
       description: "We transform Agriculture and Future Businesses with integral digital solutions that connect ancestral wisdom with cutting-edge innovation.",
       cta1: "Explore Agro Workshops",
@@ -69,6 +71,9 @@ const HeroSection = ({ language }: HeroSectionProps) => {
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
           <span className="gradient-text-primary block">
             {text.title}
+          </span>
+          <span className="gradient-text-primary block">
+            {text.title2}
           </span>
           <span className="gradient-text-gold text-4xl md:text-5xl lg:text-6xl block mt-2">
             {text.subtitle}
