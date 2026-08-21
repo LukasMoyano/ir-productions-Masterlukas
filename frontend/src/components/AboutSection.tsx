@@ -96,7 +96,10 @@ const AboutSection = ({ language }: AboutSectionProps) => {
   const text = content[language];
 
   return (
-    <section className="py-20 bg-card">
+    <section
+      id={language === 'es' ? 'equipo' : 'team'}
+      className="py-20 bg-card scroll-mt-16"
+    >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-accent border-accent">

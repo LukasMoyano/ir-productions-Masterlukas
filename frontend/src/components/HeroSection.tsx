@@ -10,6 +10,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/hero-background.jpg';
 
 interface HeroSectionProps {
@@ -17,6 +18,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ language }: HeroSectionProps) => {
+  const navigate = useNavigate();
   // ============================================================================
   // CONTENIDO HERO (Propuesta de Valor)
   // ============================================================================
@@ -100,7 +102,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
             variant="outline"
             size="lg"
             className="border-accent hover:bg-accent/10 hover:border-accent/70 group"
-            onClick={() => document.getElementById(language === 'es' ? 'servicios' : 'services')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => navigate('/servicios/hpc-builder')}
           >
             <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
             {text.cta2}

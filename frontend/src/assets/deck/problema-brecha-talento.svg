@@ -1,0 +1,60 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="55%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#d9a441" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#d9a441" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d9a441" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#d9a441"/>
+      <stop offset="100%" stop-color="#d9a441" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <circle cx="320" cy="170" r="180" fill="url(#glow)"/>
+  <!-- Circuitos decorativos llenando el lienzo -->
+  <g stroke="#d9a441" stroke-width="1.4" opacity="0.4">
+    <path d="M0 60 H90 l20 20 H140 M500 80 H560 l20 -20 H640"/>
+    <path d="M0 100 H70 l15 -15 H120 M560 120 H600 l20 -20 H640"/>
+    <path d="M0 330 H100 l20 20 H150 M470 340 H540 l20 20 H640"/>
+    <path d="M0 365 H80 l15 -15 H130 M520 380 H590 l20 -20 H640"/>
+    <circle cx="140" cy="80" r="4" fill="#d9a441" fill-opacity="0.5"/>
+    <circle cx="500" cy="120" r="4" fill="#d9a441" fill-opacity="0.5"/>
+    <circle cx="150" cy="350" r="4" fill="#d9a441" fill-opacity="0.5"/>
+    <circle cx="540" cy="380" r="4" fill="#d9a441" fill-opacity="0.5"/>
+  </g>
+  <!-- Siluetas de personas (lado izquierdo) -->
+  <g stroke="#d9a441" stroke-width="2.5" fill="#d9a441">
+    <g fill-opacity="0.2">
+      <circle cx="140" cy="110" r="26"/>
+      <path d="M102 195 q0-50 38-50 q38 0 38 50"/>
+    </g>
+    <g fill-opacity="0.35" transform="translate(-28,-14)">
+      <circle cx="140" cy="110" r="22"/>
+      <path d="M106 195 q0-42 34-42 q34 0 34 42"/>
+    </g>
+    <g fill-opacity="0.1" transform="translate(30,-22)">
+      <circle cx="140" cy="110" r="18"/>
+      <path d="M108 195 q0-36 32-36 q32 0 32 36"/>
+    </g>
+  </g>
+  <!-- Muro de cristal y engranaje IA (derecha) -->
+  <path d="M330 70 v250" stroke="#d9a441" stroke-width="3" stroke-opacity="0.6"/>
+  <path d="M335 70 v250" stroke="#d9a441" stroke-width="1" stroke-opacity="0.2"/>
+  <g stroke="#d9a441" stroke-width="2.5" fill="none">
+    <circle cx="470" cy="150" r="42"/>
+    <circle cx="470" cy="150" r="12" fill="#d9a441" fill-opacity="0.5"/>
+    <path d="M470 100 v-14 M470 214 v14 M420 150 h-14 M534 150 h14 M434.6 114.6 l-10 -10 M505.4 185.4 l10 10 M505.4 114.6 l10 -10 M434.6 185.4 l-10 10" stroke-linecap="round"/>
+  </g>
+  <g fill="#d9a441" opacity="0.8">
+    <circle cx="440" cy="262" r="4"/>
+    <circle cx="505" cy="262" r="4"/>
+  </g>
+  <path d="M430 255 l20 12 l10 -6 l8 14" stroke="#d9a441" stroke-width="2" fill="none" opacity="0.6"/>
+  <text x="470" y="330" text-anchor="middle" fill="#f2f2f2" font-family="monospace" font-size="18" font-weight="700">BREAK-GLASS</text>
+</svg>

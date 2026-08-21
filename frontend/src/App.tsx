@@ -30,6 +30,7 @@ import CultivatechPresentation from "./pages/CultivatechPresentation";
 import AgroInnovationWorkshops from "./pages/AgroInnovationWorkshops";
 import HPCBuilder from "./pages/HPCBuilder";
 import InvestorDeck from "./pages/InvestorDeck";
+import BlockchainServices from "./pages/BlockchainServices";
 
 // ============================================================================
 // 2. CONFIGURACIÓN DEL CLIENTE DE DATOS
@@ -69,6 +70,10 @@ const App = () => (
           <Route
             path="/servicios/hpc-builder"
             element={<HPCBuilder />}
+          />
+          <Route
+            path="/servicios/blockchain"
+            element={<BlockchainServices />}
           />
           {/* Ruta de Deck / Inversión para Inversionistas */}
           <Route

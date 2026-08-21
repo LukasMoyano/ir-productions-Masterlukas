@@ -14,11 +14,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Users, Server, Bot, Presentation } from "lucide-react";
+import { ArrowRight, Users, Server, Bot, Presentation, Link as LinkIcon } from "lucide-react";
 import agroTechImage from "@/assets/agro-tech-farmers.jpg";
 import hpcWorkstationImage from "@/assets/hpc-workstation.jpg";
 import iotRobotImage from "@/assets/iot-robot.jpg";
 import circularEconomyImage from "@/assets/De_Residuos_a_Componentes_de_Alta_Tecnologia.png";
+import blockchainImage from "@/assets/portfolio/blockchain-andino.jpg";
 
 const benefitColorMap: { [key: string]: string } = {
   // Agricultura - Verde
@@ -61,6 +62,17 @@ const benefitColorMap: { [key: string]: string } = {
   "Premium hardware": "bg-amber-500/20 border-amber-500/30 text-amber-400",
   "AI optimisation": "bg-yellow-500/20 border-yellow-500/30 text-yellow-400",
   "Technical support": "bg-accent/20 border-accent/30 text-accent",
+
+  // Blockchain - Azul/Indigo
+  "Smart Contracts": "bg-indigo-500/20 border-indigo-500/30 text-indigo-400",
+  "Tokenización": "bg-purple-500/20 border-purple-500/30 text-purple-400",
+  "Tokenisation": "bg-purple-500/20 border-purple-500/30 text-purple-400",
+  "Trazabilidad": "bg-cyan-500/20 border-cyan-500/30 text-cyan-400",
+  "Traceability": "bg-cyan-500/20 border-cyan-500/30 text-cyan-400",
+  "Cifrado propio": "bg-slate-500/20 border-slate-500/30 text-slate-400",
+  "Own encryption": "bg-slate-500/20 border-slate-500/30 text-slate-400",
+  "DLT": "bg-blue-500/20 border-blue-500/30 text-blue-400",
+  "Web3": "bg-indigo-500/20 border-indigo-500/30 text-indigo-400",
   
   // Default
   default: "bg-blue-500/20 border-blue-500/30 text-blue-400",
@@ -107,6 +119,18 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
       subtitle: "Tres pilares tecnológicos para transformar tu futuro",
       services: [
         {
+          icon: Presentation,
+          title: "Proyecto Integral RAEE & Agricultura Circular",
+          description:
+            "Visión integral que une Upcycling, IA y Robótica para transformar el futuro del agro. Integración de residuos electrónicos en sistemas productivos circulares.",
+          benefits: ["Upcycling RAEE", "IA Avanzada", "Robótica", "Soberanía tecnológica", "Circularidad"],
+          image: circularEconomyImage,
+          badge: "RAEE + Circular",
+          color: "primary",
+          target: "Productores • Inversionistas • Aliados",
+          link: "/presentacion-cultivatech#urban-mine",
+        },
+        {
           icon: Users,
           title: "Talleres Agro-Innovación Integral",
           description:
@@ -136,20 +160,19 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
            link: "https://cultivatech-colombia-frontend.netlify.app",
           external: true,
         },
-
         {
-          icon: Presentation,
-          title: "Proyecto Integral RAEE & Agricultura Circular",
+          icon: LinkIcon,
+          title: "Blockchain Soberano · Trazabilidad & Smart Contracts",
           description:
-            "Visión integral que une Upcycling, IA y Robótica para transformar el futuro del agro. Integración de residuos electrónicos en sistemas productivos circulares.",
-          benefits: ["Upcycling RAEE", "IA Avanzada", "Robótica", "Soberanía tecnológica", "Circularidad"],
-          image: circularEconomyImage,
-          badge: "RAEE + Circular",
-          color: "primary",
-          target: "Productores • Inversionistas • Aliados",
-          link: "/presentacion-cultivatech#urban-mine",
+            "Contratos inteligentes, tokenización de activos y trazabilidad inmutable de datos, desplegados sobre infraestructura de cómputo propia y cifrado soberano, sin depender de la nube ni de terceros.",
+          benefits: ["Smart Contracts", "Tokenización", "Trazabilidad", "Cifrado propio", "Soberanía tecnológica"],
+          image: blockchainImage,
+          badge: "DLT · Web3",
+          color: "accent",
+          target: "Finanzas • Sector público • Agro • Industria",
+          link: "/servicios/blockchain",
+          external: false,
         },
-
         {
           icon: Server,
           title: "Workstations HPC/IA Personalizadas",
@@ -169,6 +192,18 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
       title: "Our Solution Lines",
       subtitle: "Three technological pillars to transform your future",
       services: [
+        {
+          icon: Presentation,
+          title: "Future Vision: Circular Agriculture",
+          description:
+          "Discover our integral vision that unites Upcycling, AI, and Robotics to transform the future of agriculture and technological sovereignty.",
+          benefits: ["Upcycling RAEE", "AI Advanced", "Robotics", "Tech Sovereignty", "Circularity"],
+          image: circularEconomyImage,
+          badge: "RAEE + Circular",
+          color: "primary",
+          target: "Producers • Investors • Partners",
+          link: "/presentacion-cultivatech#urban-mine",
+        },
         {
           icon: Users,
           title: "Agro-Tech Workshops",
@@ -197,16 +232,17 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           external: true,
         },
         {
-          icon: Presentation,
-          title: "Future Vision: Circular Agriculture",
+          icon: LinkIcon,
+          title: "Sovereign Blockchain · Traceability & Smart Contracts",
           description:
-          "Discover our integral vision that unites Upcycling, AI, and Robotics to transform the future of agriculture and technological sovereignty.",
-          benefits: ["Upcycling RAEE", "AI Advanced", "Robotics", "Tech Sovereignty", "Circularity"],
-          image: circularEconomyImage,
-          badge: "RAEE + Circular",
-          color: "primary",
-          target: "Producers • Investors • Partners",
-          link: "/presentacion-cultivatech#urban-mine",
+            "Smart contracts, asset tokenisation and immutable data traceability, deployed on your own computing infrastructure with sovereign encryption — no cloud, no third-party dependency.",
+          benefits: ["Smart Contracts", "Tokenisation", "Traceability", "Own encryption", "Tech Sovereignty"],
+          image: iotRobotImage,
+          badge: "DLT · Web3",
+          color: "accent",
+          target: "Finance • Public sector • Agro • Industry",
+          link: "/servicios/blockchain",
+          external: false,
         },
         {
           icon: Server,

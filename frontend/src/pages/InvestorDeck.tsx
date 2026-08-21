@@ -40,6 +40,12 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
+// Imágenes ilustrativas para las cápsulas de Problema (el deck de inversión).
+// Son placeholders SVG con la identidad visual del deck; se pueden reemplazar
+// por fotografías reales generadas con IA sin modificar esta estructura.
+import imgIAInaccesible from "@/assets/deck/problema-ia-inaccesible.svg";
+import imgBrechaTalento from "@/assets/deck/problema-brecha-talento.svg";
+import imgDobleImpacto from "@/assets/deck/problema-doble-impacto.svg";
 
 // Email de contacto para inversores, clave para la interacción.
 const CONTACT_EMAIL = "managementandplanning@masterlukasmoyano.com";
@@ -356,44 +362,57 @@ const InvestorDeck = () => {
             }
           />
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Tarjeta de problema: "IA inaccesible", destacando costos y dependencia de la nube. */}
-            <Card className="tech-border hover-lift group">
+            {/* Tarjeta de problema: "IA inaccesible", destacando costos y dependencia de la nube.
+                Imagen ilustrativa en la parte superior, con zoom suave al hacer hover. */}
+            <Card className="tech-border hover-lift group overflow-hidden">
+              <div className="relative h-44 overflow-hidden border-b border-border">
+                <img
+                  src={imgIAInaccesible}
+                  alt={isEs ? "IA inaccesible: nube cerrada que no respeta la soberanía de los datos" : "AI out of reach: a closed cloud that does not respect data sovereignty"}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent" />
+              </div>
               <CardContent className="p-8 text-center">
-                <AlertTriangle className="w-10 h-10 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">
-                  {isEs ? "IA inaccesible" : "AI out of reach"}
-                </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {isEs
                     ? "Soluciones de IA caras, dependientes de la nube y de suscripciones corporativas que no respetan la soberanía de los datos."
                     : "Expensive AI solutions, cloud-dependent and tied to corporate subscriptions that do not respect data sovereignty."}
                 </p>
               </CardContent>
             </Card>
-            {/* Tarjeta de problema: "Brecha de talento", enfocándose en la falta de formación en IA y STEAM. */}
-            <Card className="tech-border hover-lift group">
+            {/* Tarjeta de problema: "Brecha de talento", enfocándose en la falta de formación en IA y STEAM.
+                Imagen ilustrativa + zoom al hover, conservando solo el texto. */}
+            <Card className="tech-border hover-lift group overflow-hidden">
+              <div className="relative h-44 overflow-hidden border-b border-border">
+                <img
+                  src={imgBrechaTalento}
+                  alt={isEs ? "Brecha de talento: falta formación en IA, STEAM y transformación digital" : "Talent gap: lack of AI, STEAM and digital transformation training"}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent" />
+              </div>
               <CardContent className="p-8 text-center">
-                <Users className="w-10 h-10 text-accent mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">
-                  {isEs ? "Brecha de talento" : "Talent gap"}
-                </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {isEs
                     ? "Falta formación práctica y formación técnica en IA, STEAM y transformación digital para emprendedores y equipos."
                     : "Lack of hands-on and technical training in AI, STEAM and digital transformation for founders and teams."}
                 </p>
               </CardContent>
             </Card>
-            {/* Tarjeta de problema: "Doble impacto sin tecnología", resaltando la necesidad de tecnología para empresas BIC. */}
-            <Card className="tech-border hover-lift group">
+            {/* Tarjeta de problema: "Doble impacto sin tecnología", resaltando la necesidad de tecnología para empresas BIC.
+                Imagen ilustrativa + zoom al hover, conservando solo el texto. */}
+            <Card className="tech-border hover-lift group overflow-hidden">
+              <div className="relative h-44 overflow-hidden border-b border-border">
+                <img
+                  src={imgDobleImpacto}
+                  alt={isEs ? "Doble impacto sin tecnología: empresas BIC que necesitan implementación tecnológica" : "Double impact without tech: BIC companies in need of technological implementation"}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent" />
+              </div>
               <CardContent className="p-8 text-center">
-                <Leaf className="w-10 h-10 text-agro-green mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">
-                  {isEs
-                    ? "Doble impacto sin tecnología"
-                    : "Double impact without tech"}
-                </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {isEs
                     ? "Las empresas BIC quieren generar valor económico, social y ambiental, pero les falta quien implemente la tecnología que lo haga posible."
                     : "BIC companies want to generate economic, social and environmental value, but lack someone to implement the technology that makes it possible."}
