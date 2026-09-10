@@ -101,3 +101,8 @@ INFORME_TECNICO_V2_PERICIAL.md
 DESCRIPCION_PROBLEMA.md
 *.log
 ngrok.log
+docs/ssl/
+docs/operaciones/
+.opencode/
+scripts/unlock-server.sh
+masterlukasmoyano.com*.zip
