@@ -31,6 +31,7 @@ import AgroInnovationWorkshops from "./pages/AgroInnovationWorkshops";
 import HPCBuilder from "./pages/HPCBuilder";
 import InvestorDeck from "./pages/InvestorDeck";
 import BlockchainServices from "./pages/BlockchainServices";
+import PropuestaBI from "./pages/PropuestaBI";
 
 // ============================================================================
 // 2. CONFIGURACIÓN DEL CLIENTE DE DATOS
@@ -79,6 +80,10 @@ const App = () => (
           <Route
             path="/inversionistas"
             element={<InvestorDeck />}
+          />
+          <Route
+            path="/propuesta-bi"
+            element={<PropuestaBI />}
           />
           
           {/* Ruta de Error 404 (Catch-all) */}

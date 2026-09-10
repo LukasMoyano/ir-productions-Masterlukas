@@ -1,66 +1,120 @@
 {
-  "last_updated": "2026-02-04T12:00:00Z",
+  "last_updated": "2026-09-01T12:00:00Z",
   "components": [
     {
-      "id": "cpu-tr-7980x",
+      "id": "cpu-r9-9950x",
       "category": "CPU",
-      "name": "AMD Ryzen Threadripper 7980X",
-      "specs": { "cores": 64, "threads": 128, "socket": "sTR5", "tdp": 350 },
-      "price": 5499.99,
-      "stock": true,
-      "image": "/placeholder.svg"
-    },
-    {
-      "id": "cpu-r9-7950x",
-      "category": "CPU",
-      "name": "AMD Ryzen 9 7950X",
+      "name": "AMD Ryzen 9 9950X",
       "specs": { "cores": 16, "threads": 32, "socket": "AM5", "tdp": 170 },
-      "price": 599.00,
+      "price": 649.00,
       "stock": true,
       "image": "/placeholder.svg"
     },
     {
-      "id": "gpu-rtx-4090",
-      "category": "GPU",
-      "name": "NVIDIA GeForce RTX 4090 24GB",
-      "specs": { "vram": "24GB GDDR6X", "teraflops": 82.6, "power": 450 },
-      "price": 1999.00,
+      "id": "cpu-r9-7900x",
+      "category": "CPU",
+      "name": "AMD Ryzen 9 7900X",
+      "specs": { "cores": 12, "threads": 24, "socket": "AM5", "tdp": 170 },
+      "price": 389.00,
       "stock": true,
       "image": "/placeholder.svg"
     },
     {
-      "id": "gpu-a100",
+      "id": "gpu-rx-7900xtx",
       "category": "GPU",
-      "name": "NVIDIA A100 Tensor Core 80GB",
-      "specs": { "vram": "80GB HBM2e", "teraflops": 312, "power": 300 },
-      "price": 12500.00,
+      "name": "AMD Radeon RX 7900 XTX 24GB",
+      "specs": { "vram": "24GB GDDR6", "teraflops": 61, "power": 355 },
+      "price": 999.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "gpu-rx-7900xt",
+      "category": "GPU",
+      "name": "AMD Radeon RX 7900 XT 20GB",
+      "specs": { "vram": "20GB GDDR6", "teraflops": 51, "power": 315 },
+      "price": 729.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "ram-64-ddr5",
+      "category": "RAM",
+      "name": "64GB (2x32) Corsair Vengeance DDR5",
+      "specs": { "capacity": "64GB", "type": "DDR5-6000", "ecc": false },
+      "price": 149.00,
       "stock": true,
       "image": "/placeholder.svg"
     },
     {
       "id": "ram-128-ddr5",
       "category": "RAM",
-      "name": "128GB (4x32GB) DDR5-6000 ECC",
-      "specs": { "capacity": "128GB", "type": "DDR5", "ecc": true },
-      "price": 850.00,
+      "name": "128GB (4x32) Kingston FURY DDR5",
+      "specs": { "capacity": "128GB", "type": "DDR5-5600", "ecc": false },
+      "price": 310.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "cooling-arctic-360",
+      "category": "COOLING",
+      "name": "Arctic Liquid Freezer III 360",
+      "specs": { "type": "AIO Líquida", "size": "360mm", "fans": 3 },
+      "price": 129.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "storage-nvme-2tb",
+      "category": "STORAGE",
+      "name": "2TB WD Black SN850X NVMe",
+      "specs": { "type": "M.2 PCIe 4.0", "speed": "7300 MB/s" },
+      "price": 159.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "storage-nas-ironwolf",
+      "category": "STORAGE",
+      "name": "DAS 16TB (2x8TB) Seagate IronWolf",
+      "specs": { "type": "HDD RAID", "speed": "7200 RPM NAS" },
+      "price": 450.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "psu-1000w-plat",
+      "category": "PSU",
+      "name": "Seasonic FOCUS GX-1000 ATX 3.0",
+      "specs": { "wattage": 1000, "cert": "80+ Gold" },
+      "price": 189.00,
+      "stock": true,
+      "image": "/placeholder.svg"
+    },
+    {
+      "id": "psu-1200w-plat",
+      "category": "PSU",
+      "name": "Corsair HX1200 Platinum",
+      "specs": { "wattage": 1200, "cert": "80+ Platinum" },
+      "price": 249.00,
       "stock": true,
       "image": "/placeholder.svg"
     }
   ],
   "platforms": [
     {
-      "id": "genesis",
-      "name": "Genesis AI Workstation",
-      "description": "Optimizado para entrenamiento de modelos locales y renderizado.",
-      "base_price": 1200.00,
-      "compatible_sockets": ["sTR5", "AM5"]
+      "id": "base-am5",
+      "name": "Chasis + Motherboard AM5 B650E",
+      "description": "Estructura Base. Placa base de alto rendimiento, conectividad PCIe 5.0 y chasis airflow.",
+      "base_price": 380.00,
+      "compatible_sockets": ["AM5"]
     },
     {
-      "id": "titan",
-      "name": "Titan Server Node",
-      "description": "Inferencia pesada y despliegue de clusters empresariales.",
-      "base_price": 2500.00,
-      "compatible_sockets": ["sTR5"]
+      "id": "pro-am5",
+      "name": "Chasis + Motherboard AM5 X670E",
+      "description": "Plataforma Extrema. VRMs masivos para overclocking y múltiples puertos de expansión.",
+      "base_price": 550.00,
+      "compatible_sockets": ["AM5"]
     }
   ]
 }

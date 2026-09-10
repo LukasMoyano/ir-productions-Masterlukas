@@ -17,9 +17,10 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Users, Server, Bot, Presentation, Link as LinkIcon } from "lucide-react";
 import agroTechImage from "@/assets/agro-tech-farmers.jpg";
 import hpcWorkstationImage from "@/assets/hpc-workstation.jpg";
-import iotRobotImage from "@/assets/iot-robot.jpg";
+import redMeshImage from "@/assets/portfolio/red-mesh.png";
 import circularEconomyImage from "@/assets/De_Residuos_a_Componentes_de_Alta_Tecnologia.png";
 import blockchainImage from "@/assets/portfolio/blockchain-andino.jpg";
+import iotRobotImage from "@/assets/iot-robot.jpg";
 
 const benefitColorMap: { [key: string]: string } = {
   // Agricultura - Verde
@@ -237,7 +238,7 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           description:
             "Smart contracts, asset tokenisation and immutable data traceability, deployed on your own computing infrastructure with sovereign encryption — no cloud, no third-party dependency.",
           benefits: ["Smart Contracts", "Tokenisation", "Traceability", "Own encryption", "Tech Sovereignty"],
-          image: iotRobotImage,
+          image: redMeshImage,
           badge: "DLT · Web3",
           color: "accent",
           target: "Finance • Public sector • Agro • Industry",

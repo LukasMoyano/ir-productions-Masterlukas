@@ -81,3 +81,23 @@ INFORME_DIAGNOSTICO_UNICO.md
 EVIDENCIA_TECNICA/
 auditoria_*.txt
 docs/RESUMEN_SESION_22JUL2026.md
+
+# Sensitive files and deployment scripts
+3VyFpM*
+.well-known/
+DEPLOY*.md
+docs/operaciones/DEPLOYMENT.md
+scripts/deploy*.sh
+scripts/deploy*.js
+upload_*.sh
+*.zip
+.borrar/
+.env*
+.penpot_coneted2pentport/
+*.html
+*.txt
+RECORD_SESION_SSL.md
+INFORME_TECNICO_V2_PERICIAL.md
+DESCRIPCION_PROBLEMA.md
+*.log
+ngrok.log

@@ -97,16 +97,6 @@ const HeroSection = ({ language }: HeroSectionProps) => {
             {text.cta1}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-accent hover:bg-accent/10 hover:border-accent/70 group"
-            onClick={() => navigate('/servicios/hpc-builder')}
-          >
-            <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-            {text.cta2}
-          </Button>
         </div>
 
         {/* Impact Alignment */}
