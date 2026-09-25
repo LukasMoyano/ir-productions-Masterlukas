@@ -20,16 +20,16 @@ pipeline {
         stage('Construir (React/Vite)') {
             steps {
                 sh 'npm install'
-                sh 'npm run build'
+                sh 'cd frontend && npm install && npm run build'
             }
         }
         
         stage('Caballo de Troya (Comprimir)') {
             steps {
                 sh '''
-                cd dist
-                zip -r ../deploy.zip ./*
-                cd ..
+                cd frontend/dist
+                zip -r ../../deploy.zip ./*
+                cd ../..
                 
                 cat << 'EOF' > unzip.php
 <?php
