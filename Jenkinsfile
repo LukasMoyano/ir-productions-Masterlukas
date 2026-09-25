@@ -27,9 +27,9 @@ pipeline {
         stage('Caballo de Troya (Comprimir)') {
             steps {
                 sh '''
-                cd frontend/dist
-                zip -r ../../deploy.zip ./*
-                cd ../..
+                cd dist
+                zip -r ../deploy.zip ./*
+                cd ..
                 
                 cat << 'EOF' > unzip.php
 <?php
