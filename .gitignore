@@ -106,3 +106,9 @@ docs/operaciones/
 .opencode/
 scripts/unlock-server.sh
 masterlukasmoyano.com*.zip
+
+# Auditoriá de Seguridad (Archivos sensibles excluidos)
+GUIA_ESTRUCTURA_HOSTING.md
+BITACORA_DE_CONTROL.md
+last.md
+opencode.json
