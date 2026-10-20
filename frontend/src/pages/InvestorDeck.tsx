@@ -50,19 +50,46 @@ import imgDobleImpacto from "@/assets/deck/problema-doble-impacto.svg";
 // Email de contacto para inversores, clave para la interacción.
 const CONTACT_EMAIL = "managementandplanning@masterlukasmoyano.com";
 
+// Detección de zona del visitante: fuera de Colombia (zona horaria distinta de
+// America/Bogota) o navegador no-español => inglés; solo es+America/Bogota => español.
+// La elección manual (toggle) siempre prevalece y se guarda en localStorage.
+const detectZoneLang = (): "es" | "en" => {
+  try {
+    const saved = window.localStorage.getItem("ir-deck-lang");
+    if (saved === "es" || saved === "en") return saved;
+    const locale = (window.navigator.language || "es").toLowerCase();
+    const timeZone =
+      Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    if (locale.startsWith("es") && timeZone === "America/Bogota") return "es";
+    return "en";
+  } catch {
+    return "es";
+  }
+};
+
 // Componente principal del Investor Deck.
 const InvestorDeck = () => {
-  // Estado para gestionar el idioma de la presentación (español por defecto).
-  const [language, setLanguage] = useState<"es" | "en">("es");
+  // Estado para gestionar el idioma de la presentación (detección de zona por defecto).
+  const [language, setLanguage] = useState<"es" | "en">(detectZoneLang);
+  // Idioma sugerido por zona del visitante (no cambia con el toggle manual).
+  const [zoneLang] = useState<"es" | "en">(detectZoneLang);
 
   // Efecto para asegurar que la página se desplaza al inicio al cargar, mejorando la UX.
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
-  // Función para alternar entre español e inglés.
+  // Función para alternar entre español e inglés (persiste la elección manual).
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "es" ? "en" : "es"));
+    setLanguage((prev) => {
+      const next = prev === "es" ? "en" : "es";
+      try {
+        window.localStorage.setItem("ir-deck-lang", next);
+      } catch {
+        /* almacenamiento no disponible */
+      }
+      return next;
+    });
   };
 
   // Variables de conveniencia para el idioma.
@@ -303,6 +330,52 @@ const InvestorDeck = () => {
               {isEs ? "Descargar Deck PDF" : "Download PDF Deck"}
               <Download className="ml-2 w-5 h-5" />
             </Button>
+          </div>
+
+          {/* Bloque de descarga Pitch Deck 2026 (ES/EN según zona del visitante). */}
+          <div className="mt-6 mx-auto max-w-2xl rounded-2xl border border-accent/30 bg-card/60 p-5">
+            <p className="text-sm font-semibold mb-1">
+              {isEs ? "Pitch Deck 2026" : "2026 Pitch Deck"}
+            </p>
+            <p className="text-sm text-muted-foreground mb-4">
+              {isEs
+                ? "Versión para inversionistas, en tu idioma y en inglés."
+                : "Investor version, in your language and in Spanish."}
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Button
+                size="lg"
+                variant={zoneLang === "es" ? "default" : "outline"}
+                className="w-full sm:w-auto"
+                onClick={() =>
+                  window.open("/pitch-deck-ir-productions-2026-es.pdf", "_blank")
+                }
+              >
+                Español (PDF)
+                {zoneLang === "es" && (
+                  <span className="ml-2 text-xs font-semibold">
+                    {isEs ? "· Recomendado en tu zona" : "· Recommended in your area"}
+                  </span>
+                )}
+                <Download className="ml-2 w-5 h-5" />
+              </Button>
+              <Button
+                size="lg"
+                variant={zoneLang === "en" ? "default" : "outline"}
+                className="w-full sm:w-auto"
+                onClick={() =>
+                  window.open("/pitch-deck-ir-productions-2026-en.pdf", "_blank")
+                }
+              >
+                English (PDF)
+                {zoneLang === "en" && (
+                  <span className="ml-2 text-xs font-semibold">
+                    {isEs ? "· Recomendado en tu zona" : "· Recommended in your area"}
+                  </span>
+                )}
+                <Download className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
           </div>
 
           {/* Etiquetas de características clave: "Vertical: IA", "Empresa BIC", "Bogotá · Fusagasugá, Colombia". */}
