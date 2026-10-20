@@ -10,7 +10,6 @@ import ProcessSection from '@/components/ProcessSection';
 import ImpactSection from '@/components/ImpactSection';
 import ImpactODSSection from '@/components/ImpactODSSection';
 import CollaborationSection from '@/components/CollaborationSection';
-import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
@@ -21,7 +20,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header language={language} toggleLanguage={toggleLanguage} />
       <HeroSection language={language} />
       <PhilosophySection language={language} />
@@ -33,7 +32,6 @@ const Index = () => {
       <ImpactSection language={language} />
       <ImpactODSSection language={language} />
       <CollaborationSection language={language} />
-      <BlogSection language={language} />
       <ContactSection language={language} />
     </div>
   );

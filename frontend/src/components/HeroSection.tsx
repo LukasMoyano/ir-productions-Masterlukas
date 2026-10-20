@@ -70,7 +70,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 lg:px-8">
         {/* Título Principal (H1): Jerarquía máxima de SEO.
             Debe contener el nombre de la marca o la palabra clave principal. */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in break-words">
           <span className="gradient-text-primary block">
             {text.title}
           </span>
@@ -121,7 +121,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
         </div>
       </div>
 
-      {/* Floating Tech Elements */} di
+      {/* Floating Tech Elements */}
       <div className="absolute top-1/4 left-8 hidden lg:block">
         <div className="w-32 h-32 border border-primary/20 rounded-lg transform rotate-12 animate-float">
           <div className="w-full h-full border border-accent/30 rounded-lg transform -rotate-6" />

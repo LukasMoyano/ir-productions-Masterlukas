@@ -32,6 +32,7 @@ import HPCBuilder from "./pages/HPCBuilder";
 import InvestorDeck from "./pages/InvestorDeck";
 import BlockchainServices from "./pages/BlockchainServices";
 import PropuestaBI from "./pages/PropuestaBI";
+import NewsHub from "./pages/NewsHub";
 
 // ============================================================================
 // 2. CONFIGURACIÓN DEL CLIENTE DE DATOS
@@ -58,6 +59,9 @@ const App = () => (
           
           {/* Ruta de Portafolio Profesional */}
           <Route path="/portfolio" element={<Portfolio />} />
+          
+          {/* Ruta del Blog y Noticias */}
+          <Route path="/blog-news" element={<NewsHub />} />
           
           {/* Rutas de Presentaciones y Servicios (Landing Pages) */}
           <Route

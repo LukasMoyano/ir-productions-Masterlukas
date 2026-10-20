@@ -13,6 +13,11 @@
 /* La directiva `@layer base` se usa para agrupar y organizar estilos personalizados.
    Los estilos en esta capa tienen una baja especificidad, lo que permite que sean fácilmente sobrescritos por utilidades de Tailwind. */
 @layer base {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   /* `:root` define variables CSS (custom properties) globales para el tema claro (por defecto).
      Estas variables definen la paleta de colores principal, radios de borde, etc.
      Tailwind está configurado para usar estas variables, permitiendo clases como `bg-background` o `text-primary`. */

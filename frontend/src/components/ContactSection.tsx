@@ -114,23 +114,23 @@ const ContactSection = ({ language }: ContactSectionProps) => {
             {contactMethods.map((method, index) => (
               <Card
                 key={index}
-                className="tech-border hover-lift group cursor-pointer"
+                className="tech-border hover-lift group cursor-pointer overflow-hidden"
                 onClick={() => window.open(method.link, '_blank')}
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className={`w-12 h-12 ${method.bg} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                    <div className={`w-12 h-12 ${method.bg} flex-shrink-0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                       <method.icon className={`w-6 h-6 ${method.color}`} />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors truncate">
                         {method.label}
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground truncate">
                         {method.value}
                       </p>
                     </div>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <ExternalLink className="w-4 h-4 flex-shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
                 </CardContent>
               </Card>
@@ -140,17 +140,17 @@ const ContactSection = ({ language }: ContactSectionProps) => {
           {/* Right Column - Info & CTA */}
           <div className="space-y-6">
             {/* Location */}
-            <Card className="tech-border">
+            <Card className="tech-border overflow-hidden">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-agro-green/10 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 flex-shrink-0 bg-agro-green/10 rounded-xl flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-agro-green" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h3 className="font-semibold text-foreground mb-1">
                       {language === 'es' ? 'Ubicación' : 'Location'}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground break-words">
                       {text.location}
                     </p>
                   </div>
@@ -159,7 +159,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
             </Card>
 
             {/* Brochure Download */}
-            <Card className="tech-border hover-lift group cursor-pointer glow-gold" onClick={() => window.open('/portfolio-download.html', '_blank')}>
+            <Card className="tech-border hover-lift group cursor-pointer glow-gold overflow-hidden" onClick={() => window.open('/portfolio-download.html', '_blank')}>
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Download className="w-8 h-8 text-accent" />
@@ -187,7 +187,7 @@ const ContactSection = ({ language }: ContactSectionProps) => {
             {/* Main CTA */}
             <Button
               size="lg"
-              className="w-full glow-red group"
+              className="w-full glow-red group overflow-hidden"
               onClick={() => window.open('https://wa.me/573197919742', '_blank')}
             >
               {text.cta}

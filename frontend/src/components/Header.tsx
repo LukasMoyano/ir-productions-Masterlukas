@@ -21,6 +21,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
       { href: '/inversionistas', label: 'Inversionistas' },
       { href: '#proceso', label: 'Proceso' },
       { href: '#equipo', label: 'Equipo' },
+      { href: '/blog-news', label: 'Blog & NEWS' },
       { href: '#contacto', label: 'Contacto' }
     ],
     en: [
@@ -30,6 +31,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
       { href: '/inversionistas', label: 'Investors' },
       { href: '#process', label: 'Process' },
       { href: '#team', label: 'Team' },
+      { href: '/blog-news', label: 'Blog & NEWS' },
       { href: '#contact', label: 'Contact' }
     ]
     };
@@ -83,13 +85,13 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-3 xl:space-x-6">
             {navItems[language].map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-300 relative group cursor-pointer"
+                className="text-foreground hover:text-primary transition-colors duration-300 relative group cursor-pointer text-sm xl:text-base"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -98,12 +100,12 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
           </nav>
 
           {/* Language Toggle & Menu */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 xl:space-x-4">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleLanguage}
-              className="hidden md:flex items-center space-x-1"
+              className="hidden lg:flex items-center space-x-1"
             >
               <Globe className="w-4 h-4" />
               <span>{language === 'es' ? 'EN' : 'ES'}</span>
@@ -113,7 +115,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden"
+              className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -123,7 +125,7 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col space-y-3">
               {navItems[language].map((item) => (
                 <a

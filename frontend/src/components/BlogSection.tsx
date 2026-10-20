@@ -147,9 +147,9 @@ const BlogSection = ({ language }: BlogSectionProps) => {
               </div>
 
               {/* CTA */}
-              <Button size="lg" className="glow-tech group" onClick={() => window.location.href='mailto:managementandplanning@masterlukasmoyano.com?subject=Suscripci%C3%B3n%20Blog%20_-IR-_&body=Hola,%20me%20gustar%C3%ADa%20suscribirme%20para%20recibir%20actualizaciones.'}>
-                {text.cta}
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="glow-tech group overflow-hidden" onClick={() => window.location.href='mailto:managementandplanning@masterlukasmoyano.com?subject=Suscripci%C3%B3n%20Blog%20_-IR-_&body=Hola,%20me%20gustar%C3%ADa%20suscribirme%20para%20recibir%20actualizaciones.'}>
+                <span className="truncate">{text.cta}</span>
+                <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
               </Button>
             </CardContent>
           </Card>
