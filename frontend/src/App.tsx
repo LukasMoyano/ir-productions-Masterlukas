@@ -33,6 +33,7 @@ import InvestorDeck from "./pages/InvestorDeck";
 import BlockchainServices from "./pages/BlockchainServices";
 import PropuestaBI from "./pages/PropuestaBI";
 import NewsHub from "./pages/NewsHub";
+import ExperienciasBTLATL from "./pages/ExperienciasBTLATL";
 
 // ============================================================================
 // 2. CONFIGURACIÓN DEL CLIENTE DE DATOS
@@ -79,6 +80,11 @@ const App = () => (
           <Route
             path="/servicios/blockchain"
             element={<BlockchainServices />}
+          />
+          {/* Ruta de Landing Experiencias Gamificadas BTL/ATL */}
+          <Route
+            path="/experiencias-btl-atl"
+            element={<ExperienciasBTLATL />}
           />
           {/* Ruta de Deck / Inversión para Inversionistas */}
           <Route

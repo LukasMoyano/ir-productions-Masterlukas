@@ -92,7 +92,7 @@ const HeroSection = ({ language }: HeroSectionProps) => {
           <Button
             size="lg"
             className="cta-primary hover-lift group"
-            onClick={() => document.getElementById(language === 'es' ? 'servicios' : 'services')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => navigate('/servicios/hpc-builder')}
           >
             {text.cta1}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

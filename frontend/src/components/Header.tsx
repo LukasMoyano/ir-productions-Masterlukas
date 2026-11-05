@@ -17,8 +17,10 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
     es: [
       { href: '#inicio', label: 'Inicio' },
       { href: '#servicios', label: 'Servicios' },
+      { href: '/experiencias-btl-atl', label: 'Experiencias BTL/ATL' },
       { href: '/portfolio', label: 'Portafolio' },
       { href: '/inversionistas', label: 'Inversionistas' },
+      { href: '/servicios/hpc-builder', label: 'Investigación & HPC' },
       { href: '#proceso', label: 'Proceso' },
       { href: '#equipo', label: 'Equipo' },
       { href: '/blog-news', label: 'Blog & NEWS' },
@@ -27,8 +29,10 @@ const Header = ({ language, toggleLanguage }: HeaderProps) => {
     en: [
       { href: '#home', label: 'Home' },
       { href: '#services', label: 'Services' },
+      { href: '/experiencias-btl-atl', label: 'BTL/ATL Experiences' },
       { href: '/portfolio', label: 'Portfolio' },
       { href: '/inversionistas', label: 'Investors' },
+      { href: '/servicios/hpc-builder', label: 'R&D & HPC' },
       { href: '#process', label: 'Process' },
       { href: '#team', label: 'Team' },
       { href: '/blog-news', label: 'Blog & NEWS' },

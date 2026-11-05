@@ -118,3 +118,17 @@ access_log
 Jenkinsfile
 
 RESUMEN_ARQUITECTURA_CICD.md
+
+# Documentación interna, material de diseño físico y mockups (Excluidos de Git/Netlify)
+docs/BRIEF_IMPRESION_PENDON.md
+docs/Pendon_Impresion/
+docs/generar_mockups.py
+docs/*mockup*
+docs/GITHUB_PROFILE_README.md
+
+# Backups y Decks Internos
+dist-backups/
+pitch-deck/
+SESION_RESUMEN_*.md
+scripts/lftp_acme_*.sh
+

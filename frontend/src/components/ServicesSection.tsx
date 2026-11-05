@@ -158,8 +158,8 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           badge: "MVP",
           color: "tech-green",
           target: "Agricultores • Apicultores • Investigadores",
-           link: "https://cultivatech-colombia-frontend.netlify.app",
-          external: true,
+           link: "/presentacion-cultivatech",
+          external: false,
         },
         {
           icon: LinkIcon,
@@ -229,8 +229,8 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
           image: iotRobotImage,
           badge: "IoT + AI",
           color: "tech-green",
-          link: "https://cultivatech-colombia-frontend.netlify.app",
-          external: true,
+          link: "/presentacion-cultivatech",
+          external: false,
         },
         {
           icon: LinkIcon,
