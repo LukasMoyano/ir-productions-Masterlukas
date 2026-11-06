@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "build": "cd frontend && bun install && bun run build"
+    "build": "cd frontend && bun install && bun run build",
+    "build:local": "npm run build && cp -r dist/* /var/www/masterlukasmoyano.irproductions.local/html/dist/ && echo '✅ Sincronizado con localhost y 192.168.1.7'",
+    "sync:local": "cp -r dist/* /var/www/masterlukasmoyano.irproductions.local/html/dist/ && echo '✅ Sincronizado con localhost y 192.168.1.7'"
   },
   "dependencies": {
     "@opencode-ai/models": "^0.0.105",
