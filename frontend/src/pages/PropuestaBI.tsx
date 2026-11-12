@@ -120,12 +120,15 @@ const presentationData = {
     {
       id: "inversion",
       icon: CheckCircle2,
-      title: "Estructura de Inversión",
+      title: "Estructura de Inversión y Oferta Grupal PyME",
+      subtitle: "Piloto Productizado C · Alta Eficiencia Operativa",
       content: [
-        "**Modalidad:** 1 a 1 (Totalmente personalizado con sus datos).",
-        "**Valor por UTA (100 min):** $200.000 COP por persona.",
-        "**Sin cobro de IVA** (Ahorro del 19%).",
-        "**Retorno:** La inversión se paga sola con las primeras horas de trabajo automatizado."
+        "**PAQUETE CERRADO PYME (4 HORAS):** **$1.000.000 COP** (Rango referencial: $800.000 – $1.200.000 COP) para equipos de **hasta 6 a 8 colaboradores**.",
+        "**MODALIDAD 1 A 1 / PERSONALIZADA:** **$200.000 COP por UTA** (Unidad de Trabajo Activa de 100 min) por participante.",
+        "**AHORRO DIRECTO DE IVA (19%):** Al ser entidad tecnológica de base social, estamos exentos de IVA. Cero sobrecostos ocultos.",
+        "**CONDICIÓN DE RESERVA (ANTICIPO 50% MANDATORIO):** **$500.000 COP** para formalizar y agendar fecha; saldo del 50% contra entrega de la jornada y entrega de certificados.",
+        "**QUÉ INCLUYE:** 4 horas de inmersión práctica + memorias digitales + plantillas listas para automatizar + certificación oficial de -IR- Productions.",
+        "**EXCLUSIONES CLARAS:** No incluye soporte o mantenimiento técnico a computadores, suministro de licencias Microsoft 365, ni migración masiva de bases de datos."
       ],
       image: null,
       align: "center",
