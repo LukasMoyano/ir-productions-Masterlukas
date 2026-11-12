@@ -1212,7 +1212,7 @@ const BlockchainServices = () => {
                         <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-500/10">
                           <Icon className="h-5 w-5 text-indigo-400" />
                         </div>
-                        <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                           0{index + 1}
                         </span>
                         <p className="mt-1 text-sm font-semibold">{step.label}</p>
@@ -1453,7 +1453,7 @@ const BlockchainServices = () => {
                             <Badge
                               key={tag}
                               variant="outline"
-                              className="border-border text-[10px] text-muted-foreground"
+                              className="border-border text-xs text-muted-foreground"
                             >
                               {tag}
                             </Badge>

@@ -9,7 +9,6 @@ import ExperienciasGamificadasSection from '@/components/ExperienciasGamificadas
 import BusinessModelSection from '@/components/BusinessModelSection';
 import ProcessSection from '@/components/ProcessSection';
 import ImpactSection from '@/components/ImpactSection';
-import ImpactODSSection from '@/components/ImpactODSSection';
 import CollaborationSection from '@/components/CollaborationSection';
 import ContactSection from '@/components/ContactSection';
 
@@ -23,18 +22,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Header language={language} toggleLanguage={toggleLanguage} />
-      <HeroSection language={language} />
-      <PhilosophySection language={language} />
-      <AboutSection language={language} />
-      <ServicesSection language={language} />
-      <PortfolioPreview language={language} />
-      <ExperienciasGamificadasSection language={language} />
-      <BusinessModelSection language={language} />
-      <ProcessSection language={language} />
-      <ImpactSection language={language} />
-      <ImpactODSSection language={language} />
-      <CollaborationSection language={language} />
-      <ContactSection language={language} />
+      <main id="main-content">
+        <HeroSection language={language} />
+        <PhilosophySection language={language} />
+        <AboutSection language={language} />
+        <ServicesSection language={language} />
+        <PortfolioPreview language={language} />
+        <ExperienciasGamificadasSection language={language} />
+        <BusinessModelSection language={language} />
+        <ProcessSection language={language} />
+        <ImpactSection language={language} />
+        <CollaborationSection language={language} />
+        <ContactSection language={language} />
+      </main>
     </div>
   );
 };

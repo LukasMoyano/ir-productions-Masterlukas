@@ -364,7 +364,7 @@ const CultivatechPresentation = () => {
                                 {material.symbol}
                               </h3>
                               <p className="font-bold text-sm uppercase tracking-widest mt-1 text-white">{material.name}</p>
-                              <p className="text-[10px] font-mono text-white/40">{material.atomicMass}</p>
+                              <p className="text-xs font-mono text-white/40">{material.atomicMass}</p>
                             </div>
                           ))}
                         </div>
@@ -374,7 +374,7 @@ const CultivatechPresentation = () => {
                   
                   {/* Fuentes de Datos */}
                   {slide.chartData?.source && (
-                    <p className="text-[10px] text-muted-foreground uppercase font-mono tracking-widest text-right mt-8 pt-4 border-t border-white/5">
+                    <p className="text-xs text-muted-foreground uppercase font-mono tracking-widest text-right mt-8 pt-4 border-t border-white/5">
                       FUENTE: {slide.chartData.source}
                     </p>
                   )}
@@ -463,7 +463,7 @@ const CultivatechPresentation = () => {
                                             Iniciar Transmisión
                                             <Activity className="w-5 h-5 ml-3 group-hover:animate-pulse" />
                                         </button>
-                                        <p className="text-[10px] text-center text-muted-foreground mt-4 uppercase tracking-widest">
+                                        <p className="text-xs text-center text-muted-foreground mt-4 uppercase tracking-widest">
                                             *La transmisión se encriptará y se enviará directamente vía WhatsApp Central.
                                         </p>
                                     </div>

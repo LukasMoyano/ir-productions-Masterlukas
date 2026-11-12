@@ -251,7 +251,7 @@ const HPCBuilder = () => {
                             <CardTitle className="text-md font-bold text-white leading-tight">{comp.name}</CardTitle>
                             <span className="font-bold text-accent ml-2 whitespace-nowrap">{formatPrice(comp.price)}</span>
                           </div>
-                          {!isCompatible && <Badge className="mt-2 bg-red-900 text-red-100 uppercase text-[10px]">Incompatible</Badge>}
+                          {!isCompatible && <Badge className="mt-2 bg-red-900 text-red-100 uppercase text-xs">Incompatible</Badge>}
                         </CardHeader>
                         <CardContent>
                           <div className="grid grid-cols-2 gap-2 text-xs">
@@ -467,12 +467,12 @@ const HPCBuilder = () => {
                   {/* Performance Metrics */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className={`p-3 bg-black/50 border rounded-md text-center ${psuWarning ? 'border-red-500 shadow-[0_0_10px_rgba(255,0,0,0.3)]' : 'border-white/10'}`}>
-                      <p className="text-[10px] text-muted-foreground uppercase mb-1">Consumo Max.</p>
+                      <p className="text-xs text-muted-foreground uppercase mb-1">Consumo Max.</p>
                       <p className={`text-sm font-bold ${psuWarning ? 'text-red-500' : 'text-accent'}`}>{totalPower > 100 ? `${totalPower}W` : '---'}</p>
-                      {psuWarning && <p className="text-[9px] text-red-500 mt-1 uppercase">¡PSU INSUFICIENTE!</p>}
+                      {psuWarning && <p className="text-xs text-red-500 mt-1 uppercase">¡PSU INSUFICIENTE!</p>}
                     </div>
                     <div className="p-3 bg-black/50 border border-white/10 rounded-md text-center">
-                      <p className="text-[10px] text-muted-foreground uppercase mb-1">Poder IA Bruto</p>
+                      <p className="text-xs text-muted-foreground uppercase mb-1">Poder IA Bruto</p>
                       <p className="text-sm font-bold text-tech-green">{totalTeraflops > 0 ? `${totalTeraflops} TFLOPs` : '---'}</p>
                     </div>
                   </div>
@@ -508,8 +508,8 @@ const HPCBuilder = () => {
                         <div className="flex flex-col items-center mb-6">
                         <span className="text-xs text-muted-foreground uppercase tracking-widest mb-2">Total Inversión (Est.)</span>
                         <span className="text-3xl font-black text-white">{formatPrice(totalPriceUsd)}</span>
-                        {language === 'es' && <span className="text-[10px] text-muted-foreground mt-2 text-center">*Tasado referencial (USD base). La transacción final se liquida según la TRM del día.</span>}
-                        {language === 'en' && <span className="text-[10px] text-muted-foreground mt-2 text-center">*Base USD pricing. International shipping and taxes apply based on destination.</span>}
+                        {language === 'es' && <span className="text-xs text-muted-foreground mt-2 text-center">*Tasado referencial (USD base). La transacción final se liquida según la TRM del día.</span>}
+                        {language === 'en' && <span className="text-xs text-muted-foreground mt-2 text-center">*Base USD pricing. International shipping and taxes apply based on destination.</span>}
                         </div>
                         
                         <button 

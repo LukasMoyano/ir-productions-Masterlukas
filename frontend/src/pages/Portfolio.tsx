@@ -350,7 +350,7 @@ const Portfolio = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {pillar.badges.map((b, i) => (
-                      <Badge key={i} variant="secondary" className="bg-slate-200/90 text-slate-900 hover:bg-white text-[10px] md:text-xs font-bold uppercase tracking-widest border-none backdrop-blur-md transition-colors shadow-lg">
+                      <Badge key={i} variant="secondary" className="bg-slate-200/90 text-slate-900 hover:bg-white text-xs md:text-xs font-bold uppercase tracking-widest border-none backdrop-blur-md transition-colors shadow-lg">
                         {b}
                       </Badge>
                     ))}
@@ -387,7 +387,7 @@ const Portfolio = () => {
                      <div className="text-center space-y-4">
                         <Network className="w-12 h-12 md:w-20 md:h-20 text-primary mx-auto animate-pulse" />
                         <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter">+220,000 Registros Procesados</h3>
-                        <p className="text-[10px] md:text-sm text-muted-foreground uppercase tracking-widest">Base de Conocimiento Agéntica</p>
+                        <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest">Base de Conocimiento Agéntica</p>
                      </div>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
@@ -404,7 +404,7 @@ const Portfolio = () => {
                 <div key={idx} className="group relative aspect-video rounded-xl overflow-hidden border border-white/5">
                   <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                     <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-white">{item.title}</span>
+                     <span className="text-xs md:text-xs font-bold uppercase tracking-widest text-white">{item.title}</span>
                   </div>
                 </div>
               ))}
@@ -437,12 +437,12 @@ const Portfolio = () => {
               <span className="text-xl font-black tracking-tighter gradient-text-primary">_-IR-_</span>
               <span className="text-xs uppercase tracking-widest text-muted-foreground">Productions</span>
            </div>
-           <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">
+           <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-xs md:text-xs uppercase tracking-widest text-muted-foreground">
               <a href="https://github.com/LukasMoyano" className="hover:text-primary transition-colors">Github</a>
                <a href="/legal" className="hover:text-primary transition-colors">Legal</a>
                <a href="/privacy" className="hover:text-primary transition-colors">Privacy</a>
            </div>
-           <p className="text-[10px] text-muted-foreground/50 uppercase tracking-widest text-center md:text-right">© 2026 Lukas Moyano Morales. Soberanía Tecnológica.</p>
+           <p className="text-xs text-muted-foreground/50 uppercase tracking-widest text-center md:text-right">© 2026 Lukas Moyano Morales. Soberanía Tecnológica.</p>
         </div>
       </footer>
     </div>

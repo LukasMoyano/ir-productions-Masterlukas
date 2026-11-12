@@ -29,10 +29,15 @@ const ContactSection = ({ language }: ContactSectionProps) => {
         github: "GitHub",
         brochure: "Descargar Brochure"
       },
-      location: "Fusagasugá, Cundinamarca, Colombia",
+      location: "Fusagasugá / Bogotá, Colombia",
       quickContact: "Contacto Rápido",
       social: "Síguenos",
-      cta: "Iniciar Conversación"
+      cta: "Iniciar Conversación",
+      whatsappFunnel: [
+        { label: "Quiero Consultoría (HPC / Blockchain)", link: "https://wa.me/573197919742?text=Hola%20Lukas,%20me%20interesa%20consultoría%20en%20Infraestructura%20HPC/Blockchain%20para%20mi%20organización." },
+        { label: "Quiero Digitalizar Cintas / Hardware", link: "https://wa.me/573197919742?text=Hola%20Lukas,%20quiero%20cotizar%20la%20digitalización%20de%20cintas%20o%20recuperación%20de%20equipos%20con%20Rescate%20Fénix." },
+        { label: "Quiero Agro-Tech & Talleres", link: "https://wa.me/573197919742?text=Hola%20Lukas,%20quiero%20información%20sobre%20los%20Talleres%20Agro-Innovación%20o%20Kits%20IoT." },
+      ]
     },
     en: {
       title: "Connect with Innovation!",
@@ -45,10 +50,15 @@ const ContactSection = ({ language }: ContactSectionProps) => {
         github: "GitHub",
         brochure: "Download Brochure"
       },
-      location: "Arbeláez, Cundinamarca, Colombia",
+      location: "Fusagasugá / Bogotá, Colombia",
       quickContact: "Quick Contact",
       social: "Follow Us",
-      cta: "Start Conversation"
+      cta: "Start Conversation",
+      whatsappFunnel: [
+        { label: "I want Consulting (HPC / Blockchain)", link: "https://wa.me/573197919742?text=Hola%20Lukas,%20me%20interesa%20consultoría%20en%20Infraestructura%20HPC/Blockchain%20para%20mi%20organización." },
+        { label: "I want to Digitize Tapes / Hardware", link: "https://wa.me/573197919742?text=Hola%20Lukas,%20quiero%20cotizar%20la%20digitalización%20de%20cintas%20o%20recuperación%20de%20equipos%20con%20Rescate%20Fénix." },
+        { label: "I want Agro-Tech & Workshops", link: "https://wa.me/573197919742?text=Hola%20Lukas,%20quiero%20información%20sobre%20los%20Talleres%20Agro-Innovación%20o%20Kits%20IoT." },
+      ]
     }
   };
 
@@ -108,14 +118,44 @@ const ContactSection = ({ language }: ContactSectionProps) => {
           </p>
         </div>
 
+        {/* Embudo de WhatsApp guiado */}
+        <div className="mb-12">
+          <h3 className="text-center text-xl font-semibold text-foreground mb-6">
+            {language === 'es' ? '¿Qué necesitas? Elige tu intención' : 'What do you need? Choose your intent'}
+          </h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {text.whatsappFunnel.map((item) => (
+              <a
+                key={item.label}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center gap-2 p-5 bg-card/60 backdrop-blur-md border border-border hover:border-primary/50 rounded-xl transition-all hover-lift text-center"
+              >
+                <MessageSquare className="w-6 h-6 text-green-500 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold text-foreground group-hover:text-primary transition-colors">{item.label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Methods */}
           <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
             {contactMethods.map((method, index) => (
               <Card
                 key={index}
+                role="button"
+                tabIndex={0}
+                aria-label={method.label}
                 className="tech-border hover-lift group cursor-pointer overflow-hidden"
                 onClick={() => window.open(method.link, '_blank')}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    window.open(method.link, '_blank');
+                  }
+                }}
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
@@ -159,7 +199,19 @@ const ContactSection = ({ language }: ContactSectionProps) => {
             </Card>
 
             {/* Brochure Download */}
-            <Card className="tech-border hover-lift group cursor-pointer glow-gold overflow-hidden" onClick={() => window.open('/portfolio-download.html', '_blank')}>
+            <Card
+              role="button"
+              tabIndex={0}
+              aria-label={text.contact.brochure}
+              className="tech-border hover-lift group cursor-pointer glow-gold overflow-hidden"
+              onClick={() => window.open('/portfolio-download.html', '_blank')}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  window.open('/portfolio-download.html', '_blank');
+                }
+              }}
+            >
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Download className="w-8 h-8 text-accent" />

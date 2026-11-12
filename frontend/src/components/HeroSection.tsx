@@ -9,8 +9,8 @@
  */
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/hero-background.jpg';
 
 interface HeroSectionProps {
@@ -31,7 +31,35 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       cta1: "Talleres Agro",
       cta2: "Workstations IA",
       slogan: "Hacemos lo que queremos, porque amamos lo que hacemos. Funk with us!",
-      impact: "Alineados con PDM de Cundinamarca • PDD Cundinamarca • ODS"
+      impact: "Alineados con PDM de Cundinamarca • PDD Cundinamarca • ODS",
+      funnel: [
+        {
+          title: "Empresas & Gobierno",
+          subtitle: "Soberanía Tecnológica & Cómputo",
+          description: "Elimina OPEX en licencias SaaS y fuga de datos con IA Local On-Premise, estaciones HPC y Smart Contracts auditables.",
+          links: [
+            { label: "Workstations HPC/IA", href: "/servicios/hpc-builder", external: false },
+            { label: "Blockchain Soberano", href: "/servicios/blockchain", external: false },
+          ],
+        },
+        {
+          title: "Rescate Fénix & Digitalización",
+          subtitle: "Memoria Análoga & Hardware Soberano",
+          description: "Digitalización profesional de cintas VHS/Beta y recuperación de equipos de cómputo antiguos mediante GNU/Linux.",
+          links: [
+            { label: "Visitar Rescate Fénix", href: "https://fusacompufenix.netlify.app", external: true },
+          ],
+        },
+        {
+          title: "Agro-Tech & Arte Digital",
+          subtitle: "Nodos IoT & Experiencias Vivas",
+          description: "Democratización tecnológica en el campo con CultivaTech (ESP32) y experiencias interactivas gamificadas de alto impacto.",
+          links: [
+            { label: "Talleres Agro-Innovación", href: "/talleres-agro-innovacion", external: false },
+            { label: "Experiencias BTL/ATL", href: "/experiencias-btl-atl", external: false },
+          ],
+        },
+      ]
     },
     en: {
       title: "_-IR-_ ",
@@ -41,7 +69,35 @@ const HeroSection = ({ language }: HeroSectionProps) => {
       cta1: "Explore Agro Workshops",
       cta2: "Discover AI Workstations",
       slogan: "We do what we want, because we love what we do. Funk with us!",
-      impact: "Aligned with PDM of Cundinamarca • PDD Cundinamarca • SDGs"
+      impact: "Aligned with PDM of Cundinamarca • PDD Cundinamarca • SDGs",
+      funnel: [
+        {
+          title: "Businesses & Government",
+          subtitle: "Tech Sovereignty & Compute",
+          description: "Cut SaaS license OPEX and data leakage with on-premise local AI, HPC workstations and auditable Smart Contracts.",
+          links: [
+            { label: "HPC/AI Workstations", href: "/servicios/hpc-builder", external: false },
+            { label: "Sovereign Blockchain", href: "/servicios/blockchain", external: false },
+          ],
+        },
+        {
+          title: "Rescue Fénix & Digitization",
+          subtitle: "Analog Memory & Sovereign Hardware",
+          description: "Professional digitization of VHS/Beta tapes and recovery of old computers through GNU/Linux.",
+          links: [
+            { label: "Visit Rescue Fénix", href: "https://fusacompufenix.netlify.app", external: true },
+          ],
+        },
+        {
+          title: "Agro-Tech & Digital Art",
+          subtitle: "IoT Nodes & Living Experiences",
+          description: "Technological democratization in the field with CultivaTech (ESP32) and high-impact gamified interactive experiences.",
+          links: [
+            { label: "Agro-Innovation Workshops", href: "/talleres-agro-innovacion", external: false },
+            { label: "BTL/ATL Experiences", href: "/experiencias-btl-atl", external: false },
+          ],
+        },
+      ]
     }
   };
 
@@ -92,11 +148,57 @@ const HeroSection = ({ language }: HeroSectionProps) => {
           <Button
             size="lg"
             className="cta-primary hover-lift group"
-            onClick={() => navigate('/servicios/hpc-builder')}
+            onClick={() => navigate('/talleres-agro-innovacion')}
           >
             {text.cta1}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="hover-lift group"
+            onClick={() => navigate('/servicios/hpc-builder')}
+          >
+            {text.cta2}
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
+
+        {/* Funnel de 3 segundos: segmentación DIPN (1 línea = 1 cliente + 1 problema + 1 promesa) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto mt-12 text-left">
+          {text.funnel.map((card) => (
+            <div
+              key={card.title}
+              className="bg-card/60 backdrop-blur-md border border-border hover:border-primary/50 transition-all rounded-lg p-5 text-left hover-lift"
+            >
+              <h3 className="text-lg font-bold text-foreground mb-1">{card.title}</h3>
+              <p className="text-xs uppercase tracking-widest text-accent mb-3">{card.subtitle}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{card.description}</p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2">
+                {card.links.map((l) =>
+                  l.external ? (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-tech-green hover:text-primary font-medium inline-flex items-center gap-1 transition-colors"
+                    >
+                      {l.label} <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  ) : (
+                    <Link
+                      key={l.href}
+                      to={l.href}
+                      className="text-sm text-tech-green hover:text-primary font-medium inline-flex items-center gap-1 transition-colors"
+                    >
+                      {l.label} <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Impact Alignment */}

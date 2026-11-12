@@ -11,7 +11,7 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
     es: {
       title: "Impacto y Alineación",
       subtitle: "Contribuyendo a los Objetivos de Desarrollo Sostenible",
-      description: "_-IR-_ Productions, a través de nuestras soluciones tecnológicas, contribuye activamente a los ODSs claves, apoyando las metas de innovación, sostenibilidad, desarrollo económico y cierre de brecha digital de los planes de desarrollo Naciolales, Municipales y Departamentales, especialmente Fusagasuga, La Region del Sumapaz y Cundinamarca.",
+      description: "_-IR-_ Productions, a través de nuestras soluciones tecnológicas, contribuye activamente a los ODSs claves, apoyando las metas de innovación, sostenibilidad, desarrollo económico y cierre de brecha digital de los planes de desarrollo Nacionales, Municipales y Departamentales, especialmente Fusagasuga, La Region del Sumapaz y Cundinamarca.",
       sdgs: [
         {
           icon: Users,
@@ -60,7 +60,7 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
     en: {
       title: "Impact and Alignment",
       subtitle: "Contributing to the Sustainable Development Goals",
-      description: "-IR- Productions, through our technological solutions, actively contributes to key SDGs, supporting innovation, sustainability, economic development and digital gap closure goals of municipal and departmental development plans, especially in Arbeláez, Cundinamarca.",
+      description: "-IR- Productions, through our technological solutions, actively contributes to key SDGs, supporting innovation, sustainability, economic development and digital gap closure goals of municipal and departmental development plans, especially in Fusagasugá, Cundinamarca.",
       sdgs: [
         {
           icon: Users,
@@ -131,6 +131,20 @@ const ImpactSection = ({ language }: ImpactSectionProps) => {
           <p className="text-lg text-muted-foreground max-w-5xl mx-auto leading-relaxed">
             {text.description}
           </p>
+        </div>
+
+        {/* Métricas de Impacto */}
+        <div className="grid grid-cols-3 gap-4 mb-12 max-w-3xl mx-auto text-center">
+          {[
+            { value: '500+', label: language === 'es' ? 'Beneficiarios esperados' : 'Expected beneficiaries' },
+            { value: '-30%', label: language === 'es' ? 'Residuos electrónicos' : 'Electronic waste' },
+            { value: '+25%', label: language === 'es' ? 'Productividad agro' : 'Agro productivity' },
+          ].map((m) => (
+            <div key={m.label} className="p-4 bg-card border border-border rounded-xl">
+              <div className="text-2xl md:text-3xl font-black text-accent">{m.value}</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">{m.label}</div>
+            </div>
+          ))}
         </div>
 
         {/* SDGs Grid */}

@@ -38,6 +38,7 @@ interface FormState {
   sector: string;
   need: string;
   stage: string;
+  budget: string;
   interest: Interest;
   message: string;
   consent: boolean;
@@ -52,6 +53,7 @@ const initialState: FormState = {
   sector: "",
   need: "",
   stage: "",
+  budget: "",
   interest: "proyecto",
   message: "",
   consent: false,
@@ -83,6 +85,7 @@ const copy = {
       sector: "Sector",
       need: "¿Qué necesitas?",
       stage: "Etapa del proyecto",
+      budget: "Presupuesto aproximado",
       interest: "¿Qué buscas?",
       message: "¿Qué quieres saber o resolver?",
       consent:
@@ -112,6 +115,10 @@ const copy = {
       ["gobierno", "Entidad pública / gobierno"],
     ],
     needs: [
+      ["hpc", "Workstations HPC / IA Local"],
+      ["blockchain", "Blockchain Soberano"],
+      ["agrotech", "Agro-Tech / IoT (CultivaTech)"],
+      ["fenix", "Rescate Fénix (Digitalización VHS / PCs)"],
       ["diagnostico", "Diagnóstico de viabilidad"],
       ["contratos", "Smart contracts"],
       ["trazabilidad", "Trazabilidad / notarización"],
@@ -125,6 +132,12 @@ const copy = {
       ["piloto", "Piloto en marcha"],
       ["operacion", "Operación en producción"],
       ["noaplica", "No aplica"],
+    ],
+    budgets: [
+      ["menos_5m", "Menos de $5M COP"],
+      ["5m_20m", "$5M – $20M COP"],
+      ["20m_50m", "$20M – $50M COP"],
+      ["mas_50m", "Más de $50M COP"],
     ],
     interests: [
       ["proyecto", "Quiero un proyecto"],
@@ -200,6 +213,7 @@ const copy = {
       sector: "Sector",
       need: "What do you need?",
       stage: "Project stage",
+      budget: "Approximate budget",
       interest: "What are you looking for?",
       message: "What do you want to know or solve?",
       consent: "I authorise the processing of my data to answer this request.",
@@ -228,6 +242,10 @@ const copy = {
       ["gobierno", "Public entity / government"],
     ],
     needs: [
+      ["hpc", "HPC / Local AI Workstations"],
+      ["blockchain", "Sovereign Blockchain"],
+      ["agrotech", "Agro-Tech / IoT (CultivaTech)"],
+      ["fenix", "Rescue Fénix (VHS / PC Digitization)"],
       ["diagnostico", "Feasibility assessment"],
       ["contratos", "Smart contracts"],
       ["trazabilidad", "Traceability / notarisation"],
@@ -241,6 +259,12 @@ const copy = {
       ["piloto", "Pilot in progress"],
       ["operacion", "Live operation"],
       ["noaplica", "Not applicable"],
+    ],
+    budgets: [
+      ["menos_5m", "Under $5M COP"],
+      ["5m_20m", "$5M – $20M COP"],
+      ["20m_50m", "$20M – $50M COP"],
+      ["mas_50m", "Over $50M COP"],
     ],
     interests: [
       ["proyecto", "I want a project"],
@@ -351,6 +375,7 @@ export const DiagnosticForm = ({ language }: DiagnosticFormProps) => {
         `${text.fields.sector}: ${labelFor(text.sectors, form.sector)}`,
         `${text.fields.need}: ${labelFor(text.needs, form.need)}`,
         `${text.fields.stage}: ${labelFor(text.stages, form.stage)}`,
+        `${text.fields.budget}: ${labelFor(text.budgets, form.budget)}`,
         `${text.fields.interest}: ${labelFor(text.interests, form.interest)}`,
         `${text.fields.message}: ${form.message}`,
       ]
@@ -743,6 +768,23 @@ export const DiagnosticForm = ({ language }: DiagnosticFormProps) => {
                       <p className="mt-1 text-xs text-destructive">{errors.stage}</p>
                     )}
                   </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="bc-budget">{text.fields.budget}</Label>
+                  <select
+                    id="bc-budget"
+                    value={form.budget}
+                    onChange={(event) => update("budget", event.target.value)}
+                    className="mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    <option value="">—</option>
+                    {text.budgets.map(([value, label]) => (
+                      <option key={value} value={value}>
+                        {label}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div>

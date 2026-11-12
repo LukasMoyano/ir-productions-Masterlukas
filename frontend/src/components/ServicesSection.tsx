@@ -329,7 +329,7 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
 
                 {service.target && (
                   <div className="w-full py-3 px-4 border-y border-primary/20 bg-primary/5 rounded-lg shadow-inner">
-                    <p className="text-[10px] md:text-xs text-primary font-bold uppercase tracking-[0.2em]">
+                    <p className="text-xs md:text-xs text-primary font-bold uppercase tracking-[0.2em]">
                       {service.target}
                     </p>
                   </div>
@@ -339,7 +339,7 @@ const ServicesSection = ({ language }: ServicesSectionProps) => {
                   {service.benefits.map((benefit, idx) => (
                     <Badge 
                       key={idx} 
-                      className={`text-[9px] md:text-[10px] uppercase tracking-widest font-semibold ${getBenefitColor(benefit)}`}
+                      className={`text-xs md:text-xs uppercase tracking-widest font-semibold ${getBenefitColor(benefit)}`}
                     >
                       {benefit}
                     </Badge>

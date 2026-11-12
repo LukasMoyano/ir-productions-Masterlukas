@@ -78,7 +78,7 @@ const PortfolioPreview = ({ language }: PortfolioPreviewProps) => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16">
           <div className="max-w-2xl space-y-4">
-            <Badge variant="outline" className="border-accent text-accent uppercase tracking-widest text-[10px]">
+            <Badge variant="outline" className="border-accent text-accent uppercase tracking-widest text-xs">
               {t.badge}
             </Badge>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">

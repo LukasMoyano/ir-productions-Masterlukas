@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { TrendingUp, Coins, Users, Bot, Server, GraduationCap } from 'lucide-react';
+import { Coins, Banknote, ShieldCheck, Server, GraduationCap, Recycle, ArrowUpRight } from 'lucide-react';
 
 interface BusinessModelSectionProps {
   language: 'es' | 'en';
@@ -9,61 +9,73 @@ interface BusinessModelSectionProps {
 const BusinessModelSection = ({ language }: BusinessModelSectionProps) => {
   const content = {
     es: {
-      title: "Nuestro Modelo de Negocio y Escalabilidad",
-      subtitle: "Visión Financiera Sostenible",
-      models: [
+      title: "Paquetes Productizados",
+      subtitle: "Precios base, condiciones claras y margen neto sostenible",
+      packages: [
         {
           icon: GraduationCap,
-          title: "Talleres Agro-Tech",
-          model: "B2G/B2B + Alianzas Institucionales",
-          pricing: "Modelo de precios por ciclo/grupo",
-          scalability: "Formador de Formadores + Contenido e-learning",
+          title: "Talleres Agro-Innovación & CultivaTech",
+          badge: "B2G / Institucional",
+          model: "B2G / B2B Formador de Formadores.",
+          investment: "Paquetes productizados por ciclo formativo (incluye kits IoT ESP32, guías STEAM y certificación).",
+          terms: "Anticipo 50% para inicio de cohortes, saldo contra entrega de informe de impacto. Margen neto ≥ 75%.",
+          link: "",
           color: "agro-green"
         },
         {
           icon: Server,
-          title: "Workstations HPC/IA",
-          model: "Consultoría + Venta Directa",
-          pricing: "Anticipo 70% + Personalización",
-          scalability: "Alianzas con distribuidores + Expansión nichos (salud, finanzas)",
+          title: "Estaciones HPC & IA Local",
+          badge: "B2B",
+          model: "Consultoría de arquitectura 'personal shopper' + ensamble soberano (Debian / AMD ROCm / LLMs locales).",
+          investment: "Hardware al costo verificado + honorarios de integración y blindaje de infraestructura.",
+          terms: "Anticipo 50% de honorarios para diseño y adquisición guiada. Margen neto ≥ 75%.",
+          link: "",
           color: "primary"
         },
         {
-          icon: Bot,
-          title: "CultivaTech ColombIA",
-          model: "Venta de Kit + Suscripción SaaS",
-          pricing: "Hardware + Plataforma mensual",
-          scalability: "Expansión cultivos/regiones + IA mejorada + Analítica avanzada",
+          icon: Recycle,
+          title: "Rescate Fénix & Digitalización",
+          badge: "B2C / PyMEs",
+          model: "Preservación de memoria histórica en cintas (VHS/Beta) y reacondicionamiento de PCs con GNU/Linux.",
+          investment: "Tarifa clara por hora de cinta digitalizada en HD / Tarifa plana por revivir equipo antiguo.",
+          terms: "Recepción con diagnóstico inicial, 50% de anticipo.",
+          link: "https://fusacompufenix.netlify.app",
           color: "tech-green"
         }
       ]
     },
     en: {
-      title: "Our Business Model and Scalability",
-      subtitle: "Sustainable Financial Vision",
-      models: [
+      title: "Productised Packages",
+      subtitle: "Base pricing, clear terms and a sustainable net margin",
+      packages: [
         {
           icon: GraduationCap,
-          title: "Agro-Tech Workshops",
-          model: "B2G/B2B + Institutional Partnerships",
-          pricing: "Pricing model per cycle/group",
-          scalability: "Train the Trainers + E-learning Content",
+          title: "Agro-Innovation Workshops & CultivaTech",
+          badge: "B2G / Institutional",
+          model: "B2G / B2B Train-the-Trainer.",
+          investment: "Productised packages per training cycle (includes ESP32 IoT kits, STEAM guides and certification).",
+          terms: "50% advance to start cohorts, balance upon delivery of impact report. Net margin ≥ 75%.",
+          link: "",
           color: "agro-green"
         },
         {
           icon: Server,
-          title: "HPC/AI Workstations",
-          model: "Consulting + Direct Sales",
-          pricing: "70% Advance + Customisation",
-          scalability: "Distributor partnerships + Niche expansion (health, finance)",
+          title: "HPC & Local AI Workstations",
+          badge: "B2B",
+          model: "'Personal shopper' architecture consulting + sovereign assembly (Debian / AMD ROCm / local LLMs).",
+          investment: "Hardware at verified cost + integration and infrastructure hardening fees.",
+          terms: "50% advance on fees for design and guided procurement. Net margin ≥ 75%.",
+          link: "",
           color: "primary"
         },
         {
-          icon: Bot,
-          title: "CultivaTech ColombIA",
-          model: "Kit Sales + SaaS Subscription",
-          pricing: "Hardware + Monthly Platform",
-          scalability: "Crop/region expansion + Enhanced AI + Advanced Analytics",
+          icon: Recycle,
+          title: "Rescue Fénix & Digitization",
+          badge: "B2C / SMEs",
+          model: "Preservation of historical memory on tape (VHS/Beta) and refurbishment of PCs with GNU/Linux.",
+          investment: "Clear rate per hour of digitised tape in HD / Flat rate to revive old equipment.",
+          terms: "Reception with initial assessment, 50% advance.",
+          link: "https://fusacompufenix.netlify.app",
           color: "tech-green"
         }
       ]
@@ -77,7 +89,7 @@ const BusinessModelSection = ({ language }: BusinessModelSectionProps) => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-accent border-accent">
-            {language === 'es' ? 'Modelo de Negocio' : 'Business Model'}
+            {language === 'es' ? 'Inversión' : 'Investment'}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text-primary">
             {text.title}
@@ -87,96 +99,64 @@ const BusinessModelSection = ({ language }: BusinessModelSectionProps) => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {text.models.map((model, index) => (
-            <Card key={index} className="tech-border hover-lift group">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {text.packages.map((pkg, index) => (
+            <Card key={index} className="tech-border hover-lift group flex flex-col">
               <CardHeader className="text-center pb-4">
-                <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-${model.color}/20 to-${model.color}/40 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                  <model.icon className={`w-8 h-8 text-${model.color}`} />
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <pkg.icon className="w-8 h-8 text-primary group-hover:text-accent transition-colors" />
                 </div>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {model.title}
+                  {pkg.title}
                 </CardTitle>
+                <Badge className="mx-auto mt-2" variant="secondary">{pkg.badge}</Badge>
               </CardHeader>
 
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <Coins className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-sm text-foreground mb-1">
-                        {language === 'es' ? 'Modelo:' : 'Model:'}
-                      </p>
-                      <p className="text-sm text-muted-foreground">{model.model}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <Users className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-sm text-foreground mb-1">
-                        {language === 'es' ? 'Precios:' : 'Pricing:'}
-                      </p>
-                      <p className="text-sm text-muted-foreground">{model.pricing}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <TrendingUp className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-sm text-foreground mb-1">
-                        {language === 'es' ? 'Escalabilidad:' : 'Scalability:'}
-                      </p>
-                      <p className="text-sm text-muted-foreground">{model.scalability}</p>
-                    </div>
+              <CardContent className="space-y-4 flex-grow">
+                <div className="flex items-start gap-3">
+                  <Coins className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-sm text-foreground mb-1">
+                      {language === 'es' ? 'Modelo:' : 'Model:'}
+                    </p>
+                    <p className="text-sm text-muted-foreground">{pkg.model}</p>
                   </div>
                 </div>
+
+                <div className="flex items-start gap-3">
+                  <Banknote className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-sm text-foreground mb-1">
+                      {language === 'es' ? 'Inversión Base:' : 'Base Investment:'}
+                    </p>
+                    <p className="text-sm text-muted-foreground">{pkg.investment}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <ShieldCheck className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-sm text-foreground mb-1">
+                      {language === 'es' ? 'Condiciones comerciales:' : 'Commercial terms:'}
+                    </p>
+                    <p className="text-sm text-muted-foreground">{pkg.terms}</p>
+                  </div>
+                </div>
+
+                {pkg.link && (
+                  <a
+                    href={pkg.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-tech-green hover:text-primary font-medium transition-colors"
+                  >
+                    {language === 'es' ? 'Visitar Rescate Fénix' : 'Visit Rescue Fénix'}
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                )}
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Growth Visualization */}
-        <div className="text-center">
-          <div className="relative max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-8">
-              <div className="flex flex-col items-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-agro-green/20 to-agro-green/40 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-agro-green rounded-full" />
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {language === 'es' ? 'Inicio' : 'Startup'}
-                </p>
-              </div>
-
-              <div className="flex-1 h-1 bg-gradient-to-r from-agro-green via-primary to-tech-green rounded-full" />
-
-              <div className="flex flex-col items-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/40 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                  <TrendingUp className="w-8 h-8 text-primary" />
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {language === 'es' ? 'Crecimiento' : 'Growth'}
-                </p>
-              </div>
-
-              <div className="flex-1 h-1 bg-gradient-to-r from-primary via-tech-green to-accent rounded-full" />
-
-              <div className="flex flex-col items-center group">
-                <div className="w-24 h-24 bg-gradient-to-br from-tech-green/20 to-accent/40 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                  <div className="grid grid-cols-2 gap-1">
-                    <div className="w-3 h-3 bg-tech-green rounded-full" />
-                    <div className="w-3 h-3 bg-accent rounded-full" />
-                    <div className="w-3 h-3 bg-primary rounded-full" />
-                    <div className="w-3 h-3 bg-agro-green rounded-full" />
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {language === 'es' ? 'Red Escalable' : 'Scalable Network'}
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

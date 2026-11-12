@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 
   <head>
     <meta charset="UTF-8" />
@@ -40,7 +40,25 @@
     <meta name="theme-color" content="#CC0000" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Fallback semántico (Opción A de la auditoría): sirve a crawlers y lectores sin JS.
+           React reemplaza este contenido automáticamente al montar la SPA. -->
+      <header>
+        <h1>_-IR-_ Productions | Soberanía Tecnológica, Agro-Tech y Arte Digital</h1>
+        <p>Transformamos el Agro y las Empresas con IA Local, IoT y Blockchain desde Fusagasugá / Bogotá, Colombia.</p>
+      </header>
+      <main>
+        <h2>Líneas de solución</h2>
+        <ul>
+          <li><a href="/servicios/blockchain">Blockchain Soberano · Smart Contracts &amp; Trazabilidad</a></li>
+          <li><a href="/servicios/hpc-builder">Workstations HPC/IA Personalizadas</a></li>
+          <li><a href="/talleres-agro-innovacion">Talleres Agro-Innovación</a></li>
+          <li><a href="/presentacion-cultivatech">Kit Agro-IoT CultivaTech ColombIA</a></li>
+          <li><a href="/experiencias-btl-atl">Experiencias Gamificadas BTL/ATL</a></li>
+        </ul>
+        <p>Contacto: <a href="https://wa.me/573197919742">WhatsApp +57 319 791 9742</a> · <a href="mailto:managementandplanning@masterlukasmoyano.com">Email</a></p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
